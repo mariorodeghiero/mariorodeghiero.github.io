@@ -1,0 +1,68 @@
+/* Start Toggle */
+@import url("https://fonts.googleapis.com/css?family=Dancing+Script|Great+Vibes");
+@import url("https://fonts.googleapis.com/css?family=Montserrat");
+.toggle {
+  width: 30px;
+  padding: 8px;
+  float: right;
+  background-color: rgba(0, 0, 0, 0.3);
+  border-radius: 10px;
+  margin-top: 30px;
+  cursor: pointer;
+  display: none; }
+
+.toggle span {
+  width: 100%;
+  height: 3px;
+  background-color: #ffffff;
+  border-radius: 2px;
+  display: block;
+  margin-bottom: 3px; }
+
+/* End Toggle */
+.container {
+  width: 100%;
+  margin: 0 auto;
+  position: fixed;
+  z-index: 99999; }
+  .container .logo {
+    width: 15%;
+    float: left;
+    text-align: center; }
+    .container .logo h1 {
+      font-size: 1.6em;
+      color: #1C8E83;
+      font-family: sans-serif; }
+  .container .links {
+    width: 85%;
+    float: left;
+    height: 50px; }
+    .container .links ul {
+      float: right; }
+  .container .clearfix {
+    clear: both; }
+
+.container .links
+.container .links ul li {
+  display: inline-block;
+  margin-right: 35px; }
+
+.container .links ul li a {
+  color: #000;
+  -webkit-transition: 0.3s ease-out;
+  -moz-transition: 0.3s ease-out;
+  -o-transition: 0.3s ease-out;
+  transition: 0.3s ease-out;
+  font-family: 'Montserrat';
+  font-size: 13px; }
+
+.container .links ul li a:hover {
+  background-color: #A9A9A9;
+  opacity: 0.2;
+  color: #000;
+  border-radius: 10px;
+  padding: 10px;
+  -webkit-transition: 0.3s ease-in;
+  -moz-transition: 0.3s ease-in;
+  -o-transition: 0.3s ease-in;
+  transition: 0.3s ease-in; }

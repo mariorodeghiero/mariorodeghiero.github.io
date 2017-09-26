@@ -1,0 +1,33 @@
+{
+  "name": "boiler-plate",
+  "version": "1.0.0",
+  "description": "Front-End Boiler plate",
+  "main": "gulpfile.js",
+  "author": "Mário Rodeghiero <mario.rodehiero@gmail.com>",
+  "license": "MIT",
+  "homepage": "https://github.com/mariorodeghiero/front-end-boilerplate",
+  "devDependencies": {
+    "browser-sync": "^2.18.12",
+    "gulp": "^3.9.1",
+    "gulp-autoprefixer": "^4.0.0",
+    "gulp-clean": "^0.3.2",
+    "gulp-concat": "^2.6.1",
+    "gulp-csslint": "^1.0.0",
+    "gulp-cssmin": "^0.2.0",
+    "gulp-html-replace": "^1.6.2",
+    "gulp-imagemin": "^3.3.0",
+    "gulp-jshint": "^2.0.4",
+    "gulp-sass": "^3.1.0",
+    "gulp-uglify": "^3.0.0",
+    "gulp-usemin": "^0.3.28",
+    "jshint": "^2.9.5",
+    "jshint-stylish": "^2.2.1"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "gulp": "gulp"
+  },
+  "bugs": {
+    "url": "https://github.com/mariorodeghiero/front-end-boilerplate/issues"
+  }
+}

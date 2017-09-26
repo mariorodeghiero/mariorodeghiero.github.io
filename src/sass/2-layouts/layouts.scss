@@ -1,0 +1,62 @@
+@import 'src/sass/0-plugins/plugins';
+@import url('https://fonts.googleapis.com/css?family=Dancing+Script|Great+Vibes');
+@import url('https://fonts.googleapis.com/css?family=Montserrat');
+
+.container {
+    width: 100%;
+    margin: 0 auto;
+    position: fixed;
+    z-index: 99999;
+    .logo {
+        width: 15%;
+        float: left;
+        text-align: center;
+        h1 {
+            font-size: 1.6em;
+            color: #1C8E83;
+            font-family: sans-serif;
+        }
+    }
+    .links {
+        width: 85%;
+        float: left;
+        height: 50px;
+        ul {
+            float: right;
+        }
+    }
+    .clearfix {
+        clear: both;
+    }
+}
+
+
+
+.container .links 
+
+.container .links ul li {
+    display: inline-block;
+   margin-right: 35px;
+}
+
+.container .links ul li a {
+    color: #000;
+    -webkit-transition: 0.3s ease-out;
+    -moz-transition: 0.3s ease-out;
+    -o-transition: 0.3s ease-out;
+    transition: 0.3s ease-out;
+    font-family: 'Montserrat';
+    font-size: 13px;
+}
+
+.container .links ul li a:hover {
+    background-color: #A9A9A9;
+    opacity: 0.2;
+    color: #000;
+    border-radius: 10px;
+    padding: 10px;
+    -webkit-transition: 0.3s ease-in;
+    -moz-transition: 0.3s ease-in;
+    -o-transition: 0.3s ease-in;
+    transition: 0.3s ease-in;
+}
