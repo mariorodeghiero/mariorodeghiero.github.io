@@ -49,7 +49,7 @@ gulp.task('server', function() {
         }
     });
 
-    gulp.watch('src/**/*', 'index.html').on('change', browserSync.reload);
+    gulp.watch('src/**/*').on('change', browserSync.reload);
 
     gulp.watch('src/js/**/*.js').on('change', function(event) { // verifica erros nos arquivos .js
         console.log("Linting " + event.path);
