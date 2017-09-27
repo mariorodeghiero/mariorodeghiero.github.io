@@ -5,30 +5,15 @@
     <title>[MR]</title>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="canonical" href="https://www.mariorodeghiero.com">    
+    <link rel="canonical" href="https://www.mariorodeghiero.com">
     <!-- build:css css/index.min.css -->
     <link href="css/plugins.css" rel="stylesheet">
     <link href="css/base.css" rel="stylesheet">
     <link href="css/layouts.css" rel="stylesheet">
     <link href="css/modules.css" rel="stylesheet">
     <!-- endbuild -->
-	<script src="https://code.jquery.com/jquery-3.2.1.min.js" type="text/javascript"></script>
-    
-    <script>
-		/* Jquery Code */
-		$(document).ready(function () {
-			$(".toggle").click(function () {
-				$('.links').slideToggle();
-			});
-			$(window).resize(function () {
-				if ($(window).width() > 768) {
-					$('.links').show();
-				} else {
-					$('.links').hide();
-				}
-			});
-		});
-	</script>
+    <script src="https://code.jquery.com/jquery-3.2.1.js" integrity="sha256-DZAnKJ/6XZ9si04Hgrsxu/8s717jcIzLy3oi35EouyE=" crossorigin="anonymous"></script>
+
 </head>
 
 <body>
@@ -44,42 +29,29 @@
                 <span></span>
                 <span></span>
             </div>
-            <div class="links">
+            <nav class="links">
                 <ul>
                     <li>
-                        <a href="../website/index.html">Home</a>
+                        <a href="index.html">Home</a>
                     </li>
                     <li>
-                        <a href="../website/index.html#about">About</a>
-                    </li>
-                    <li>
-                        <a href="../website/index.html#skills">Skills</a>
+                        <a href="../website/index.html#about">About Me</a>
                     </li>
                     <li>
                         <a href="../website/index.html#contact">Contact</a>
                     </li>
                 </ul>
-            </div>
+            </nav>
             <div class="clearfix"></div>
         </div>
     </header>
 
- 
-    <div class="container-tag">
-        <h3 class="tag-h3">[ Tags ]</h3>
-        <ul class="tags">
-            <li><a href="#" class="tag">html</a></li>
-            <li><a href="#" class="tag">css</a></li>
-            <li><a href="#" class="tag">js</a></li>
-            <li><a href="#" class="tag">python</a></li>
-            <li><a href="#" class="tag">git</a></li>
-            <li><a href="#" class="tag">github</a></li>
-            <li><a href="#" class="tag">ityped.js</a></li>
-            <li><a href="#" class="tag">sublimetext</a></li>
-            <li><a href="#" class="tag">vscode</a></li>
-        </ul>
-    </div> 
-<!--  
+    <div class="page">
+        <div class="search">
+            <label for="search">Search:</label>
+            <input type="search" name="search" id="search" placeholder="ex: flex-box">
+        </div>
+        <!-- 
     <div>
         <section id="content">
             <article class="item">
@@ -98,33 +70,35 @@
                 </div>
             </article>
         </section>
-    </div>
-
+    </div> -->
+        <!--
     <div id="disqus_thread"></div>
 
     <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+-->
 
-    <footer>
-        <div class="rodape">
-            <nav>
-                <ul class="icones-sociais">
-                    <p>@By, Mário Rodeghiero</p>
-                    <li>
-                        <a href="https://github.com/MarioRodeghiero" class="github">Github</a>
-                    </li>
-                    <li>
-                        <a href="https://stackexchange.com/users/10228601/mário-antônio-rodeghiero" class="twitter">Stackoverflow</a>
-                    </li>
-                    <li>
-                        <a href="https://br.linkedin.com/in/mariorodeghiero" class="linkedin">LinkedIn</a>
-                    </li>
-                </ul>
-            </nav>
-        </div>
-    </footer> -->
+    </div>
+
+    <footer class="footer">
+            <p>&copy; 2017 MárioRodeghiero</p> 
+        <nav>
+            <ul class="social-icons">
+                <li>
+                    <a href="https://github.com/MarioRodeghiero" ><img class="github" src="img/github-icon.png" alt="Icone de redirecionamento para Git"></a>
+                </li>
+                <li>
+                    <a href="https://br.linkedin.com/in/mariorodeghiero"><img class="linkedin" src="img/linkedin-icon.png" alt="Icone de redirecionamento para Linkedin"></a>
+                </li>
+                <li>
+                    <a href="https://twitter.com/rodeghiero_"><img  class="twitter" src="img/twitter-icon.png" alt="Icone de redirecionamento paraTwitter"></a>
+                </li>
+            </ul>
+        </nav>
+    </footer>
 
     <!-- build:js js/index.min.js -->
     <script src="js/jquery.js"></script>
+    <script src="js/menu.js"></script>
     <!-- endbuild -->
 
 </body>

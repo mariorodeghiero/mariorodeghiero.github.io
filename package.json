@@ -21,7 +21,8 @@
     "gulp-uglify": "^3.0.0",
     "gulp-usemin": "^0.3.28",
     "jshint": "^2.9.5",
-    "jshint-stylish": "^2.2.1"
+    "jshint-stylish": "^2.2.1",
+    "rss-to-json": "^1.0.2"
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
