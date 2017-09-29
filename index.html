@@ -6,7 +6,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="canonical" href="https://www.mariorodeghiero.com">
-    <link rel="stylesheet" href="dist/css/index.min.css"/>
+    <link rel="stylesheet" href="css/index.min.css"/>
     <script src="https://code.jquery.com/jquery-3.2.1.js" integrity="sha256-DZAnKJ/6XZ9si04Hgrsxu/8s717jcIzLy3oi35EouyE=" crossorigin="anonymous"></script>
 
 </head>
@@ -38,13 +38,23 @@
                 </ul>
             </nav>
             <div class="clearfix"></div>
-        </div>
+        </div> 
     </header>
 
     <div class="page">
-        <div class="search">
-            <label for="search">Search:</label>
+        <input class="search-btn" id="search" type="image" src="img/search-icon.png" onclick="openNav()"></input>
+        <div class="search" id="container-search">
             <input type="search" name="search" id="search" placeholder="ex: flex-box">
+            <a href="javascript:void(0)" class="close-btn" onclick="closeNav()">&times;</a>
+            <section>
+                <ul>
+                    <a href="#"><li>Post 1</li></a><hr>
+                    <a href="#"><li>Post 2</li></a><hr>
+                    <a href="#"><li>Post 3</li></a><hr>
+                    <a href="#"><li>Post 4</li></a><hr>
+                    <a href="#"><li>Post 5</li></a><hr>
+                </ul>
+            </section>
         </div>
         <!-- 
     <div>
@@ -76,22 +86,20 @@
 
     <footer class="footer">
             <p>&copy; 2017 MárioRodeghiero</p> 
-        <nav>
             <ul class="social-icons">
                 <li>
-                    <a href="https://github.com/MarioRodeghiero" ><img class="github" src="dist/img/github-icon.png" alt="Icone de redirecionamento para Git"></a>
+                    <a href="https://github.com/MarioRodeghiero" ><img class="github" src="img/github-icon.png" alt="Icone de redirecionamento para Git"></a>
                 </li>
                 <li>
-                    <a href="https://br.linkedin.com/in/mariorodeghiero"><img class="linkedin" src="dist/img/linkedin-icon.png" alt="Icone de redirecionamento para Linkedin"></a>
+                    <a href="https://br.linkedin.com/in/mariorodeghiero"><img class="linkedin" src="img/linkedin-icon.png" alt="Icone de redirecionamento para Linkedin"></a>
                 </li>
                 <li>
-                    <a href="https://twitter.com/rodeghiero_"><img  class="twitter" src="dist/img/twitter-icon.png" alt="Icone de redirecionamento paraTwitter"></a>
+                    <a href="https://twitter.com/rodeghiero_"><img  class="twitter" src="img/twitter-icon.png" alt="Icone de redirecionamento paraTwitter"></a>
                 </li>
             </ul>
-        </nav>
     </footer>
 
-    <script src="dist/js/index.min.js"></script>
+    <script src="js/index.min.js"></script>
 
 </body>
 

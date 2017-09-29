@@ -8,7 +8,7 @@
     margin: 0 auto;
     position: fixed;
     z-index: 999;
-    position: relative;
+    background-color: #ffffff; // position: relative;
     .logo {
         width: 15%;
         float: left;
@@ -74,37 +74,58 @@
     }
 }
 
-@media(max-width:768px) {
-    .container-header {
-        .toggle {
-            display: block;
-        }
-        .links {
-            display: none;
-            ul li {
-                display: block;
-                text-align: center;
-                padding: 10px;
-            }
-            ul {
-                float: none;
-            }
-        }
-    }
-}
-
-
 /* start search */
 
+.search-btn {
+    position: fixed;
+    margin-top: 80px;
+    margin-left: 20px;
+}
+
 .search {
-    margin: 20px;
-    float: right;
+    display: none;
+    height: 100%;
+    width: 20%;
+    position: fixed;
+    background-color: rgba(17, 17, 17, 0.9);
+    padding: 100px 10px;
+    opacity: 0.4;
     input {
         border-radius: 5px;
         border: 2px solid #00B4CC;
         background-color: #FFFFFF;
         padding: 5px;
         font-family: 'Open Sans';
+        width: 90%;
+    }
+    .close-btn {
+        position: absolute;
+        top: 65px;
+        right: 10px;
+        font-size: 36px;
+        text-decoration: none;
+        color: #FFFFFF;
+        &:hover {
+            color: gray;
+        }
+    }
+    ul {
+        list-style-type: circle;
+        line-height: 1.6em;
+        a {
+            color: #f1f1f1;
+            text-decoration: none;
+            li {
+                margin-left: -20px;
+                font-size: 0.9em;
+                &:hover {
+                    color: gray;
+                }
+            }
+        }
+        hr {
+            margin-left: -20px;
+        }
     }
 }
 
@@ -120,19 +141,30 @@
 
 .footer {
     background: #00B4CC;
-    padding: 10px;
-    color: #fff;
+    height: 130px;
+    width: 100%;
     .social-icons {
-        display: inline-block;
-        margin-left: 40%;
         text-align: center;
+        margin-left: -30px;
         li {
-            margin-right: 10px;
-            float: left;
+            padding-right: 10px;
+            display: inline;
+        }
+        .github, .linkedin, .twitter  {
+            &:hover{
+                opacity: 0.6;
+            }
         }
     }
     p {
+        color: #fff;
         text-align: initial;
         font-family: 'Open Sans';
+        padding: 10px;
+        font-size: 0.9em;
     }
 }
+
+  
+/* Start Toggle */
+
