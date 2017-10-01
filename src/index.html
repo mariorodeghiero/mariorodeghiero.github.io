@@ -11,8 +11,8 @@
     <link href="css/base.css" rel="stylesheet">
     <link href="css/layouts.css" rel="stylesheet">
     <link href="css/modules.css" rel="stylesheet">
+    <link href="css/animated.css" rel="stylesheet">
     <!-- endbuild -->
-    <script src="https://code.jquery.com/jquery-3.2.1.js" integrity="sha256-DZAnKJ/6XZ9si04Hgrsxu/8s717jcIzLy3oi35EouyE=" crossorigin="anonymous"></script>
 
 </head>
 
@@ -29,7 +29,7 @@
                 <span></span>
                 <span></span>
             </div>
-            <nav class="links">
+            <nav class="links animated zoomIn">
                 <ul>
                     <li>
                         <a href="index.html">Home</a>
@@ -43,73 +43,44 @@
                 </ul>
             </nav>
             <div class="clearfix"></div>
-        </div> 
+        </div>
     </header>
 
     <div class="page">
-        <input class="search-btn" id="search" type="image" src="img/search-icon.png" onclick="openNav()"></input>
+        <input class="search-btn" id="search-btn" type="image" src="img/search-icon.png">
         <div class="search" id="container-search">
-            <input type="search" name="search" id="search" placeholder="ex: flex-box">
-            <a href="javascript:void(0)" class="close-btn" onclick="closeNav()">&times;</a>
-            <section>
-                <ul>
-                    <a href="#"><li>Post 1</li></a><hr>
-                    <a href="#"><li>Post 2</li></a><hr>
-                    <a href="#"><li>Post 3</li></a><hr>
-                    <a href="#"><li>Post 4</li></a><hr>
-                    <a href="#"><li>Post 5</li></a><hr>
-                </ul>
-            </section>
-        </div>
-        <!-- 
-    <div>
-        <section id="content">
-            <article class="item">
-                <div class="description">
-                    <a href="../website/article.html">
-                        <h1>Flex box</h1>
-                        <h2>Aprendendo como funciona</h2>
-                        <p class="summary">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad eum dolorum architecto obcaecati enim
-                            dicta praesentium, quam nobis! Neque ad aliquam facilis numquam. Veritatis, sit.
-                        </p>
-                    </a>
-                    <ul>
-                        <li><a class="tag-post">html</a></li>
-                        <li><a class="tag-post">css</a></li>
-                    </ul>
-                </div>
-            </article>
-        </section>
-    </div> -->
-        <!--
-    <div id="disqus_thread"></div>
+            <input type="search" name="search" id="search-input" placeholder="ex: flex-box">
+            <a class="close-btn" id="close-btn">&times;</a>
 
-    <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
--->
+            <ul id="output"></ul>
+
+        </div>
+
 
     </div>
 
     <footer class="footer">
-            <p>&copy; 2017 MárioRodeghiero</p> 
-            <ul class="social-icons">
-                <li>
-                    <a href="https://github.com/MarioRodeghiero" ><img class="github" src="img/github-icon.png" alt="Icone de redirecionamento para Git"></a>
-                </li>
-                <li>
-                    <a href="https://br.linkedin.com/in/mariorodeghiero"><img class="linkedin" src="img/linkedin-icon.png" alt="Icone de redirecionamento para Linkedin"></a>
-                </li>
-                <li>
-                    <a href="https://twitter.com/rodeghiero_"><img  class="twitter" src="img/twitter-icon.png" alt="Icone de redirecionamento paraTwitter"></a>
-                </li>
-            </ul>
+        <p>&copy; 2017 MárioRodeghiero</p>
+        <ul class="social-icons">
+            <li>
+                <a href="https://github.com/MarioRodeghiero"><img class="github" src="img/github-icon.png" alt="Icone de redirecionamento para Git"></a>
+            </li>
+            <li>
+                <a href="https://br.linkedin.com/in/mariorodeghiero"><img class="linkedin" src="img/linkedin-icon.png" alt="Icone de redirecionamento para Linkedin"></a>
+            </li>
+            <li>
+                <a href="https://twitter.com/rodeghiero_"><img  class="twitter" src="img/twitter-icon.png" alt="Icone de redirecionamento paraTwitter"></a>
+            </li>
+        </ul>
     </footer>
 
     <!-- build:js js/index.min.js -->
     <script src="js/jquery.js"></script>
     <script src="js/menu.js"></script>
     <script src="js/search.js"></script>
+           
     <!-- endbuild -->
-
+    <script src="src/js/search-post.js"></script> 
 </body>
 
 </html>

@@ -74,6 +74,7 @@
     }
 }
 
+
 /* start search */
 
 .search-btn {
@@ -105,6 +106,7 @@
         font-size: 36px;
         text-decoration: none;
         color: #FFFFFF;
+        cursor: pointer;
         &:hover {
             color: gray;
         }
@@ -112,12 +114,13 @@
     ul {
         list-style-type: circle;
         line-height: 1.6em;
-        a {
-            color: #f1f1f1;
-            text-decoration: none;
-            li {
-                margin-left: -20px;
-                font-size: 0.9em;
+        li {
+            margin-left: -20px;
+            font-size: 0.9em;
+            color: #ffffff;
+            a {
+                color: #ffffff;
+                text-decoration: none;
                 &:hover {
                     color: gray;
                 }
@@ -150,8 +153,10 @@
             padding-right: 10px;
             display: inline;
         }
-        .github, .linkedin, .twitter  {
-            &:hover{
+        .github,
+        .linkedin,
+        .twitter {
+            &:hover {
                 opacity: 0.6;
             }
         }
@@ -165,6 +170,13 @@
     }
 }
 
-  
+
 /* Start Toggle */
 
+#output {
+    font-size: 0.8rem; // margin-top: 90px;
+    // float: left;
+    // width: 500px;
+    // height: 300px;
+    // border: 1px solid rebeccapurple
+}
