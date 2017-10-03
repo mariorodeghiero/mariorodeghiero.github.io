@@ -8,13 +8,15 @@
     margin: 0 auto;
     position: fixed;
     z-index: 999;
-    background-color: #ffffff; // position: relative;
+    background-color: #708090;
+    // background-color: #ffffff; 
+    // position: relative;
     .logo {
         width: 15%;
         float: left;
         text-align: center;
         h1 {
-            font-size: 1.6em; // color: #1C8E83;
+            font-size: 1.6em;
             color: #00B4CC;
             font-family: sans-serif;
         }
@@ -46,7 +48,7 @@
                 display: inline-block;
                 margin-right: 35px;
                 a {
-                    color: #000;
+                    color: #fff;
                     -webkit-transition: 0.3s ease-out;
                     -moz-transition: 0.3s ease-out;
                     -o-transition: 0.3s ease-out;
@@ -85,11 +87,13 @@
 
 .search {
     display: none;
+    top: 60px;
     height: 100%;
     width: 20%;
     position: fixed;
     background-color: rgba(17, 17, 17, 0.9);
-    padding: 100px 10px;
+    // background: linear-gradient(135deg, rgba(85, 239, 203, 1) 0%, rgba(30, 87, 153, 1) 0%, rgba(85, 239, 203, 1) 0%, rgba(91, 202, 255, 1) 100%);
+    padding: 30px 10px;
     opacity: 0.4;
     input {
         border-radius: 5px;
@@ -101,7 +105,7 @@
     }
     .close-btn {
         position: absolute;
-        top: 65px;
+        top: 0;
         right: 10px;
         font-size: 36px;
         text-decoration: none;
@@ -143,7 +147,7 @@
 /* start footer */
 
 .footer {
-    background: #00B4CC;
+    background: #778899;
     height: 130px;
     width: 100%;
     .social-icons {

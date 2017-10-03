@@ -6,7 +6,7 @@ const findPost = document.getElementById('search-input');
 findPost.addEventListener('keyup', findMatches);
 
 function getPosts() {
-    fetch('dist/posts.json')
+    fetch('db/posts.json')
         .then((res) => res.json())
         .then((data) => {
             let output = '';
@@ -21,10 +21,12 @@ function getPosts() {
 }
 
 function findMatches() {
-    let filter = findPost.value.toUpperCase();
+    var filter = findPost.value.toUpperCase();
     let ul = document.getElementById('output');
     let li = ul.getElementsByTagName('li');
     let hr = document.getElementsByTagName('hr');
+    let i;
+    let a;
     for (i = 0; i < li.length; i++) {
         a = li[i].getElementsByTagName("a")[0];
         if (a.innerHTML.toUpperCase().indexOf(filter) > -1) {

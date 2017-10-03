@@ -10,7 +10,8 @@ var gulp = require('gulp')
     , jshint = require('gulp-jshint')//npm install jshint gulp-jshint --save-dev
     , jshintStylish = require('jshint-stylish')//npm install --save-dev jshint-stylish
     , csslint = require('gulp-csslint')//npm install --save-dev gulp-csslint
-    , sass = require('gulp-sass');
+    , sass = require('gulp-sass')
+    , babel = require('gulp-babel');
 
 // tarefa para criar a pasta dist com todos arquivos
 gulp.task('copy', ['clean'], function() {
@@ -35,8 +36,8 @@ gulp.task('build-img', function() {
 gulp.task('usemin', function() {
    return gulp.src('dist/**/*.html')
         .pipe(usemin({
-         js: [ uglify()],
-         css: [ cssmin() ]
+        js : [babel({presets: ['env']}),uglify()],
+        css : [ cssmin() ]
         }))
         .pipe(gulp.dest('dist'));
 });
@@ -54,7 +55,9 @@ gulp.task('server', function() {
     gulp.watch('src/js/**/*.js').on('change', function(event) { // verifica erros nos arquivos .js
         console.log("Linting " + event.path);
         gulp.src(event.path)
-            .pipe(jshint())
+            .pipe(jshint({
+                'esversion': 6
+            }))
             .pipe(jshint.reporter(jshintStylish));
     });
 
