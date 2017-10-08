@@ -1,36 +1,23 @@
-
 /*class voltar*/
-
 .voltar {
-    float: left;
-    position: fixed;
-    margin: 10px 10px;
-}
-
-.voltar a {
-  text-decoration: none;
-}
-
-#mostrar {
-    display: none;
-}
-
-.voltar:hover #mostrar{
+  float: left;
+  position: fixed;
+  margin: 10px 10px; }
+  .voltar a {
+    text-decoration: none; }
+  .voltar #mostrar {
+    display: none; }
+  .voltar:hover #mostrar {
     display: block;
     position: relative;
     color: whitesmoke;
     cursor: pointer;
-    margin-left: 3%;
-    margin-top: 3%;
-    min-width: 100px;
-    max-width: 130px;
-    padding-left: 30px;
+    padding: 10px;
     background: #222;
     -webkit-border-radius: 10px;
     -moz-border-radius: 10px;
     border-radius: 10px;
-    border: #FFF solid 2px;
-}
+    border: #FFF solid 2px; }
 
 .code {
   background: #134f5c;
@@ -39,119 +26,87 @@
   tab-size: 4;
   padding-bottom: 40px;
   border-radius: 4px;
-  color: #4dd0e1;  
-  line-height: 1.3rem;
-}
-
-p {
-  margin: 1.6em 0;
-}
+  color: #4dd0e1;
+  line-height: 1.3rem; }
 
 article {
   margin: 0 auto;
   max-width: 800px;
   padding: 40px 11.14%;
   word-break: break-word;
-  hyphens: auto;
-}
-article a {
-  text-decoration: none;
-}
-
-article p{
-  font-size: 1.3rem;
-  line-height: 1.8rem;
-  letter-spacing: 0.03em;
-}
-h5 {
+  hyphens: auto; }
+  article a {
+    text-decoration: none; }
+  article p {
+    margin: 1.6em 0;
+    font-size: 1.3rem;
+    line-height: 1.8rem;
+    letter-spacing: 0.03em; }
+  article h5 {
     text-align: right;
     margin-top: 0;
     padding: 0;
     color: black;
-    font-size: 1.2rem;
-}
-
-h4 {
-  color: #A9A9A9;
-  font-size: .9em;
-  letter-spacing: .51px;
-  text-align: center;
-  margin: -1.7em auto 3em;
-  font-style: italic;
-}
-
-h2 {
-  font-size: 6.4rem;
-  font-weight: 600;
-  text-align: center;
-  font-size: 4.2rem;
-  line-height: 10rem;
-  margin-top: 0;
-}
+    font-size: 1.2rem; }
+  article h4 {
+    color: #A9A9A9;
+    font-size: .9em;
+    letter-spacing: .51px;
+    text-align: center;
+    margin: -1.7em auto 3em;
+    font-style: italic; }
+  article h2 {
+    font-size: 6.4rem;
+    font-weight: 600;
+    text-align: center;
+    font-size: 4.2rem;
+    line-height: 10rem;
+    margin-top: 0; }
 
 @media only screen and (max-width: 700px) {
   article {
     font-size: .85em;
     line-height: 1.7em;
     margin-bottom: 30px;
-    padding: 8%;
-  }
-  article p{
-    font-size: 0.8rem;
-  }
-
-  h2 {
-    font-size: 3.5rem;
-    line-height: 3.5em;
-    letter-spacing: 0;
-  }
-
-  h4 {
-    letter-spacing: .3px;
-    margin: -2.7em auto 4em;
-  }
-  h5{
-    font-size: 1.0em;
-  }
-  .voltar:hover #mostrar{
+    padding: 8%; }
+    article p {
+      font-size: 0.8rem; }
+    article h2 {
+      font-size: 3.5rem;
+      line-height: 3.5em;
+      letter-spacing: 0; }
+    article h4 {
+      letter-spacing: .3px;
+      margin: -2.7em auto 4em; }
+    article h5 {
+      font-size: 1.0em; }
+  .voltar:hover #mostrar {
     margin: 0;
     padding: 7px;
-    min-width: 50px;
-  }
-}
+    min-width: 50px; } }
+
 @media only screen and (max-width: 502px) {
   article {
     width: auto;
     font-size: .8em;
-    line-height: 1.6em;
-  }
-  article p{
-    font-size: 0.8rem;    
-  }
-
-  h2 {
-    font-size: 2.4rem;
-    line-height: 1.4em;
-    letter-spacing: 0;
-  }
-
-  h4 {
-    letter-spacing: 0;
-    margin: .4em auto 3em;
-  }
-  h5{
-    font-size: 1.0em;
-  }
-  .voltar:hover #mostrar{
+    line-height: 1.6em; }
+    article p {
+      font-size: 0.8rem; }
+    article h2 {
+      font-size: 2.4rem;
+      line-height: 1.4em;
+      letter-spacing: 0; }
+    article h4 {
+      letter-spacing: 0;
+      margin: .4em auto 3em; }
+    article h5 {
+      font-size: 1.0em; }
+  .voltar:hover #mostrar {
     margin: 0;
     padding: 7px;
-    min-width: 50px;
-  }
-}
-
+    min-width: 50px; } }
 
 .disqus {
-  margin-left:  auto;
+  margin-left: auto;
   margin-right: auto;
-  width: 80%;
-}
+  width: 80%; }

@@ -1,0 +1,37 @@
+.container {
+    margin-top: 30px; // float: right;
+}
+
+.container-tag {
+    float: left;
+    margin-top: 70px;
+    text-align: center;
+    width: 100%;
+    padding: 10px;
+    .tags {
+        li {
+            display: inline-block;
+            padding: 15px;
+            .tag {
+                background: #eee;
+                color: #999;
+                padding: 8px 15px;
+                border-radius: 4px;
+                text-decoration: none;
+                -webkit-transition: color 0.2s;
+                -webkit-transition: 0.5s ease-out;
+                -moz-transition: 0.5s ease-out;
+                -o-transition: 0.5s ease-out;
+                transition: 0.5s ease-out;
+                &:hover {
+                    -webkit-transition: 0.4s ease-in;
+                    -moz-transition: 0.4s ease-in;
+                    -o-transition: 0.4s ease-in;
+                    transition: 0.4s ease-in;
+                    background-color: #00B4CC;
+                    color: white;
+                }
+            }
+        }
+    }
+}
