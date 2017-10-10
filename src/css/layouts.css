@@ -96,15 +96,14 @@
   top: 60px;
   height: 100%;
   position: fixed;
-  background-color: #000;
+  background: #eee;
   padding: 50px;
-  opacity: 0.9;
   z-index: 89;
   width: 100%; }
   .search input {
     margin-top: 30px;
     border-radius: 5px;
-    border: 2px solid #00B4CC;
+    border: 1px solid #00B4CC;
     background-color: #FFFFFF;
     padding: 5px;
     font-family: 'Open Sans';
@@ -119,22 +118,21 @@
     .search .close-btn:hover {
       color: gray; }
   .search ul {
-    margin-top: 20px;
-    list-style-type: circle; }
+    margin-top: 20px; }
     .search ul li {
       margin-left: -20px;
       padding-top: 15px;
       font-size: 0.8rem;
-      color: #ffffff; }
+      color: #000; }
       .search ul li a {
-        color: #ffffff;
+        color: #000;
         text-decoration: none; }
         .search ul li a:hover {
-          color: gray; }
+          color: #E3DFDF; }
     .search ul hr {
       margin-left: -20px;
       width: 90%;
-      background-color: #fff; }
+      background-color: #00B4CC; }
 
 /* end search */
 .geral {

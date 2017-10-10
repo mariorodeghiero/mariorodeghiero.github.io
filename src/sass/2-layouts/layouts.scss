@@ -91,15 +91,15 @@
     top: 60px;
     height: 100%;
     position: fixed;
-    background-color: #000;
+    background: #eee;
     padding: 50px;
-    opacity: 0.9;
+    // opacity: 0.9;
     z-index: 89;
     width: 100%;
     input {
         margin-top: 30px;
         border-radius: 5px;
-        border: 2px solid #00B4CC;
+        border: 1px solid #00B4CC;
         background-color: #FFFFFF;
         padding: 5px;
         font-family: 'Open Sans';
@@ -118,24 +118,23 @@
     }
     ul {
         margin-top: 20px;
-        list-style-type: circle;
         li {
             margin-left: -20px;
             padding-top: 15px;
             font-size: 0.8rem;
-            color: #ffffff;
+            color: #000;
             a {
-                color: #ffffff;
+                color: #000;
                 text-decoration: none;
                 &:hover {
-                    color: gray;
+                    color: #E3DFDF;
                 }
             }
         }
         hr {
             margin-left: -20px;
             width: 90%;
-            background-color: #fff;
+            background-color: #00B4CC;
         }
     }
 }

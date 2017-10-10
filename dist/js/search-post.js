@@ -6,14 +6,14 @@ const findPost = document.getElementById('search-input');
 findPost.addEventListener('keyup', findMatches);
 
 function getPosts() {
-    fetch('dist/db/posts.json')
+    fetch('db/posts.json')
         .then((res) => res.json())
         .then((data) => {
             let output = '';
             data.forEach(function (post) {
                 output +=
                     `
-                    <li class="list-group-item animated fadeInLeft"><a href="#">${post.title}</a></li><hr class="animated fadeInLeft">
+                    <li class=" animated fadeInLeft"><a href="#">${post.title}</a></li><hr class="hr-search animated fadeInLeft">
                     `;
             });
             document.getElementById('output').innerHTML = output;

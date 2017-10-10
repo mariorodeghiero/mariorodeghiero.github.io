@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="UTF-8">
+	<title></title>
+	<link rel="stylesheet" href="../css/article.css">
+</head>
+
+<body>
+
+	<div class="voltar">
+		<a href="https://mariorodeghiero.com/">
+			<img src="../img/back.png" alt="voltar">
+		</a>
+		<p id="mostrar">Voltar ?</p>
+	</div>
+
+	<article>
+		<a href="https://github.com/MarioRodeghiero">
+			<h5>
+				<img src="../img/github-logo.png" alt=""> Autor: MárioRodeghiero</h5>
+		</a>
+		<h5>Date: 09/10/2017</h5>
+		<h1>CopyRight Automático</h1>
+		<h4>"Atualizar data do CopyRight de forma automatica"</h4>
+
+		<p>
+			Minha ideia é colocar em pratica, tudo que aprendo através de livros, vídeos e cursos. Espero que este post seja o primeiro,
+			entre vários outros que estão por vir. Seja sobre html, css, JS ou qualquer outra linguagem e que eu possa ajudar, repassando
+			conhecimento que adquiri durante meu estudos.
+			<br> Agora deu de blá-blá-blá e Bora lá! Vamos falar sobre o objetivo do post “Atualizar data do CopyRight de forma automatica”.
+		</p>
+
+		<h2>Estrutura de arquivos</h2>
+		<p>
+			Caso alguém tenha duvida sobre a estrutura de arquivos utilizada, segue a saída do comando “tree”, aplicado no terminal do
+			computador.
+		</p>
+
+		<img  class="screenShot" src="../img/screenShot-copyright.png" alt="screen Shot da estrutura de arquivos">
+
+
+		<h2>Código HTML</h2>
+		<p>
+			Para exiber o copyright, criei um arquivo chamado “index.html” na pasta raiz(exemples-myBlog) e logo abaixo da tag ”body”,
+			foi criada a tag “footer” e inserido o id="copy", assim, vamos conseguir utilizar o id em nosso código javascript.
+			<br> Para realizar a chamada do nosso arquivo javascript, criamos a tag “script” e inserimos o src="js/copy.js".
+		</p>
+		<pre class='code'><code>
+		&lt;html&gt;
+		&lt;body&gt;
+
+		&lt;footer id="copy"&gt;
+		&lt;footer&gt;
+
+		&lt;script src="js/copy.js"&gt;&lt;script&gt;
+		&lt;/body&gt;
+		&lt;/html&gt;
+	</code></pre>
+
+		<h2>Código JS</h2>
+		<p>
+			A primeira coisa a ser feita no código javascript, é criar um novo objeto “Date()” e vamos armazenar na variavel "date".
+			Fizemos isso, porque “Date()” nos retorna uma informação muito completa, algo parecido com isso: “Mon Oct 09 2017 15:27:03
+			GMT-0300 (-03)”. Como queremos exibir apenas o ano em nosso copyright, vamos criar a variável “year” para pegar somente
+			o ano do nosso objeto, passando “date.getFullYear()”. Agora é só realizarmos o básico, vamos buscar o elemento com id="copy"
+			e depois utilizar o “innerHTML” para apresentar o ano em nossa pagina de exemplo.
+		</p>
+
+		<pre class='code'><code>	
+		let date = new Date();
+		let year = date.getFullYear();
+				
+		let copyRight = document.getElementById('copy');
+		copyRight.innerHTML = '&lt;p&gt;Copyright &copy;'+ year +'&lt;/p&gt;';				
+</code></pre>
+
+		<p>
+			Galera, espero ter escrito um post legal e que possa ser compreendido rsrsrs... Fiquem à vontade para dar feedbacks.
+			Lembrando!!! Sou apenas um novato na área de Desenvolvimento e nunca trabalhei na área, apenas venho estudando para futuramente buscar algo como Front-End.
+			Abraço galera, valeu !!!
+		</p>
+
+	</article>
+
+	<!--Disqus comentarios-->
+	<div class="disqus" id="disqus_thread"></div>
+	<script>
+		(function () {
+			var d = document,
+				s = d.createElement('script');
+			s.src = 'https://helponedev.disqus.com/embed.js';
+			s.setAttribute('data-timestamp', +new Date());
+			(d.head || d.body).appendChild(s);
+		})();
+	</script>
+	<noscript>Please enable JavaScript to view the
+		<a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a>
+	</noscript>
+</body>
+
+</html>

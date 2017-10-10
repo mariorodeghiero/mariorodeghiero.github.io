@@ -2,59 +2,113 @@
 <html lang="en">
 
 <head>
-    <title>[MR]</title>
+    <title>[MR] Mário Rodeghiero</title>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="canonical" href="https://www.mariorodeghiero.com">
     <link rel="stylesheet" href="dist/css/index.min.css"/>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css">
 
 </head>
 
 <body>
+    <div class="geral">
+        <header>
+            <div class="container-header">
+                <div class="logo">
+                    <h1>[MR]</h1>
+                </div>
+                <div class="toggle">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+                <nav class="links animated zoomIn">
+                    <ul>
+                        <li>
+                            <a href="https://mariorodeghiero.com/">Home</a>
+                        </li>
+                        <li>
+                            <a>About Me</a>
+                        </li>
+                        <li>
+                            <a>Contact</a>
+                        </li>
+                    </ul>
+                </nav>
+                <div class="clearfix"></div>
+            </div>
+        </header>
 
-    <header>
-        <div class="container-header">
-            <div class="logo">
-                <h1>[MR]</h1>
-            </div>
-            <div class="toggle">
-                <span></span>
-                <span></span>
-                <span></span>
-                <span></span>
-            </div>
-            <nav class="links animated zoomIn">
-                <ul>
-                    <li>
-                        <a href="index.html">Home</a>
-                    </li>
-                    <li>
-                        <a href="../website/index.html#about">About Me</a>
-                    </li>
-                    <li>
-                        <a href="../website/index.html#contact">Contact</a>
-                    </li>
-                </ul>
-            </nav>
-            <div class="clearfix"></div>
+        <div class="search-btn">
+            <input id="search-btn" type="image" src="dist/img/search-icon.png">
         </div>
-    </header>
-
-    <div class="page">
-        <input class="search-btn" id="search-btn" type="image" src="dist/img/search-icon.png">
         <div class="search animated slideInUp" id="container-search">
             <input type="search" name="search" id="search-input" placeholder="ex: flex-box">
             <a class="close-btn" id="close-btn">&times;</a>
-
             <ul id="output"></ul>
-
         </div>
 
+        <div class="container-tag">
+            <ul class="tags">
+                <li><a href="#" class="tag">html</a></li>
+                <li><a href="#" class="tag">css</a></li>
+                <li><a href="#" class="tag">js</a></li>
+                <li><a href="#" class="tag">ityped.js</a></li>
+                <li><a href="#" class="tag">vscode</a></li>
+                <li><a href="#" class="tag">gulp</a></li>
+            </ul>
+        </div>
 
+        <div class="container ">
+            <div class="article ">
+                <a href="../dist/posts/copy-right.html" >
+                    <article class="card card-body mb-5 animated zoomInRight">
+                        <h1>Criando um CopyRight Automatico </h1>
+                        <p>Neste post vou mostrar um script para realizar atualizaçao da data de um copyright forma automatica.</p>
+                        <div class="container-tag-post">
+                            <ul class="tag-post">
+                                <li class="btn-outline-info">JS</li>
+                                <li>html</li>
+                            </ul>
+                        </div>
+                        <h4> Monday, 9 october 2017</h4>
+                    </article>
+                </a>
+
+                <!-- <a href="article.html">
+                        <article class="card card-body mb-5 animated zoomInRight">
+                            <h1>Trabalhando com Fatch API</h1>
+                            <p>Neste post vou mostrar como realizar consultas utilizando o Fetch API para consultar via URL, texto e json.</p>
+                            <div class="container-tag-post">
+                                <ul class="tag-post">
+                                    <li class="btn-outline-info">JS</li>
+                                    <li>html</li>
+                                </ul>
+                            </div>
+                            <h4> Saturday, 7 october 2017</h4>
+                        </article>
+                    </a>
+
+                    <a href="article.html">
+                            <article class="card card-body mb-5 animated zoomInRight">
+                                <h1>Eventos do addEventListener</h1>
+                                <p>Neste post vou mostrar como realizar consultas utilizando o Fetch API para consultar via URL, texto e json.</p>
+                                <div class="container-tag-post">
+                                    <ul class="tag-post">
+                                        <li class="btn-outline-info">JS</li>
+                                        <li>html</li>
+                                    </ul>
+                                </div>
+                                <h4> Saturday, 7 october 2017</h4>
+                            </article>
+                        </a>
+                -->
+            </div>
+        </div>
     </div>
 
-    <footer class="footer">
-        <p>&copy; 2017 MárioRodeghiero</p>
+    <footer class=" footer">
         <ul class="social-icons">
             <li>
                 <a href="https://github.com/MarioRodeghiero"><img class="github" src="dist/img/github-icon.png" alt="Icone de redirecionamento para Git"></a>

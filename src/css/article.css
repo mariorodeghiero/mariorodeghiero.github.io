@@ -1,8 +1,7 @@
 /*class voltar*/
 .voltar {
   float: left;
-  position: fixed;
-  margin: 10px 10px; }
+  position: fixed; }
   .voltar a {
     text-decoration: none; }
   .voltar #mostrar {
@@ -22,7 +21,7 @@
 .code {
   background: #134f5c;
   color: #fff;
-  white-space: pre;
+  white-space: pre-wrap;
   tab-size: 4;
   padding-bottom: 40px;
   border-radius: 4px;
@@ -55,13 +54,15 @@ article {
     text-align: center;
     margin: -1.7em auto 3em;
     font-style: italic; }
-  article h2 {
-    font-size: 6.4rem;
+  article h1 {
     font-weight: 600;
     text-align: center;
-    font-size: 4.2rem;
-    line-height: 10rem;
+    font-size: 3.5rem;
+    line-height: 9rem;
     margin-top: 0; }
+  article h2 {
+    text-align: center;
+    padding-top: 50px; }
 
 @media only screen and (max-width: 700px) {
   article {
@@ -71,7 +72,7 @@ article {
     padding: 8%; }
     article p {
       font-size: 0.8rem; }
-    article h2 {
+    article h1 {
       font-size: 3.5rem;
       line-height: 3.5em;
       letter-spacing: 0; }
@@ -79,11 +80,7 @@ article {
       letter-spacing: .3px;
       margin: -2.7em auto 4em; }
     article h5 {
-      font-size: 1.0em; }
-  .voltar:hover #mostrar {
-    margin: 0;
-    padding: 7px;
-    min-width: 50px; } }
+      font-size: 1.0em; } }
 
 @media only screen and (max-width: 502px) {
   article {
@@ -92,7 +89,7 @@ article {
     line-height: 1.6em; }
     article p {
       font-size: 0.8rem; }
-    article h2 {
+    article h1 {
       font-size: 2.4rem;
       line-height: 1.4em;
       letter-spacing: 0; }
@@ -101,12 +98,13 @@ article {
       margin: .4em auto 3em; }
     article h5 {
       font-size: 1.0em; }
-  .voltar:hover #mostrar {
-    margin: 0;
-    padding: 7px;
-    min-width: 50px; } }
+  .voltar img {
+    width: 70%; } }
 
 .disqus {
   margin-left: auto;
   margin-right: auto;
   width: 80%; }
+
+.screenShot {
+  width: 100%; }
