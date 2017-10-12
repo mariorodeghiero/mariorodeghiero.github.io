@@ -1,0 +1,9 @@
+User-agent: *
+Disallow: /src
+Disallow: .gitignore
+Disallow: CNAME
+Disallow: CONTRIBUTRING.md
+Disallow: LICENSE
+Disallow: README.md
+Disallow: gulpfile.js
+Disallow: package.json
