@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta itemprop="name" content="Objeto de notação literal">
+    <title>Objeto de notação literal</title>
+
+    <!-- Social: Twitter -->
+    <meta name="twitter:site" content="@rodeghiero_">
+    <meta name="twitter:title" content="Objeto de notação literal">
+    <meta name="twitter:description" content="Construindo objetos de notação literal">
+
+    <!-- Social: Open Graph -->
+    <meta property="og:locale" content="en_US">
+    <meta property="og:url" content="https://mariorodeghiero.com/dist/posts/object-literal.html">
+    <meta property="og:title" content="Objeto de notação literal">
+    <meta property="og:site_name" content="Mario Rodeghiero Desenvolvedor Front End">
+    <meta property="og:description" content="Criando objetos de notação literala em javascript.">
+    <meta property="og:type" content="article">
+    <meta property="article:author" content="Mário Antônio do Amaral Rodeghiero">
+    <meta property="article:section" content="Tutoriais">
+    <meta property="article:tag" content="Javascript, html, css, sass">
+
+    <meta itemprop="description" content="Construindo objetos de notação literal">
+
+    <link rel="stylesheet" href="../css/article.css">
+    <!-- Global Site Tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-107916783-1"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+
+        function gtag() {
+            dataLayer.push(arguments);
+        }
+        gtag('js', new Date());
+
+        gtag('config', 'UA-107916783-1');
+    </script>
+</head>
+
+<body>
+    <div class="voltar">
+        <a href="https://www.mariorodeghiero.com">
+            <img src="../img/back.png" alt="voltar">
+        </a>
+        <p id="mostrar">Voltar ?</p>
+    </div>
+
+    <article>
+        <a href="https://github.com/MarioRodeghiero">
+            <h5>
+                <img src="../img/github-logo.png" alt="icone github"> Autor: MárioRodeghiero
+            </h5>
+        </a>
+
+        <h5>Date: 10/11/2017</h5>
+        <h1>Objeto de notação literal</h1>
+        <h4>"Construindo objetos de notação literal."</h4>
+
+        <p>
+            Neste post vamos criar um objeto em javascript, usando notação literal. É um objeto que contem uma coleção de valores referenciados
+            por nomes, e podem ser utilizados conforme a necessidade do seu programa. O objeto pode conter propriedades "dado:
+            valor" e também métodos (quando armazenamos uma função dentro de uma propriedade).
+        </p>
+
+        <h2>Código HTML</h2>
+        <p>Logo abaixo esta disponível o código HTML que foi utilizando para exemplo. Para estilização foi usado o framework
+            bootstrap e configurado algumas estilizações pessoais, fique a vontade para aplicar suas estilazações.
+        </p>
+        <pre class='code'><code>
+                &lt;html&gt;
+                &lt;body&gt;
+                
+                         &lt;div class="container"&gt 
+                            &lt;div class="form-group"&gt 
+                                &lt;h1&gt Restaurante 
+                                    &lt;span id="restauranteNome">&lt;/span&gt
+                                &lt;/h1&gt
+                                &lt;hr&gt
+                                &lt;h4&gt Atualmente temos disponiveis: &lt;/h4&gt
+                                &lt;span id="mesas">&lt;/span&gt mesas
+                            &lt;/div&gt
+                         &lt;/div&gt
+                
+                &lt;script src="js/object-literal.js"&gt;&lt;script&gt;
+                &lt;/body&gt;
+                &lt;/html&gt;
+                </code></pre>
+
+        <h2>Construindo um objeto literal</h2>
+        <p>
+            Vamos criar um objeto "Restaurante" no qual vai ter o nome de "Thay", onde vamos ter 30 mesas, sendo que 15 delas estarão
+            reservadas. Como vocês podem ver no código abaixo, primeiramente criamos uma variável "restaurante" seguida do
+            sinal de igual e abrimos chaves para criar o objeto, com suas propriedades e método. Dentro das chaves, vamos
+            inserir cada objeto (nome, mesas, reservada) e por ultimo o método com uma função para checar a quantidade de
+            mesas disponíveis, onde irá retornar o valor da quantidade de mesas, menos a quantidade de mesas reservadas.
+        </p>
+
+        <h2>Código JS</h2>
+        <pre class='code'><code>
+
+
+            let restaurante = { 
+                nome: 'Thay', 
+                mesas: 30, 
+                reservada: 25, 
+                mesasDisponiveis: function () { 
+                    return this.mesas - this.reservada;
+                } 
+            }; 
+
+            let restNome = document.getElementById('restauranteNome');
+            restNome.innerHTML = restaurante.nome;
+
+            let restMesas = document.getElementById('mesas');
+            restMesas.textContent = restaurante.mesasDisponiveis();
+
+        </code></pre>
+
+        <h2>Exemplo do Código funcionando</h2>
+
+        <p>
+            Aqui temos o exemplo do código JS funcionando, realizando a manipulação do DOM deixando visível o nome do restaurante
+            e quantidade de mesas disponíveis para reservas
+        </p>
+
+        <img class="screenShot" src="../img/screenShot-object-literal.png" alt="screen Shot da estrutura de arquivos">
+
+        <p>
+            Este código foi inspirado, com base no aprendizado do livro "JavaScript & JQuery Desenvolvimento de interfaces
+            web interativas", autor "Jon Duckett". <br>
+            Pretendo criar mais posts, repassando o que aprendi em livros, youtube
+            e cursos que estudo. Acho que escrever é uma boa forma de fixar o que aprendo e ainda de praxe, posso ajudar alguém.
+        </p>
+
+    </article>
+
+    <!--Disqus comentarios-->
+    <div class="disqus" id="disqus_thread"></div>
+    <script>
+        (function () {
+            var d = document,
+                s = d.createElement('script');
+            s.src = 'https://helponedev.disqus.com/embed.js';
+            s.setAttribute('data-timestamp', +new Date());
+            (d.head || d.body).appendChild(s);
+        })();
+    </script>
+    <noscript>Please enable JavaScript to view the
+        <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a>
+    </noscript>
+</body>
+
+</html>

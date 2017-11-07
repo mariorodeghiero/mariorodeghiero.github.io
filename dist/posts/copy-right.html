@@ -6,7 +6,7 @@
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<meta itemprop="name" content="CopyRight Automático">
-	<title>CopyRight Automático</title>
+	<title>CopyRight Automatico</title>
 
 	<!-- Social: Twitter -->
 	<meta name="twitter:site" content="@rodeghiero_">
@@ -18,7 +18,7 @@
 	<meta property="og:url" content="https://mariorodeghiero.com/dist/posts/copy-right.html">
 	<meta property="og:title" content="CopyRight Automático">
 	<meta property="og:site_name" content="Mario Rodeghiero Desenvolvedor Front End">
-	<meta property="og:description" content="Atualizar data do CopyRight de forma automatica">
+	<meta property="og:description" content="Atualizar data do CopyRight de forma automatica utilizando javascript.">
 	<meta property="og:type" content="article">
 	<meta property="article:author" content="Mário Antônio do Amaral Rodeghiero">
 	<meta property="article:section" content="Tutoriais">
@@ -52,8 +52,10 @@
 	<article>
 		<a href="https://github.com/MarioRodeghiero">
 			<h5>
-				<img src="../img/github-logo.png" alt=""> Autor: MárioRodeghiero</h5>
+				<img src="../img/github-logo.png" alt="icone github"> Autor: MárioRodeghiero
+			</h5>
 		</a>
+
 		<h5>Date: 09/10/2017</h5>
 		<h1>CopyRight Automático</h1>
 		<h4>"Atualizar data do CopyRight de forma automatica"</h4>
@@ -73,13 +75,12 @@
 
 		<img class="screenShot" src="../img/screenShot-copyright.png" alt="screen Shot da estrutura de arquivos">
 
-
 		<h2>Código HTML</h2>
-		<p>
-			Para exiber o copyright, criei um arquivo chamado “index.html” na pasta raiz(exemples-myBlog) e logo abaixo da tag ”body”,
-			foi criada a tag “footer” e inserido o id="copy", assim, vamos conseguir utilizar o id em nosso código javascript.
-			<br> Para realizar a chamada do nosso arquivo javascript, criamos a tag “script” e inserimos o src="js/copy.js".
-		</p>
+			<p>
+				Para exiber o copyright, criei um arquivo chamado “index.html” na pasta raiz(exemples-myBlog) e logo abaixo da tag ”body”,
+				foi criada a tag “footer” e inserido o id="copy", assim, vamos conseguir utilizar o id em nosso código javascript.
+				<br> Para realizar a chamada do nosso arquivo javascript, criamos a tag “script” e inserimos o src="js/copy.js".
+			</p>
 		<pre class='code'><code>
 		&lt;html&gt;
 		&lt;body&gt;
@@ -90,16 +91,16 @@
 		&lt;script src="js/copy.js"&gt;&lt;script&gt;
 		&lt;/body&gt;
 		&lt;/html&gt;
-	</code></pre>
+		</code></pre>
 
 		<h2>Código JS</h2>
-		<p>
-			A primeira coisa a ser feita no código javascript, é criar um novo objeto “Date()” e vamos armazenar na variavel "date".
-			Fizemos isso, porque “Date()” nos retorna uma informação muito completa, algo parecido com isso: “Mon Oct 09 2017 15:27:03
-			GMT-0300 (-03)”. Como queremos exibir apenas o ano em nosso copyright, vamos criar a variável “year” para pegar somente
-			o ano do nosso objeto, passando “date.getFullYear()”. Agora é só realizarmos o básico, vamos buscar o elemento com id="copy"
-			e depois utilizar o “innerHTML” para apresentar o ano em nossa pagina de exemplo.
-		</p>
+			<p>
+				A primeira coisa a ser feita no código javascript, é criar um novo objeto “Date()” e vamos armazenar na variavel "date".
+				Fizemos isso, porque “Date()” nos retorna uma informação muito completa, algo parecido com isso: “Mon Oct 09 2017 15:27:03
+				GMT-0300 (-03)”. Como queremos exibir apenas o ano em nosso copyright, vamos criar a variável “year” para pegar somente
+				o ano do nosso objeto, passando “date.getFullYear()”. Agora é só realizarmos o básico, vamos buscar o elemento com id="copy"
+				e depois utilizar o “innerHTML” para apresentar o ano em nossa pagina de exemplo.
+			</p>
 
 		<pre class='code'><code>	
 		let date = new Date();
@@ -107,7 +108,7 @@
 				
 		let copyRight = document.getElementById('copy');
 		copyRight.innerHTML = '&lt;p&gt;Copyright &copy;'+ year +'&lt;/p&gt;';				
-</code></pre>
+		</code></pre>
 
 		<p>
 			Galera, espero ter escrito um post legal e que possa ser compreendido rsrsrs... Fiquem à vontade para dar feedbacks. Lembrando!!!
