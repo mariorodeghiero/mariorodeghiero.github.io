@@ -80,14 +80,19 @@
                 &lt;/html&gt;
                 </code></pre>
 
-        <h2>Construindo um objeto literal</h2>
+        <h2>Criando o codigo javascript</h2>
+        //type, data e options
         <p>
-           
+           Primeiramente vamos adicionar um codigo meio que padrão e para dar inicio, vamos criar uma variavel chamada <b>"ctx"</b> para armazenar nesta variavel o elemento que possui o <b>id="myChart"</b>. Logo em seguida vamos criar uma variavel chamada <b>myChart</b> e passamos a palavra <b>new</b> com nome <b>Chart</b> para criarmos um novo objeto, passando a variavel <b>ctx</b>.
         </p>
 
         <h2>Código JS</h2>
         <pre class='code'><code>
+        var ctx = document.getElementById("myChart").getContext('2d');
 
+        var myChart = new Chart(ctx, { 
+
+        });
 
         </code></pre>
 
