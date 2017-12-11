@@ -61,13 +61,16 @@
         <h4>"Construindo gráficos com chart.js"</h4>
 
         <p>
-            ChartJs é uma biblioteca de WebGraphics baseado em canvas, podendo realizar manipulação dos dados atraves de javascript e para tornar
-            o desenvolvimento mais rapido e pratico. Com este framework, você ainda gera graficos respovivos e pode personlizar de acordo com sua necessidade, pois ele possui 8 tipos diferentes de grafico.
+            ChartJs é uma biblioteca de WebGraphics baseado em canvas, podendo realizar manipulação dos dados atraves de javascript e
+            para tornar o desenvolvimento mais rapido e pratico. Com este framework, você ainda gera graficos respovivos
+            e pode personlizar de acordo com sua necessidade, pois ele possui varios tipos diferentes de grafico.
         </p>
 
         <h2>Código HTML</h2>
         <p>
-            Como este é um simples exemplo para abordar apenas algumas das varias configurações disponiveis no Chartjs, nosso codigo HTML vai apresentar uma simples Tag canvas com id="myChart" e no final, especificamos o caminho do nosso arquivo "chart.js".
+            Como este é um simples exemplo para abordar apenas algumas das varias configurações disponiveis no Chartjs, nosso codigo
+            HTML vai apresentar uma simples Tag canvas com id="myChart" e no final, especificamos o caminho do nosso arquivo
+            "chart.js".
         </p>
         <pre class='code'><code>
                 &lt;html&gt;
@@ -81,12 +84,17 @@
                 </code></pre>
 
         <h2>Criando o codigo javascript</h2>
-        //type, data e options
+
         <p>
-           Primeiramente vamos adicionar um codigo meio que padrão e para dar inicio, vamos criar uma variavel chamada <b>"ctx"</b> para armazenar nesta variavel o elemento que possui o <b>id="myChart"</b>. Logo em seguida vamos criar uma variavel chamada <b>myChart</b> e passamos a palavra <b>new</b> com nome <b>Chart</b> para criarmos um novo objeto, passando a variavel <b>ctx</b>.
+            Primeiramente vamos adicionar um codigo meio que padrão e para dar inicio, vamos criar uma variavel chamada
+            <b>"ctx"</b> para armazenar nesta variavel o elemento que possui o
+            <b>id="myChart"</b>. Logo em seguida vamos criar uma variavel chamada
+            <b>myChart</b> e passamos a palavra
+            <b>new</b> com nome
+            <b>Chart</b> para criarmos um novo objeto, passando a variavel
+            <b>"ctx"</b>.
         </p>
 
-        <h2>Código JS</h2>
         <pre class='code'><code>
         var ctx = document.getElementById("myChart").getContext('2d');
 
@@ -96,16 +104,33 @@
 
         </code></pre>
 
+
+        <p>Dentro do nosso código padrão, existe 3 tipos de configurações que o Chartjs nos proporssiona:</p>
+        
+        <h2>Type</h2> 
+        <p>Em type configuramos o tipo de gráfico que desejamos ( line, bar, radar, pie, polarArea, bubble, scatter ).</p>
+            
+            <pre class='code'><code>
+        var ctx = document.getElementById("myChart").getContext('2d');
+
+        var myChart = new Chart(ctx, { 
+            type: 'line'
+        });
+
+        </code></pre>
+        
+        
+
         <h2>Exemplo do Código funcionando</h2>
 
         <p>
-            
+
         </p>
 
         <img class="screenShot" src="../img/screenShot-object-literal.png" alt="screen Shot da estrutura de arquivos">
 
         <p>
-           
+
         </p>
 
     </article>
