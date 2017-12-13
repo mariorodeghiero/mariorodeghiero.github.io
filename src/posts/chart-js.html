@@ -71,17 +71,17 @@
             E no final do nosso HTML, especificamos o caminho do nosso arquivo <b>"chart.js"</b>.
         </p>
         <pre class='code'><code>
-            &lt;html&gt;
-            &lt;head&gt;
-            &lt;script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.4.0/Chart.min.js"&gt;&lt;/script&gt;
-            &lt;/head&gt;
-            &lt;body&gt;
-                
-                     &lt;canvas id="myChart"&gt &lt;/canvas&gt
-                
-            &lt;script src="js/chart.js"&gt;&lt;script&gt;
-            &lt;/body&gt;
-            &lt;/html&gt;
+    &lt;html&gt;
+    &lt;head&gt;
+    &lt;script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.4.0/Chart.min.js"&gt;&lt;/script&gt;
+    &lt;/head&gt;
+    &lt;body&gt;
+        
+         &lt;canvas id="myChart"&gt &lt;/canvas&gt
+           
+    &lt;script src="js/chart.js"&gt;&lt;script&gt;
+    &lt;/body&gt;
+    &lt;/html&gt;
         </code></pre>
 
         <h2>Criando o código javascript</h2>
@@ -97,11 +97,11 @@
         </p>
 
         <pre class='code'><code>
-        var ctx = document.getElementById("myChart").getContext('2d');
+    var ctx = document.getElementById("myChart");
 
-        var myChart = new Chart(ctx, { 
+    var myChart = new Chart(ctx, { 
 
-        });
+    });
 
         </code></pre>
 
@@ -115,11 +115,11 @@
         </p>
 
         <pre class='code'><code>
-        var ctx = document.getElementById("myChart").getContext('2d');
+    var ctx = document.getElementById("myChart");
 
-        var myChart = new Chart(ctx, { 
-            type: 'line'
-        });
+    var myChart = new Chart(ctx, { 
+        type: 'line'
+    });
 
         </code></pre>
 
@@ -132,37 +132,34 @@
         </p>
 
         <pre class='code'><code>
-        var ctx = document.getElementById("myChart").getContext('2d'); 
-        var myChart = new Chart(ctx, { 
-            type: 'line', 
-            data: { 
-                    labels: ["Jan", "Fev", "Mar", "Abr", "Mai", "Jun"], 
-                        datasets: [{ 
-                            label: " Item 1 ", 
-                            borderColor: 'rgb(255, 99, 132)', 
-                            backgroundColor: 'rgb(255, 99, 132)', 
-                            pointHoverBackgroundColor: 'rgb(255, 99, 132)', 
-                            fill: false, 
-                            data: [0, 10, 5, 2, 20, 30], 
-                        }, 
-                            { 
-                            label: " Item 2 ", 
-                            borderColor: 'rgba(0, 207, 214, 1)', 
-                            backgroundColor: 'rgba(0, 207, 214, 1)', 
-                            pointHoverBackgroundColor: 'rgba(0, 207, 214, 1)', 
-                            fill: false, 
-                            data: [0, 20, 15, 22, 29, 37], 
-                        }, 
-                            { 
-                            label: " Item 3 ", 
-                            borderColor: 'rgba(36, 249, 203, 1)',
-                            backgroundColor: 'rgba(36, 249, 203, 1)', 
-                            pointHoverBackgroundColor: 'rgba(36, 249, 203, 1)', 
-                            fill: false, 
-                            data: [0, 10, 25, 32, 19, 27], 
-                        }],
-                } 
-        });
+    var ctx = document.getElementById("myChart"); 
+    var myChart = new Chart(ctx, { 
+    type: 'line', 
+    data: { 
+    labels: ["Jan", "Fev", "Mar", "Abr"], 
+        datasets: [{ 
+            label: " Item 1 ", 
+            borderColor: '#ff6384', 
+            backgroundColor: '#ff6384', 
+            fill: false, 
+            data: [0, 10, 5, 2, 20], 
+        }, 
+            { 
+            label: " Item 2 ", 
+            borderColor: '#00cfd6', 
+            backgroundColor: '#00cfd6',  
+            fill: false, 
+            data: [0, 20, 15, 22, 29], 
+        }, 
+            { 
+            label: " Item 3 ", 
+            borderColor: '#24f9cb',
+            backgroundColor: '#24f9cb',  
+            fill: false, 
+            data: [0, 10, 25, 32, 19], 
+        }],
+        } 
+    });
             
 
         </code></pre>
@@ -178,76 +175,73 @@
 
         <pre class='code'><code>
 
-            var ctx = document.getElementById("myChart").getContext('2d');
-            var myChart = new Chart(ctx, {
-                type: 'line',
-                data: {
-                    labels: ["Jan", "Fev", "Mar", "Abr", "Mai", "Jun"],
-                    datasets: [{
-                        label: " Item 1 ",
-                        borderColor: 'rgb(255, 99, 132)',
-                        backgroundColor: 'rgb(255, 99, 132)',
-                        pointHoverBackgroundColor: 'rgb(255, 99, 132)',
-                        fill: false,
-                        data: [0, 10, 5, 2, 20, 30],
-                    },
-                                {
-                        label: " Item 2 ",
-                        borderColor: 'rgba(0, 207, 214, 1)',
-                        backgroundColor: 'rgba(0, 207, 214, 1)',
-                        pointHoverBackgroundColor: 'rgba(0, 207, 214, 1)',
-                        fill: false,
-                        data: [0, 20, 15, 22, 29, 37],
-                    },
-                                {
-                        label: " Item 3 ",
-                        borderColor: 'rgba(36, 249, 203, 1)',
-                        backgroundColor: 'rgba(36, 249, 203, 1)',
-                        pointHoverBackgroundColor: 'rgba(36, 249, 203, 1)',
-                        fill: false,
-                        data: [0, 10, 25, 32, 19, 27],
-                    }]
-                },
-                options: {
-                layout: {
-                        padding: {
-                            left: 50,
-                            right: 50,
-                            top: 20,
-                            bottom: 20
-                        }
-                        },
-                    title: {
-                        display: true,
-                        text: 'Gráfico Ano 2017',
-                        fontSize: 13,
-                        padding: 20
-                    },
-                    legend: {
-                        position: 'bottom',
-                        labels:{
-                            boxWidth: 15
-                        },
-                    },
-                    animation:{
-                        easing: 'easeOutBack',
-                    },
-                    scales: {
-                        yAxes: [{
-                            gridLines: {
-                                display: true,
-                                color: "rgba(98, 224, 228, 0.4)"
-                            }
-                        }],
-                        xAxes: [{
-                            gridLines: {
-                                display: true,
-                                color: "rgba(98, 224, 228, 0.4)"
-                            }
-                        }],
+    var ctx = document.getElementById("myChart");
+    var myChart = new Chart(ctx, {
+    type: 'line',
+    data: {
+    labels: ["Jan", "Fev", "Mar", "Abr"],
+        datasets: [{
+            label: " Item 1 ",
+                borderColor: '#ff6384',
+                backgroundColor: '#ff6384',
+                fill: false,
+                data: [0, 10, 5, 2, 20],
+            },
+                {
+                label: " Item 2 ",
+                borderColor: '#00cfd6',
+                backgroundColor: '#00cfd6',
+                fill: false,
+                data: [0, 20, 15, 22, 29],
+            },
+                {
+                label: " Item 3 ",
+                borderColor: '#24f9cb',
+                backgroundColor: '#24f9cb',
+                fill: false,
+                data: [0, 10, 25, 32, 19],
+            }]
+        },
+        options: {
+            layout: {
+                padding: {
+                    left: 50,
+                    right: 50,
+                    top: 20,
+                    bottom: 20
                     }
+                },
+                title: {
+                    display: true,
+                    text: 'Ano 2017',
+                    fontSize: 13,
+                    padding: 20
+                },
+                legend: {
+                    position: 'bottom',
+                    labels:{
+                    boxWidth: 15
+                    },
+                },
+                animation:{
+                    easing: 'easeOutBack',
+                },
+                scales: {
+                yAxes: [{
+                gridLines: {
+                    display: true,
+                    color:"#62e0e466"
+                    }
+                }],
+                xAxes: [{
+                    gridLines: {
+                    display: true,
+                    color:"#62e0e466"
+                    }
+                }],
                 }
-            });
+            }
+         });
 
         </code></pre>
 
