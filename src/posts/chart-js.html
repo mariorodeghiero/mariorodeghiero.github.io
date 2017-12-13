@@ -106,11 +106,14 @@
 
 
         <p>Dentro do nosso código padrão, existe 3 tipos de configurações que o Chartjs nos proporssiona:</p>
-        
-        <h2>Type</h2> 
-        <p>Em type configuramos o tipo de gráfico que desejamos ( line, bar, radar, pie, polarArea, bubble, scatter ).</p>
-            
-            <pre class='code'><code>
+
+        <h2>Type</h2>
+        <p>Em type configuramos o tipo de gráfico que desejamos ( line, bar, radar, pie, polarArea, bubble, scatter ) em nosso
+            exemplo vamos usar o tipo de gráfico em linha, mas você pode consultar o site do
+            <a class="link" href="http://www.chartjs.org/">Chartjs</a> para mais informações.
+        </p>
+
+        <pre class='code'><code>
         var ctx = document.getElementById("myChart").getContext('2d');
 
         var myChart = new Chart(ctx, { 
@@ -118,8 +121,129 @@
         });
 
         </code></pre>
-        
-        
+
+        <h2>Data</h2>
+        <p>Em Data, nos vamos informar os dados para plotar em nosso gráfico. Primeiramente vamos informar os labels, no nosso caso vai ser apresentado alguns meses do ano, que é referenciado por um array, conforme o código abaixo.
+            Na sequência inserimos uma virgula e passamos os datasets para informar os dados a serem inseridos, podendo realizar algumas configurações de estilização, não entrarei em detelhae sobre estilização, pois esta disponivel na documentação, mas no exemplo ja contem uma previa do que é possivel estilizar.
+        </p>
+
+        <pre class='code'><code>
+        var ctx = document.getElementById("myChart").getContext('2d'); 
+        var myChart = new Chart(ctx, { 
+            type: 'line', 
+            data: { 
+                    labels: ["Jan", "Fev", "Mar", "Abr", "Mai", "Jun"], 
+                        datasets: [{ 
+                            label: " Item 1 ", 
+                            borderColor: 'rgb(255, 99, 132)', 
+                            backgroundColor: 'rgb(255, 99, 132)', 
+                            pointHoverBackgroundColor: 'rgb(255, 99, 132)', 
+                            fill: false, 
+                            data: [0, 10, 5, 2, 20, 30], 
+                        }, 
+                            { 
+                            label: " Item 2 ", 
+                            borderColor: 'rgba(0, 207, 214, 1)', 
+                            backgroundColor: 'rgba(0, 207, 214, 1)', 
+                            pointHoverBackgroundColor: 'rgba(0, 207, 214, 1)', 
+                            fill: false, 
+                            data: [0, 20, 15, 22, 29, 37], 
+                        }, 
+                            { 
+                            label: " Item 3 ", 
+                            borderColor: 'rgba(36, 249, 203, 1)',
+                            backgroundColor: 'rgba(36, 249, 203, 1)', 
+                            pointHoverBackgroundColor: 'rgba(36, 249, 203, 1)', 
+                            fill: false, 
+                            data: [0, 10, 25, 32, 19, 27], 
+                        }],
+                } 
+        });
+            
+
+        </code></pre>
+
+
+        <h2>Options</h2>
+        <p>Em options, realizamos as congirações globais do nosso gráfico, então logo após o fechamento da chaves do tipo "data", vamo inserir uma virgula e passar o options. Dentro dele é possivel realizar diverssos tipos de configurações, vou informar e demostrar no código abaixo, apenas algumas delas, mas também esta disponivel na documentação do Chartjs.
+        </p>
+
+    
+        <pre class='code'><code>
+
+            var ctx = document.getElementById("myChart").getContext('2d');
+            var myChart = new Chart(ctx, {
+                type: 'line',
+                data: {
+                    labels: ["Jan", "Fev", "Mar", "Abr", "Mai", "Jun"],
+                    datasets: [{
+                        label: " Item 1 ",
+                        borderColor: 'rgb(255, 99, 132)',
+                        backgroundColor: 'rgb(255, 99, 132)',
+                        pointHoverBackgroundColor: 'rgb(255, 99, 132)',
+                        fill: false,
+                        data: [0, 10, 5, 2, 20, 30],
+                    },
+                                {
+                        label: " Item 2 ",
+                        borderColor: 'rgba(0, 207, 214, 1)',
+                        backgroundColor: 'rgba(0, 207, 214, 1)',
+                        pointHoverBackgroundColor: 'rgba(0, 207, 214, 1)',
+                        fill: false,
+                        data: [0, 20, 15, 22, 29, 37],
+                    },
+                                {
+                        label: " Item 3 ",
+                        borderColor: 'rgba(36, 249, 203, 1)',
+                        backgroundColor: 'rgba(36, 249, 203, 1)',
+                        pointHoverBackgroundColor: 'rgba(36, 249, 203, 1)',
+                        fill: false,
+                        data: [0, 10, 25, 32, 19, 27],
+                    }]
+                },
+                options: {
+                layout: {
+                        padding: {
+                            left: 50,
+                            right: 50,
+                            top: 20,
+                            bottom: 20
+                        }
+                        },
+                    title: {
+                        display: true,
+                        text: 'Gráfico Ano 2017',
+                        fontSize: 13,
+                        padding: 20
+                    },
+                    legend: {
+                        position: 'bottom',
+                        labels:{
+                            boxWidth: 15
+                        },
+                    },
+                    animation:{
+                        easing: 'easeOutBack',
+                    },
+                    scales: {
+                        yAxes: [{
+                            gridLines: {
+                                display: true,
+                                color: "rgba(98, 224, 228, 0.4)"
+                            }
+                        }],
+                        xAxes: [{
+                            gridLines: {
+                                display: true,
+                                color: "rgba(98, 224, 228, 0.4)"
+                            }
+                        }],
+                    }
+                }
+            });
+
+        </code></pre>
+
 
         <h2>Exemplo do Código funcionando</h2>
 
