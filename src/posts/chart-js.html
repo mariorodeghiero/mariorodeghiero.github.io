@@ -61,27 +61,30 @@
         <h4>"Construindo gráficos com chart.js"</h4>
 
         <p>
-            ChartJs é uma biblioteca de WebGraphics baseado em canvas, podendo realizar manipulação dos dados atraves de javascript e
-            para tornar o desenvolvimento mais rapido e pratico. Com este framework, você ainda gera graficos respovivos
-            e pode personlizar de acordo com sua necessidade, pois ele possui varios tipos diferentes de grafico.
+            ChartJs é uma biblioteca de WebGraphics baseado em canvas, podendo realizar manipulação dos dados atraves de javascript,
+            para tornar o desenvolvimento de graficos, mais rapido e pratico. Com este framework, você ainda gera graficos
+            respovivos e pode personlizar de acordo com sua necessidade, pois ele possui varios tipos diferentes de grafico.
         </p>
 
         <h2>Código HTML</h2>
         <p>
-            Como este é um simples exemplo para abordar apenas algumas das varias configurações disponiveis no Chartjs, nosso codigo
-            HTML vai apresentar uma simples Tag canvas com id="myChart" e no final, especificamos o caminho do nosso arquivo
-            "chart.js".
+            Como este é um simples exemplo para abordar apenas algumas, das varias configurações disponiveis no Chartjs, nosso código
+            HTML vai apresentar uma tag script com um source para buscar a lib e uma simples Tag canvas com id="myChart".
+            E no final do nosso HTML, especificamos o caminho do nosso arquivo "chart.js".
         </p>
         <pre class='code'><code>
-                &lt;html&gt;
-                &lt;body&gt;
+            &lt;html&gt;
+            &lt;head&gt;
+            &lt;script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.4.0/Chart.min.js"&gt;&lt;/script&gt;
+            &lt;/head&gt;
+            &lt;body&gt;
                 
-                         &lt;canvas id="myChart"&gt &lt;/canvas&gt
+                     &lt;canvas id="myChart"&gt &lt;/canvas&gt
                 
-                &lt;script src="js/chart.js"&gt;&lt;script&gt;
-                &lt;/body&gt;
-                &lt;/html&gt;
-                </code></pre>
+            &lt;script src="js/chart.js"&gt;&lt;script&gt;
+            &lt;/body&gt;
+            &lt;/html&gt;
+        </code></pre>
 
         <h2>Criando o codigo javascript</h2>
 
@@ -123,8 +126,11 @@
         </code></pre>
 
         <h2>Data</h2>
-        <p>Em Data, nos vamos informar os dados para plotar em nosso gráfico. Primeiramente vamos informar os labels, no nosso caso vai ser apresentado alguns meses do ano, que é referenciado por um array, conforme o código abaixo.
-            Na sequência inserimos uma virgula e passamos os datasets para informar os dados a serem inseridos, podendo realizar algumas configurações de estilização, não entrarei em detelhae sobre estilização, pois esta disponivel na documentação, mas no exemplo ja contem uma previa do que é possivel estilizar.
+        <p>Em Data, nos vamos informar os dados para plotar em nosso gráfico. Primeiramente vamos informar os labels, no nosso
+            caso vai ser apresentado alguns meses do ano, que é referenciado por um array, conforme o código abaixo. Na sequência
+            inserimos uma virgula e passamos os datasets para informar os dados a serem inseridos, podendo realizar algumas
+            configurações de estilização, não entrarei em detelhae sobre estilização, pois esta disponivel na documentação,
+            mas no exemplo ja contem uma previa do que é possivel estilizar.
         </p>
 
         <pre class='code'><code>
@@ -165,10 +171,13 @@
 
 
         <h2>Options</h2>
-        <p>Em options, realizamos as congirações globais do nosso gráfico, então logo após o fechamento da chaves do tipo "data", vamo inserir uma virgula e passar o options. Dentro dele é possivel realizar diverssos tipos de configurações, vou informar e demostrar no código abaixo, apenas algumas delas, mas também esta disponivel na documentação do Chartjs.
+        <p>Em options, realizamos as congirações globais do nosso gráfico, então logo após o fechamento da chaves do tipo "data",
+            vamo inserir uma virgula e passar o options. Dentro dele é possivel realizar diverssos tipos de configurações,
+            vou informar e demostrar no código abaixo, apenas algumas delas, mas também esta disponivel na documentação do
+            Chartjs.
         </p>
 
-    
+
         <pre class='code'><code>
 
             var ctx = document.getElementById("myChart").getContext('2d');
@@ -251,10 +260,11 @@
 
         </p>
 
-        <img class="screenShot" src="../img/screenShot-object-literal.png" alt="screen Shot da estrutura de arquivos">
+        <img class="screenShot" src="../img/screensShot-chartjs.png" alt="screen Shot do gráfico construido com chartjs">
 
         <p>
-
+            Esse foi um post para apresentar um pouco mais sobre chartjs ♥️, esta lib open source fantastica. Agora é só colocar a criatividade em pratica e brincar com as milhares de configurações possiveis em Chartjs.<br>
+            Thanks!!
         </p>
 
     </article>
