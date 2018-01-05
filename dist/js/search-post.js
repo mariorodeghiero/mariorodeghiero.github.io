@@ -6,7 +6,8 @@ const findPost = document.getElementById('search-input');
 findPost.addEventListener('keyup', findMatches);
 
 function getPosts() {
-    fetch('https://mariorodeghiero.herokuapp.com/')
+    // fetch('https://mariorodeghiero.herokuapp.com/')
+    fetch("./db/posts.json")
         .then((res) => res.json())
         .then((data) => {
             let output = '';
@@ -19,6 +20,21 @@ function getPosts() {
             document.getElementById('output').innerHTML = output;
         });
 }
+
+// function getPosts() {
+//     var post = fetch("./db/posts.json");
+
+//     post
+//         .then( data => data.json())
+//         .then( data => data.map(post => {
+//             // console.log(post.title);
+//             output +=
+//                     `
+//                         <li class=" animated fadeInLeft"><a href="#">${post.title}</a></li>
+//                         <hr class="hr-search animated fadeInLeft">
+//                     `;
+//         }));
+// }
 
 function findMatches() {
     var filter = findPost.value.toUpperCase();
