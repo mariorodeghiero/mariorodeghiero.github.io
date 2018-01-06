@@ -2,19 +2,19 @@
     {
         "title": "CopyRight Automatico",
         "tags": "[JS]",
-        "url": "./posts/copy-right.html",
+        "url": "dist/posts/copy-right.html",
         "date": "9 out 2017"
     },
     {
         "title": "Objeto de notação literal",
         "tags": "[JS]",
-        "url": "./posts/object-literal.html",
+        "url": "dist/posts/object-literal.html",
         "date": "05 nov 2017"
     },
     {
         "title": "Construindo gráficos com chart.js",
         "tags": "[JS, ChartJS]",
-        "url": "./posts/chart-js.html",
+        "url": "dist/posts/chart-js.html",
         "date": "12 dez 2017"
     }
 ]
