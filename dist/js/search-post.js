@@ -14,27 +14,12 @@ function getPosts() {
             data.forEach(function (post) {
                 output +=
                     `
-                    <li class=" animated fadeInLeft"><a href="#">${post.title}</a></li><hr class="hr-search animated fadeInLeft">
+                    <li class=" animated fadeInLeft"><a href="${post.url}">${post.title}</a></li><hr class="hr-search animated fadeInLeft">
                     `;
             });
             document.getElementById('output').innerHTML = output;
         });
 }
-
-// function getPosts() {
-//     var post = fetch("./db/posts.json");
-
-//     post
-//         .then( data => data.json())
-//         .then( data => data.map(post => {
-//             // console.log(post.title);
-//             output +=
-//                     `
-//                         <li class=" animated fadeInLeft"><a href="#">${post.title}</a></li>
-//                         <hr class="hr-search animated fadeInLeft">
-//                     `;
-//         }));
-// }
 
 function findMatches() {
     var filter = findPost.value.toUpperCase();

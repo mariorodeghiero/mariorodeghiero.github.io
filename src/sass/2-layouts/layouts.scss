@@ -76,7 +76,6 @@
     }
 }
 
-
 /* start search */
 
 .search-btn {
@@ -84,6 +83,11 @@
     margin-top: 60px;
     margin-left: 1%;
     z-index: 79;
+    :hover{
+        padding-top: 3px;
+        transition-duration: 0.2s;
+        cursor: pointer;
+    }
 }
 
 .search {
@@ -112,9 +116,6 @@
         font-size: 36px;
         text-decoration: none;
         cursor: pointer;
-        &:hover {
-            color: gray;
-        }
     }
     ul {
         margin-top: 20px;
@@ -126,8 +127,9 @@
             a {
                 color: #000;
                 text-decoration: none;
+                transition: opacity .3s;
                 &:hover {
-                    color: #E3DFDF;
+                    opacity: 0.3;
                 }
             }
         }
@@ -139,14 +141,12 @@
     }
 }
 
-
 /* end search */
 
 .geral {
     min-height: 100%;
     position: relative;
 }
-
 
 /* start footer */
 
@@ -171,10 +171,7 @@
     }
 }
 
-
 /* end footer */
-
-
 /* Start Toggle */
 
 #output {
@@ -191,6 +188,7 @@
         }
     }
     .card {
+        transition: box-shadow .3s;
         background-color: #ffffff;
         h1 {
             text-align: center;
@@ -209,7 +207,6 @@
             .tag-post {
                 margin-left: -30px;
                 li {
-                    // margin-top: 100px;
                     display: inline-block;
                     list-style: none;
                     padding: 8px 15px;
@@ -219,5 +216,8 @@
                 }
             }
         }
+         &:hover {
+             box-shadow: 0 0 11px rgba(33, 33, 33, .2);
+         }
     }
 }

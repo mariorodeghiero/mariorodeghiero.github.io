@@ -90,6 +90,10 @@
   margin-top: 60px;
   margin-left: 1%;
   z-index: 79; }
+  .search-btn :hover {
+    padding-top: 3px;
+    transition-duration: 0.2s;
+    cursor: pointer; }
 
 .search {
   display: none;
@@ -115,8 +119,6 @@
     font-size: 36px;
     text-decoration: none;
     cursor: pointer; }
-    .search .close-btn:hover {
-      color: gray; }
   .search ul {
     margin-top: 20px; }
     .search ul li {
@@ -126,9 +128,10 @@
       color: #000; }
       .search ul li a {
         color: #000;
-        text-decoration: none; }
+        text-decoration: none;
+        transition: opacity .3s; }
         .search ul li a:hover {
-          color: #E3DFDF; }
+          opacity: 0.3; }
     .search ul hr {
       margin-left: -20px;
       width: 90%;
@@ -168,6 +171,7 @@
       text-decoration: none;
       color: inherit; }
   .article .card {
+    transition: box-shadow .3s;
     background-color: #ffffff; }
     .article .card h1 {
       text-align: center; }
@@ -188,3 +192,5 @@
         border-radius: 4px;
         background-color: #00B4CC;
         color: #FFFFFF; }
+    .article .card:hover {
+      box-shadow: 0 0 11px rgba(33, 33, 33, 0.2); }
