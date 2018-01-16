@@ -27,6 +27,9 @@
     <meta itemprop="description" content="Construindo objetos de notação literal">
 
     <link rel="stylesheet" href="../css/article.css">
+    <link href="../css/prism.css" rel="stylesheet">
+    <script src="../js/prism.js"></script>
+
     <!-- Global Site Tag (gtag.js) - Google Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=UA-107916783-1"></script>
     <script>
@@ -70,25 +73,25 @@
         <p>Logo abaixo esta disponível o código HTML que foi utilizando para exemplo. Para estilização foi usado o framework
             bootstrap e configurado algumas estilizações pessoais, fique a vontade para aplicar suas estilazações.
         </p>
-        <pre class='code'><code>
-                &lt;html&gt;
-                &lt;body&gt;
+        <pre><code class="language-html">
+        &lt;html&gt;
+        &lt;body&gt;
                 
-                         &lt;div class="container"&gt 
-                            &lt;div class="form-group"&gt 
-                                &lt;h1&gt Restaurante 
-                                    &lt;span id="restauranteNome">&lt;/span&gt
-                                &lt;/h1&gt
-                                &lt;hr&gt
-                                &lt;h4&gt Atualmente temos disponiveis: &lt;/h4&gt
-                                &lt;span id="mesas">&lt;/span&gt mesas
-                            &lt;/div&gt
-                         &lt;/div&gt
-                
-                &lt;script src="js/object-literal.js"&gt;&lt;script&gt;
-                &lt;/body&gt;
-                &lt;/html&gt;
-                </code></pre>
+             &lt;div class="container"&gt 
+                &lt;div class="form-group"&gt 
+                    &lt;h1&gt Restaurante 
+                        &lt;span id="restauranteNome">&lt;/span&gt
+                    &lt;/h1&gt
+                    &lt;hr&gt
+                    &lt;h4&gt Atualmente temos disponiveis: &lt;/h4&gt
+                    &lt;span id="mesas">&lt;/span&gt mesas
+                &lt;/div&gt
+            &lt;/div&gt
+            
+            &lt;script src="js/object-literal.js"&gt;&lt;script&gt;
+        &lt;/body&gt;
+        &lt;/html&gt;
+          </code></pre>
 
         <h2>Construindo um objeto literal</h2>
         <p>
@@ -100,23 +103,21 @@
         </p>
 
         <h2>Código JS</h2>
-        <pre class='code'><code>
+        <pre><code class="language-javascript">
+       let restaurante = { 
+           nome: 'Thay', 
+           mesas: 30, 
+           reservada: 25, 
+           mesasDisponiveis: function () { 
+               return this.mesas - this.reservada;
+           } 
+       }; 
 
+       let restNome = document.getElementById('restauranteNome');
+       restNome.innerHTML = restaurante.nome;
 
-            let restaurante = { 
-                nome: 'Thay', 
-                mesas: 30, 
-                reservada: 25, 
-                mesasDisponiveis: function () { 
-                    return this.mesas - this.reservada;
-                } 
-            }; 
-
-            let restNome = document.getElementById('restauranteNome');
-            restNome.innerHTML = restaurante.nome;
-
-            let restMesas = document.getElementById('mesas');
-            restMesas.textContent = restaurante.mesasDisponiveis();
+       let restMesas = document.getElementById('mesas');
+       restMesas.textContent = restaurante.mesasDisponiveis();
 
         </code></pre>
 
@@ -130,10 +131,11 @@
         <img class="screenShot" src="../img/screenShot-object-literal.png" alt="screen Shot da estrutura de arquivos">
 
         <p>
-            Este código foi inspirado, com base no aprendizado do livro "JavaScript & JQuery Desenvolvimento de interfaces
+            Este código foi escrito com base no aprendizado do livro "JavaScript & JQuery Desenvolvimento de interfaces
             web interativas", autor "Jon Duckett". <br>
             Pretendo criar mais posts, repassando o que aprendi em livros, youtube
-            e cursos que estudo. Acho que escrever é uma boa forma de fixar o que aprendo e ainda de praxe, posso ajudar alguém.
+            e nos cursos em que estudo. Escrever é uma boa forma de fixar o que aprendo e ainda de praxe, posso ajudar alguém.<br>
+            Thanks!!!
         </p>
 
     </article>

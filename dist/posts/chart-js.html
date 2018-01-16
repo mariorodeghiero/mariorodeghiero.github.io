@@ -27,6 +27,9 @@
     <meta itemprop="description" content="Construindo gráficos com chart.js">
 
     <link rel="stylesheet" href="../css/article.css">
+    <link href="../css/prism.css" rel="stylesheet">
+    <script src="../js/prism.js"></script>
+
     <!-- Global Site Tag (gtag.js) - Google Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=UA-107916783-1"></script>
     <script>
@@ -70,7 +73,7 @@
             HTML vai apresentar uma tag script com um source para buscar a lib e uma simples Tag <b>"canvas"</b> com <b>id="myChart"</b>.
             E no final do nosso HTML, especificamos o caminho do nosso arquivo <b>"chart.js"</b>.
         </p>
-        <pre class='code'><code>
+        <pre><code class="language-html">
     &lt;html&gt;
     &lt;head&gt;
     &lt;script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.4.0/Chart.min.js"&gt;&lt;/script&gt;
@@ -96,7 +99,7 @@
             <b>"ctx"</b>.
         </p>
 
-        <pre class='code'><code>
+        <pre><code class="language-javascript">
     var ctx = document.getElementById("myChart");
 
     var myChart = new Chart(ctx, { 
@@ -114,7 +117,7 @@
             <a class="link" href="http://www.chartjs.org/" target="_blank">Chartjs</a> para mais informações.
         </p>
 
-        <pre class='code'><code>
+        <pre><code class="language-javascript">
     var ctx = document.getElementById("myChart");
 
     var myChart = new Chart(ctx, { 
@@ -131,7 +134,7 @@
             mas no exemplo, já contém uma previa do que é possível estilizar.
         </p>
 
-        <pre class='code'><code>
+        <pre><code class="language-javascript">
     var ctx = document.getElementById("myChart"); 
     var myChart = new Chart(ctx, { 
     type: 'line', 
@@ -173,7 +176,7 @@
             </p>
 
 
-        <pre class='code'><code>
+        <pre><code class="language-javascript">
 
     var ctx = document.getElementById("myChart");
     var myChart = new Chart(ctx, {
@@ -255,8 +258,8 @@
         <img class="screenShot" src="../img/screensShot-chartjs.png" alt="screen Shot do gráfico construido com chartjs">
 
         <p>
-            Esse foi um post para apresentar um pouco mais sobre chartjs ♥️, esta lib open source fantástica. Agora é só colocar a criatividade em pratica e brincar com as milhares de configurações possíveis no Chartjs.
-            Caso eu tenha deixado passar despercebido algum erro código , esta disponivel também no meu <a class="link" href="https://codepen.io/mariorodeghiero/pen/rYoLOY" target="_blank">codepen.io</a>. <br>
+            Esse foi um post para apresentar um pouco mais sobre chartjs ♥️, esta lib open source fantástica. Agora é só colocar a criatividade em prática e brincar com as milhares de configurações possíveis no Chartjs.
+            Caso tenha deixado passar despercebido algum erro, o código esta disponivel também no meu <a class="link" href="https://codepen.io/mariorodeghiero/pen/rYoLOY" target="_blank">codepen.io</a>. <br>
             Thanks!!
         </p>
 
