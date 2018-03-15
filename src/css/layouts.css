@@ -36,7 +36,7 @@
     padding-top: 5px; }
     .container-header .logo h1 {
       font-size: 1.6em;
-      color: #00B4CC;
+      color: #00b4cc;
       font-family: sans-serif; }
   .container-header .toggle {
     width: 45px;
@@ -68,11 +68,11 @@
           -moz-transition: 0.3s ease-out;
           -o-transition: 0.3s ease-out;
           transition: 0.3s ease-out;
-          font-family: 'Montserrat';
+          font-family: "Montserrat";
           font-size: 13px;
           text-decoration: none; }
           .container-header .links ul li a:hover {
-            background-color: #A9A9A9;
+            background-color: #a9a9a9;
             opacity: 0.2;
             color: #000;
             border-radius: 10px;
@@ -121,13 +121,13 @@
       .search ul li a {
         color: #000;
         text-decoration: none;
-        transition: opacity .3s; }
+        transition: opacity 0.3s; }
         .search ul li a:hover {
           opacity: 0.3; }
     .search ul hr {
       margin-left: -20px;
       width: 90%;
-      background-color: #00B4CC; }
+      background-color: #00b4cc; }
 
 /* necessary to give position: relative to parent. */
 .effect-2 {
@@ -200,7 +200,7 @@
       text-decoration: none;
       color: inherit; }
   .article .card {
-    transition: box-shadow .3s;
+    transition: box-shadow 0.3s;
     background-color: #ffffff; }
     .article .card h1 {
       text-align: center; }
@@ -219,7 +219,7 @@
         list-style: none;
         padding: 8px 15px;
         border-radius: 4px;
-        background-color: #00B4CC;
-        color: #FFFFFF; }
+        background-color: #00b4cc;
+        color: #ffffff; }
     .article .card:hover {
       box-shadow: 0 0 11px rgba(33, 33, 33, 0.2); }
