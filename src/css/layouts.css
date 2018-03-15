@@ -104,14 +104,6 @@
   padding: 50px;
   z-index: 89;
   width: 100%; }
-  .search input {
-    margin-top: 30px;
-    border-radius: 5px;
-    border: 1px solid #00B4CC;
-    background-color: #FFFFFF;
-    padding: 5px;
-    font-family: 'Open Sans';
-    width: 90%; }
   .search .close-btn {
     top: 3px;
     float: right;
@@ -137,6 +129,38 @@
       width: 90%;
       background-color: #00B4CC; }
 
+/* necessary to give position: relative to parent. */
+.effect-2 {
+  border: 0;
+  padding: 7px 0;
+  border-bottom: 1px solid grey;
+  width: 100%; }
+
+.effect-2 ~ .focus-border {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  width: 0;
+  height: 2px;
+  background-color: turquoise;
+  transition: 0.4s; }
+
+.effect-2:focus ~ .focus-border {
+  width: 100%;
+  transition: 0.4s;
+  left: 0; }
+
+.inp-search {
+  font: 15px/24px "Lato", Arial, sans-serif;
+  width: 90%;
+  box-sizing: border-box;
+  letter-spacing: 1px;
+  background: #eee;
+  color: #708090; }
+
+:focus {
+  outline: none; }
+
 /* end search */
 .geral {
   min-height: 100%;
@@ -153,10 +177,15 @@
       padding-top: 45px;
       padding-right: 15px;
       display: inline-block; }
-      .footer .social-icons li .github:hover,
-      .footer .social-icons li .linkedin:hover,
-      .footer .social-icons li .twitter:hover {
-        opacity: 0.6; }
+      .footer .social-icons li .github,
+      .footer .social-icons li .linkedin,
+      .footer .social-icons li .twitter {
+        width: 48px;
+        height: 48px; }
+        .footer .social-icons li .github:hover,
+        .footer .social-icons li .linkedin:hover,
+        .footer .social-icons li .twitter:hover {
+          opacity: 0.6; }
 
 /* end footer */
 /* Start Toggle */

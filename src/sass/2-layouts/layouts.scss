@@ -83,7 +83,7 @@
     margin-top: 60px;
     margin-left: 1%;
     z-index: 79;
-    :hover{
+    :hover {
         padding-top: 3px;
         transition-duration: 0.2s;
         cursor: pointer;
@@ -96,19 +96,17 @@
     height: 100%;
     position: fixed;
     background: #eee;
-    padding: 50px;
-    // opacity: 0.9;
+    padding: 50px; // opacity: 0.9;
     z-index: 89;
-    width: 100%;
-    input {
-        margin-top: 30px;
-        border-radius: 5px;
-        border: 1px solid #00B4CC;
-        background-color: #FFFFFF;
-        padding: 5px;
-        font-family: 'Open Sans';
-        width: 90%;
-    }
+    width: 100%; // input {
+    //     margin-top: 30px;
+    //     border-radius: 5px;
+    //     border: 1px solid #00B4CC;
+    //     background-color: #FFFFFF;
+    //     padding: 5px;
+    //     font-family: 'Open Sans';
+    //     width: 90%;
+    // }
     .close-btn {
         top: 3px;
         float: right;
@@ -141,6 +139,44 @@
     }
 }
 
+/* necessary to give position: relative to parent. */
+
+.effect-2 {
+    border: 0;
+    padding: 7px 0;
+    border-bottom: 1px solid grey;
+    width: 100%;
+}
+
+.effect-2~.focus-border {
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    width: 0;
+    height: 2px;
+    background-color: turquoise;
+    transition: 0.4s;
+}
+
+.effect-2:focus~.focus-border {
+    width: 100%;
+    transition: 0.4s;
+    left: 0;
+}
+
+.inp-search {
+    font: 15px/24px "Lato", Arial, sans-serif;
+    width: 90%;
+    box-sizing: border-box;
+    letter-spacing: 1px;
+    background: #eee;
+    color: #708090;
+}
+
+:focus {
+    outline: none;
+}
+
 /* end search */
 
 .geral {
@@ -163,6 +199,8 @@
             .github,
             .linkedin,
             .twitter {
+                width: 48px;
+                height: 48px;
                 &:hover {
                     opacity: 0.6;
                 }
@@ -172,6 +210,7 @@
 }
 
 /* end footer */
+
 /* Start Toggle */
 
 #output {
@@ -216,8 +255,8 @@
                 }
             }
         }
-         &:hover {
-             box-shadow: 0 0 11px rgba(33, 33, 33, .2);
-         }
+        &:hover {
+            box-shadow: 0 0 11px rgba(33, 33, 33, .2);
+        }
     }
 }

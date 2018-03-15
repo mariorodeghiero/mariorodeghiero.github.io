@@ -2,7 +2,7 @@
 <html lang="en">
 
 <head>
-   
+
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -40,24 +40,25 @@
 
     <!-- endbuild -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css">
-    
 
-     <!-- Global Site Tag (gtag.js) - Google Analytics -->
-     <script async src="https://www.googletagmanager.com/gtag/js?id=UA-107916783-1"></script>
-     <script>
-         window.dataLayer = window.dataLayer || [];
- 
-         function gtag() {
-             dataLayer.push(arguments);
-         }
-         gtag('js', new Date());
- 
-         gtag('config', 'UA-107916783-1');
-     </script>
+
+    <!-- Global Site Tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-107916783-1"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+
+        function gtag() {
+            dataLayer.push(arguments);
+        }
+        gtag('js', new Date());
+
+        gtag('config', 'UA-107916783-1');
+    </script>
 </head>
 
 <body>
     <div class="geral">
+
         <header>
             <div class="container-header">
                 <div class="logo">
@@ -88,8 +89,10 @@
         <div class="search-btn">
             <input id="search-btn" type="image" src="img/search-icon.png">
         </div>
+
         <div class="search animated slideInUp" id="container-search">
-            <input type="search" name="search" id="search-input" placeholder="ex: flex-box">
+            <input type="search" name="search" id="search-input" class="inp-search effect-2" placeholder="ex: flex-box">
+            <span class="focus-border"></span>
             <span class="close-btn" id="close-btn">&times;</span>
             <ul id="output"></ul>
         </div>
@@ -123,17 +126,32 @@
         <div class="container ">
             <div class="article ">
 
+                <a href="../src/posts/2018/spread-operator.html">
+                    <article class="card card-body mb-5 animated zoomInRight">
+                        <h1>Spread operator ES6</h1>
+                        <p>Neste post vamos um pouco sobre como funciona o spread operator "..." no ES6.</p>
+                        <div class="container-tag-post">
+                            <ul class="tag-post">
+                                <li>JS</li>
+                                <li>ES6</li>
+                            </ul>
+                        </div>
+                        <h4> Wednesday, march 14, 2018</h4>
+                    </article>
+                </a>
+
                 <article class="card card-body mb-5 animated zoomInRight">
                     <a href="../src/posts/chart-js.html">
                         <h1>Construindo gráficos com chart.js</h1>
-                        <p>Neste post vamos criar e enteder, sobre como funciona o framework Chartjs, essa lib opensource famosa por seu gráficos resposivos.</p>
+                        <p>Neste post vamos criar e enteder, sobre como funciona o framework Chartjs, essa lib opensource famosa
+                            por seu gráficos resposivos.</p>
                         <div class="container-tag-post">
                             <ul class="tag-post">
                                 <li class="btn-outline-info">JS</li>
                                 <li>HTML</li>
                             </ul>
                         </div>
-                        <h4> Tuesday, 12 December 2017</h4>
+                        <h4> Tuesday, December 12, 2017</h4>
                     </a>
                 </article>
 
@@ -147,26 +165,26 @@
                                 <li>HTML</li>
                             </ul>
                         </div>
-                        <h4> Monday, 9 october 2017</h4>
+                        <h4> Monday, October 9, 2017</h4>
                     </a>
                 </article>
 
+                <a href="../src/posts/object-literal.html">
+                    <article class="card card-body mb-5 animated zoomInRight">
+                        <h1>Objeto com notação literal</h1>
+                        <p>Neste post vou mostrar como construir um objeto em Javascript com notação literal e realizar a manipulação
+                            do DOM.</p>
+                        <div class="container-tag-post">
+                            <ul class="tag-post">
+                                <li class="btn-outline-info">JS</li>
+                                <li>HTML</li>
+                            </ul>
+                        </div>
+                        <h4> Sunday, November 5, 2017</h4>
+                    </article>
+                </a>
 
-                 <a href="../src/posts/object-literal.html">
-                        <article class="card card-body mb-5 animated zoomInRight">
-                            <h1>Objeto com notação literal</h1>
-                            <p>Neste post vou mostrar como construir um objeto em Javascript com notação literal e realizar a manipulação do DOM.</p>
-                            <div class="container-tag-post">
-                                <ul class="tag-post">
-                                    <li class="btn-outline-info">JS</li>
-                                    <li>HTML</li>
-                                </ul>
-                            </div>
-                            <h4> Sunday, 5 november 2017</h4>
-                        </article>
-                    </a>
-
-            <!--  <a href="article.html">
+                <!--  <a href="article.html">
                             <article class="card card-body mb-5 animated zoomInRight">
                                 <h1>Eventos do addEventListener</h1>
                                 <p>Neste post vou mostrar como realizar consultas utilizando o Fetch API para consultar via URL, texto e json.</p>
@@ -188,17 +206,17 @@
         <ul class="social-icons">
             <li>
                 <a href="https://github.com/MarioRodeghiero">
-                    <img class="github" src="img/github-icon.png" alt="Icone de redirecionamento para Git">
+                    <img class="github" src="img/github-icon.svg" alt="Icone de redirecionamento para Git">
                 </a>
             </li>
             <li>
                 <a href="https://br.linkedin.com/in/mariorodeghiero">
-                    <img class="linkedin" src="img/linkedin-icon.png" alt="Icone de redirecionamento para Linkedin">
+                    <img class="linkedin" src="img/linkedin-icon.svg" alt="Icone de redirecionamento para Linkedin">
                 </a>
             </li>
             <li>
                 <a href="https://twitter.com/rodeghiero_">
-                    <img class="twitter" src="img/twitter-icon.png" alt="Icone de redirecionamento paraTwitter">
+                    <img class="twitter" src="img/twitter-icon.svg" alt="Icone de redirecionamento paraTwitter">
                 </a>
             </li>
         </ul>
