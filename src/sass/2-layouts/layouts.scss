@@ -6,15 +6,14 @@
   box-shadow: 0 1px 6px 0 rgba(0, 0, 0, 0.2);
   width: 100%;
   top: 0;
-  background-color: #708090;
+  background-color: #ffffff;
   position: fixed;
-  padding: 10px;
   z-index: 999;
   .logo {
     width: 15%;
     float: left;
     text-align: center;
-    padding-top: 5px;
+    margin-top: 15px;
     h1 {
       font-size: 1.6em;
       color: #00b4cc;
@@ -41,14 +40,14 @@
   .links {
     width: 85%;
     float: left;
-    padding-top: 5px;
+    margin-top: 15px;
     ul {
       float: right;
       li {
         display: inline-block;
         margin-right: 35px;
         a {
-          color: #fff;
+          color: #000;
           -webkit-transition: 0.3s ease-out;
           -moz-transition: 0.3s ease-out;
           -o-transition: 0.3s ease-out;
@@ -58,7 +57,7 @@
           text-decoration: none;
           &:hover {
             background-color: #a9a9a9;
-            opacity: 0.2;
+            opacity: 0.3;
             color: #000;
             border-radius: 10px;
             padding: 10px;
@@ -95,8 +94,8 @@
   top: 60px;
   height: 100%;
   position: fixed;
-  background: #eee;
-  padding: 50px; // opacity: 0.9;
+  background: #f0f0f0;
+  padding: 50px;
   z-index: 89;
   width: 100%;
   .close-btn {
@@ -179,13 +178,13 @@
 /* start footer */
 
 .footer {
-  height: 130px;
-  background-color: #778899;
+  height: 80px;
+  background-color: #00b4cc;
   .social-icons {
     text-align: center;
     margin-left: -40px;
     li {
-      padding-top: 45px;
+      padding-top: 20px;
       padding-right: 15px;
       display: inline-block;
       .github,
@@ -194,7 +193,7 @@
         width: 48px;
         height: 48px;
         &:hover {
-          opacity: 0.6;
+          opacity: 0.4;
         }
       }
     }
