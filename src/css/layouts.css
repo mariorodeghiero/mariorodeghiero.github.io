@@ -96,24 +96,23 @@
 
 .search {
   display: none;
-  top: 60px;
   height: 100%;
   position: fixed;
   background: #f0f0f0;
-  padding: 50px;
   z-index: 89;
-  width: 100%; }
+  width: 100%;
+  text-align: center; }
   .search .close-btn {
-    top: 3px;
+    top: 60px;
     float: right;
     position: absolute;
-    font-size: 36px;
+    font-size: 1.6em;
     text-decoration: none;
-    cursor: pointer; }
+    cursor: pointer;
+    color: #00b4cc; }
   .search ul {
     margin-top: 20px; }
     .search ul li {
-      margin-left: -20px;
       padding-top: 15px;
       font-size: 0.8rem;
       color: #000; }
@@ -124,9 +123,7 @@
         .search ul li a:hover {
           opacity: 0.3; }
     .search ul hr {
-      margin-left: -20px;
-      width: 90%;
-      background-color: #00b4cc; }
+      width: 50%; }
 
 /* necessary to give position: relative to parent. */
 .effect-2 {
@@ -151,11 +148,13 @@
 
 .inp-search {
   font: 15px/24px "Lato", Arial, sans-serif;
-  width: 90%;
+  width: 50%;
+  margin-top: 80px;
   box-sizing: border-box;
   letter-spacing: 1px;
   background: #eee;
-  color: #708090; }
+  border-color: #00b4cc;
+  opacity: 0.5; }
 
 :focus {
   outline: none; }
@@ -168,13 +167,13 @@
 /* start footer */
 .footer {
   height: 80px;
-  background-color: #00b4cc; }
+  background-color: #00b4cc;
+  text-align: center;
+  padding: 16px; }
   .footer .social-icons {
-    text-align: center;
-    margin-left: -40px; }
+    margin-left: -20px; }
     .footer .social-icons li {
-      padding-top: 20px;
-      padding-right: 15px;
+      padding-left: 10px;
       display: inline-block; }
       .footer .social-icons li .github,
       .footer .social-icons li .linkedin,

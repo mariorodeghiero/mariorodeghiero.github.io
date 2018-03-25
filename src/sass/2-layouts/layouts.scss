@@ -76,7 +76,6 @@
 }
 
 /* start search */
-
 .search-btn {
   position: fixed;
   margin-top: 60px;
@@ -91,25 +90,24 @@
 
 .search {
   display: none;
-  top: 60px;
   height: 100%;
   position: fixed;
   background: #f0f0f0;
-  padding: 50px;
   z-index: 89;
   width: 100%;
+  text-align: center;
   .close-btn {
-    top: 3px;
+    top: 60px;
     float: right;
     position: absolute;
-    font-size: 36px;
+    font-size: 1.6em;
     text-decoration: none;
     cursor: pointer;
+    color: #00b4cc;
   }
   ul {
     margin-top: 20px;
     li {
-      margin-left: -20px;
       padding-top: 15px;
       font-size: 0.8rem;
       color: #000;
@@ -123,15 +121,12 @@
       }
     }
     hr {
-      margin-left: -20px;
-      width: 90%;
-      background-color: #00b4cc;
+      width: 50%;
     }
   }
 }
 
 /* necessary to give position: relative to parent. */
-
 .effect-2 {
   border: 0;
   padding: 7px 0;
@@ -157,11 +152,13 @@
 
 .inp-search {
   font: 15px/24px "Lato", Arial, sans-serif;
-  width: 90%;
+  width: 50%;
+  margin-top: 80px;
   box-sizing: border-box;
   letter-spacing: 1px;
   background: #eee;
-  color: #708090;
+  border-color: #00b4cc;
+  opacity: 0.5;
 }
 
 :focus {
@@ -169,23 +166,21 @@
 }
 
 /* end search */
-
 .geral {
   min-height: 100%;
   position: relative;
 }
 
 /* start footer */
-
 .footer {
   height: 80px;
   background-color: #00b4cc;
+  text-align: center;
+  padding: 16px;
   .social-icons {
-    text-align: center;
-    margin-left: -40px;
+    margin-left: -20px;
     li {
-      padding-top: 20px;
-      padding-right: 15px;
+      padding-left: 10px;
       display: inline-block;
       .github,
       .linkedin,
