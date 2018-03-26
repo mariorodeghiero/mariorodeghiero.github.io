@@ -6,15 +6,14 @@
   box-shadow: 0 1px 6px 0 rgba(0, 0, 0, 0.2);
   width: 100%;
   top: 0;
-  background-color: #9af8ff;
+  background-color: #ffffff;
   position: fixed;
-  padding: 10px;
   z-index: 999;
   .logo {
     width: 15%;
     float: left;
     text-align: center;
-    padding-top: 5px;
+    margin-top: 15px;
     h1 {
       font-size: 1.6em;
       color: #00b4cc;
@@ -41,14 +40,14 @@
   .links {
     width: 85%;
     float: left;
-    padding-top: 5px;
+    margin-top: 15px;
     ul {
       float: right;
       li {
         display: inline-block;
         margin-right: 35px;
         a {
-          color: #fff;
+          color: #000;
           -webkit-transition: 0.3s ease-out;
           -moz-transition: 0.3s ease-out;
           -o-transition: 0.3s ease-out;
@@ -58,7 +57,7 @@
           text-decoration: none;
           &:hover {
             background-color: #a9a9a9;
-            opacity: 0.2;
+            opacity: 0.3;
             color: #000;
             border-radius: 10px;
             padding: 10px;
@@ -77,62 +76,65 @@
 }
 
 /* start search */
-
 .search-btn {
   position: fixed;
   margin-top: 60px;
   margin-left: 1%;
+  padding-top: 0;
   z-index: 79;
-  :hover {
+  transition: all 0.2s ease;
+  &:hover {
     padding-top: 3px;
-    transition-duration: 0.2s;
+    transition: all 0.2s ease;
     cursor: pointer;
   }
 }
 
 .search {
   display: none;
-  top: 60px;
   height: 100%;
   position: fixed;
-  background: #eee;
-  padding: 50px; // opacity: 0.9;
+  background: #f0f0f0;
   z-index: 89;
   width: 100%;
+  text-align: center;
   .close-btn {
-    top: 3px;
+    top: 60px;
     float: right;
     position: absolute;
-    font-size: 36px;
+    font-size: 1.6em;
     text-decoration: none;
     cursor: pointer;
+    color: #00b4cc;
+    transition: all ease 1s;
+    &:hover {
+      color: #000;
+      transition: all ease 1s;
+    }
   }
   ul {
     margin-top: 20px;
     li {
-      margin-left: -20px;
       padding-top: 15px;
       font-size: 0.8rem;
       color: #000;
       a {
         color: #000;
         text-decoration: none;
-        transition: opacity 0.3s;
+        transition: all ease 1s;
         &:hover {
           opacity: 0.3;
+          transition: 0.7s;
         }
       }
     }
     hr {
-      margin-left: -20px;
-      width: 90%;
-      background-color: #00b4cc;
+      width: 50%;
     }
   }
 }
 
 /* necessary to give position: relative to parent. */
-
 .effect-2 {
   border: 0;
   padding: 7px 0;
@@ -158,11 +160,13 @@
 
 .inp-search {
   font: 15px/24px "Lato", Arial, sans-serif;
-  width: 90%;
+  width: 50%;
+  margin-top: 80px;
   box-sizing: border-box;
   letter-spacing: 1px;
   background: #eee;
-  color: #708090;
+  border-color: #00b4cc;
+  opacity: 0.5;
 }
 
 :focus {
@@ -170,31 +174,31 @@
 }
 
 /* end search */
-
 .geral {
   min-height: 100%;
   position: relative;
 }
 
 /* start footer */
-
 .footer {
-  height: 130px;
-  background-color: #778899;
+  height: 80px;
+  background-color: #00b4cc;
+  text-align: center;
+  padding: 16px;
   .social-icons {
-    text-align: center;
-    margin-left: -40px;
+    margin-left: -20px;
     li {
-      padding-top: 45px;
-      padding-right: 15px;
+      padding-left: 10px;
       display: inline-block;
       .github,
       .linkedin,
       .twitter {
         width: 48px;
         height: 48px;
+        transition: all ease 0.5s;
         &:hover {
-          opacity: 0.6;
+          transition: all ease 0.5s;
+          opacity: 0.4;
         }
       }
     }

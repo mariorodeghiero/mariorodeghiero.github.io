@@ -25,15 +25,14 @@
   box-shadow: 0 1px 6px 0 rgba(0, 0, 0, 0.2);
   width: 100%;
   top: 0;
-  background-color: #708090;
+  background-color: #ffffff;
   position: fixed;
-  padding: 10px;
   z-index: 999; }
   .container-header .logo {
     width: 15%;
     float: left;
     text-align: center;
-    padding-top: 5px; }
+    margin-top: 15px; }
     .container-header .logo h1 {
       font-size: 1.6em;
       color: #00b4cc;
@@ -56,14 +55,14 @@
   .container-header .links {
     width: 85%;
     float: left;
-    padding-top: 5px; }
+    margin-top: 15px; }
     .container-header .links ul {
       float: right; }
       .container-header .links ul li {
         display: inline-block;
         margin-right: 35px; }
         .container-header .links ul li a {
-          color: #fff;
+          color: #000;
           -webkit-transition: 0.3s ease-out;
           -moz-transition: 0.3s ease-out;
           -o-transition: 0.3s ease-out;
@@ -73,7 +72,7 @@
           text-decoration: none; }
           .container-header .links ul li a:hover {
             background-color: #a9a9a9;
-            opacity: 0.2;
+            opacity: 0.3;
             color: #000;
             border-radius: 10px;
             padding: 10px;
@@ -89,45 +88,49 @@
   position: fixed;
   margin-top: 60px;
   margin-left: 1%;
-  z-index: 79; }
-  .search-btn :hover {
+  padding-top: 0;
+  z-index: 79;
+  transition: all 0.2s ease; }
+  .search-btn:hover {
     padding-top: 3px;
-    transition-duration: 0.2s;
+    transition: all 0.2s ease;
     cursor: pointer; }
 
 .search {
   display: none;
-  top: 60px;
   height: 100%;
   position: fixed;
-  background: #eee;
-  padding: 50px;
+  background: #f0f0f0;
   z-index: 89;
-  width: 100%; }
+  width: 100%;
+  text-align: center; }
   .search .close-btn {
-    top: 3px;
+    top: 60px;
     float: right;
     position: absolute;
-    font-size: 36px;
+    font-size: 1.6em;
     text-decoration: none;
-    cursor: pointer; }
+    cursor: pointer;
+    color: #00b4cc;
+    transition: all ease 1s; }
+    .search .close-btn:hover {
+      color: #000;
+      transition: all ease 1s; }
   .search ul {
     margin-top: 20px; }
     .search ul li {
-      margin-left: -20px;
       padding-top: 15px;
       font-size: 0.8rem;
       color: #000; }
       .search ul li a {
         color: #000;
         text-decoration: none;
-        transition: opacity 0.3s; }
+        transition: all ease 1s; }
         .search ul li a:hover {
-          opacity: 0.3; }
+          opacity: 0.3;
+          transition: 0.7s; }
     .search ul hr {
-      margin-left: -20px;
-      width: 90%;
-      background-color: #00b4cc; }
+      width: 50%; }
 
 /* necessary to give position: relative to parent. */
 .effect-2 {
@@ -152,11 +155,13 @@
 
 .inp-search {
   font: 15px/24px "Lato", Arial, sans-serif;
-  width: 90%;
+  width: 50%;
+  margin-top: 80px;
   box-sizing: border-box;
   letter-spacing: 1px;
   background: #eee;
-  color: #708090; }
+  border-color: #00b4cc;
+  opacity: 0.5; }
 
 :focus {
   outline: none; }
@@ -168,24 +173,26 @@
 
 /* start footer */
 .footer {
-  height: 130px;
-  background-color: #778899; }
+  height: 80px;
+  background-color: #00b4cc;
+  text-align: center;
+  padding: 16px; }
   .footer .social-icons {
-    text-align: center;
-    margin-left: -40px; }
+    margin-left: -20px; }
     .footer .social-icons li {
-      padding-top: 45px;
-      padding-right: 15px;
+      padding-left: 10px;
       display: inline-block; }
       .footer .social-icons li .github,
       .footer .social-icons li .linkedin,
       .footer .social-icons li .twitter {
         width: 48px;
-        height: 48px; }
+        height: 48px;
+        transition: all ease 0.5s; }
         .footer .social-icons li .github:hover,
         .footer .social-icons li .linkedin:hover,
         .footer .social-icons li .twitter:hover {
-          opacity: 0.6; }
+          transition: all ease 0.5s;
+          opacity: 0.4; }
 
 /* end footer */
 /* Start Toggle */

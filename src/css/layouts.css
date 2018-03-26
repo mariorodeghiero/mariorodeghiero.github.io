@@ -88,10 +88,12 @@
   position: fixed;
   margin-top: 60px;
   margin-left: 1%;
-  z-index: 79; }
-  .search-btn :hover {
+  padding-top: 0;
+  z-index: 79;
+  transition: all 0.2s ease; }
+  .search-btn:hover {
     padding-top: 3px;
-    transition-duration: 0.2s;
+    transition: all 0.2s ease;
     cursor: pointer; }
 
 .search {
@@ -109,7 +111,11 @@
     font-size: 1.6em;
     text-decoration: none;
     cursor: pointer;
-    color: #00b4cc; }
+    color: #00b4cc;
+    transition: all ease 1s; }
+    .search .close-btn:hover {
+      color: #000;
+      transition: all ease 1s; }
   .search ul {
     margin-top: 20px; }
     .search ul li {
@@ -119,9 +125,10 @@
       .search ul li a {
         color: #000;
         text-decoration: none;
-        transition: opacity 0.3s; }
+        transition: all ease 1s; }
         .search ul li a:hover {
-          opacity: 0.3; }
+          opacity: 0.3;
+          transition: 0.7s; }
     .search ul hr {
       width: 50%; }
 
@@ -179,10 +186,12 @@
       .footer .social-icons li .linkedin,
       .footer .social-icons li .twitter {
         width: 48px;
-        height: 48px; }
+        height: 48px;
+        transition: all ease 0.5s; }
         .footer .social-icons li .github:hover,
         .footer .social-icons li .linkedin:hover,
         .footer .social-icons li .twitter:hover {
+          transition: all ease 0.5s;
           opacity: 0.4; }
 
 /* end footer */
