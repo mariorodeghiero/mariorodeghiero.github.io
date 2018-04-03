@@ -64,48 +64,52 @@
         <h4>"Construindo gráficos com chart.js"</h4>
 
         <p>
-            ChartJs é uma biblioteca de WebGraphics baseado em canvas, podendo realizar manipulação dos dados através de javascript, para tornar o desenvolvimento de gráficos, mais rápido e pratico. Com este framework, você ainda gera gráficos responsivos e pode personalizar de acordo com sua necessidade, pois ele possui vários tipos diferentes de gráficos.
+            ChartJs é uma biblioteca de WebGraphics baseado em canvas, podendo realizar manipulação dos dados através de javascript,
+            para tornar o desenvolvimento de gráficos, mais rápido e pratico. Com este framework, você ainda gera gráficos
+            responsivos e pode personalizar de acordo com sua necessidade, pois ele possui vários tipos diferentes de gráficos.
         </p>
 
         <h2>Código HTML</h2>
         <p>
-           Como este é um simples exemplo para abordar apenas algumas, das varias configurações disponíveis no Chartjs, nosso código
-            HTML vai apresentar uma tag script com um source para buscar a lib e uma simples Tag <b>"canvas"</b> com <b>id="myChart"</b>.
-            E no final do nosso HTML, especificamos o caminho do nosso arquivo <b>"chart.js"</b>.
+            Como este é um simples exemplo para abordar apenas algumas, das varias configurações disponíveis no Chartjs, nosso código
+            HTML vai apresentar uma tag script com um source para buscar a lib e uma simples Tag
+            <b>"canvas"</b> com
+            <b>id="myChart"</b>. E no final do nosso HTML, especificamos o caminho do nosso arquivo
+            <b>"chart.js"</b>.
         </p>
         <pre><code class="language-html">
-    &lt;html&gt;
-    &lt;head&gt;
-    &lt;script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.4.0/Chart.min.js"&gt;&lt;/script&gt;
-    &lt;/head&gt;
-    &lt;body&gt;
+&lt;html&gt;
+&lt;head&gt;
+&lt;script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.4.0/Chart.min.js"&gt;&lt;/script&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    
+     &lt;canvas id="myChart"&gt &lt;/canvas&gt
         
-         &lt;canvas id="myChart"&gt &lt;/canvas&gt
-           
-    &lt;script src="js/chart.js"&gt;&lt;script&gt;
-    &lt;/body&gt;
-    &lt;/html&gt;
+&lt;script src="js/chart.js"&gt;&lt;script&gt;
+&lt;/body&gt;
+&lt;/html&gt;
         </code></pre>
 
         <h2>Criando o código javascript</h2>
 
         <p>
-            Primeiramente vamos adicionar um codigo meio que padrão e para dar inicio, vamos <br> criar uma variável chamada
+            Primeiramente vamos adicionar um codigo meio que padrão e para dar inicio, vamos
+            <br> criar uma variável chamada
             <b>"ctx"</b> para armazenar nesta variável o elemento que possui o
             <b>id="myChart"</b>. Logo em seguida vamos criar uma variável chamada
-            <b>myChart</b> <br> e passamos a palavra
+            <b>myChart</b>
+            <br> e passamos a palavra
             <b>new</b> com nome
             <b>Chart</b> para criarmos um novo objeto, passando a variável
             <b>"ctx"</b>.
         </p>
 
         <pre><code class="language-javascript">
-    var ctx = document.getElementById("myChart");
+var ctx = document.getElementById("myChart");
 
-    var myChart = new Chart(ctx, { 
-
-    });
-
+var myChart = new Chart(ctx, { 
+});
         </code></pre>
 
 
@@ -118,11 +122,11 @@
         </p>
 
         <pre><code class="language-javascript">
-    var ctx = document.getElementById("myChart");
+var ctx = document.getElementById("myChart");
 
-    var myChart = new Chart(ctx, { 
-        type: 'line'
-    });
+var myChart = new Chart(ctx, { 
+    type: 'line'
+});
 
         </code></pre>
 
@@ -135,116 +139,115 @@
         </p>
 
         <pre><code class="language-javascript">
-    var ctx = document.getElementById("myChart"); 
-    var myChart = new Chart(ctx, { 
-    type: 'line', 
-    data: { 
-    labels: ["Jan", "Fev", "Mar", "Abr"], 
-        datasets: [{ 
-            label: " Item 1 ", 
-            borderColor: '#ff6384', 
-            backgroundColor: '#ff6384', 
-            fill: false, 
-            data: [0, 10, 5, 2, 20], 
-        }, 
-            { 
-            label: " Item 2 ", 
-            borderColor: '#00cfd6', 
-            backgroundColor: '#00cfd6',  
-            fill: false, 
-            data: [0, 20, 15, 22, 29], 
-        }, 
-            { 
-            label: " Item 3 ", 
-            borderColor: '#24f9cb',
-            backgroundColor: '#24f9cb',  
-            fill: false, 
-            data: [0, 10, 25, 32, 19], 
-        }],
-        } 
-    });
-            
+var ctx = document.getElementById("myChart"); 
+var myChart = new Chart(ctx, { 
+type: 'line', 
+data: { 
+labels: ["Jan", "Fev", "Mar", "Abr"], 
+    datasets: [{ 
+        label: " Item 1 ", 
+        borderColor: '#ff6384', 
+        backgroundColor: '#ff6384', 
+        fill: false, 
+        data: [0, 10, 5, 2, 20], 
+    }, 
+        { 
+        label: " Item 2 ", 
+        borderColor: '#00cfd6', 
+        backgroundColor: '#00cfd6',  
+        fill: false, 
+        data: [0, 20, 15, 22, 29], 
+    }, 
+        { 
+        label: " Item 3 ", 
+        borderColor: '#24f9cb',
+        backgroundColor: '#24f9cb',  
+        fill: false, 
+        data: [0, 10, 25, 32, 19], 
+    }],
+    } 
+});
 
         </code></pre>
 
 
         <h2>Options</h2>
-            <p> Em options, realizamos as configurações globais do nosso gráfico, então logo após o fechamento da chaves do tipo <b>"data"</b>, 
-                vamos inserir uma vírgula e passar o <b>"options"</b>. Dentro dele é possível realizar diversos tipos de configurações, 
-                vou informar e demonstrar no código abaixo, apenas algumas delas, mas também esta disponível na documentação do 
-                Chartjs.
-            </p>
+        <p> Em options, realizamos as configurações globais do nosso gráfico, então logo após o fechamento da chaves do tipo
+            <b>"data"</b>, vamos inserir uma vírgula e passar o
+            <b>"options"</b>. Dentro dele é possível realizar diversos tipos de configurações, vou informar e demonstrar no
+            código abaixo, apenas algumas delas, mas também esta disponível na documentação do Chartjs.
+        </p>
 
 
         <pre><code class="language-javascript">
 
-    var ctx = document.getElementById("myChart");
-    var myChart = new Chart(ctx, {
-    type: 'line',
-    data: {
-    labels: ["Jan", "Fev", "Mar", "Abr"],
-        datasets: [{
-            label: " Item 1 ",
-                borderColor: '#ff6384',
-                backgroundColor: '#ff6384',
-                fill: false,
-                data: [0, 10, 5, 2, 20],
-            },
-                {
-                label: " Item 2 ",
-                borderColor: '#00cfd6',
-                backgroundColor: '#00cfd6',
-                fill: false,
-                data: [0, 20, 15, 22, 29],
-            },
-                {
-                label: " Item 3 ",
-                borderColor: '#24f9cb',
-                backgroundColor: '#24f9cb',
-                fill: false,
-                data: [0, 10, 25, 32, 19],
-            }]
+var ctx = document.getElementById("myChart");
+var myChart = new Chart(ctx, {
+type: 'line',
+data: {
+labels: ["Jan", "Fev", "Mar", "Abr"],
+    datasets: [{
+        label: " Item 1 ",
+            borderColor: '#ff6384',
+            backgroundColor: '#ff6384',
+            fill: false,
+            data: [0, 10, 5, 2, 20],
         },
-        options: {
-            layout: {
-                padding: {
-                    left: 50,
-                    right: 50,
-                    top: 20,
-                    bottom: 20
-                    }
-                },
-                title: {
-                    display: true,
-                    text: 'Ano 2017',
-                    fontSize: 13,
-                    padding: 20
-                },
-                legend: {
-                    position: 'bottom',
-                    labels:{
-                    boxWidth: 15
-                    },
-                },
-                animation:{
-                    easing: 'easeOutBack',
-                },
-                scales: {
-                yAxes: [{
-                gridLines: {
-                    display: true,
-                    color:"#62e0e466"
-                    }
-                }],
-                xAxes: [{
-                    gridLines: {
-                    display: true,
-                    color:"#62e0e466"
-                    }
-                }],
+            {
+            label: " Item 2 ",
+            borderColor: '#00cfd6',
+            backgroundColor: '#00cfd6',
+            fill: false,
+            data: [0, 20, 15, 22, 29],
+        },
+            {
+            label: " Item 3 ",
+            borderColor: '#24f9cb',
+            backgroundColor: '#24f9cb',
+            fill: false,
+            data: [0, 10, 25, 32, 19],
+        }]
+    },
+    options: {
+        layout: {
+            padding: {
+                left: 50,
+                right: 50,
+                top: 20,
+                bottom: 20
                 }
+            },
+            title: {
+                display: true,
+                text: 'Ano 2017',
+                fontSize: 13,
+                padding: 20
+            },
+            legend: {
+                position: 'bottom',
+                labels:{
+                boxWidth: 15
+                },
+            },
+            animation:{
+                easing: 'easeOutBack',
+            },
+            scales: {
+            yAxes: [{
+            gridLines: {
+                display: true,
+                color:"#62e0e466"
+                }
+            }],
+            xAxes: [{
+                gridLines: {
+                display: true,
+                color:"#62e0e466"
+                }
+            }],
             }
-         });
+        }
+     });
 
         </code></pre>
 
@@ -258,9 +261,11 @@
         <img class="screenShot" src="../img/screensShot-chartjs.png" alt="screen Shot do gráfico construido com chartjs">
 
         <p>
-            Esse foi um post para apresentar um pouco mais sobre chartjs ♥️, esta lib open source fantástica. Agora é só colocar a criatividade em prática e brincar com as milhares de configurações possíveis no Chartjs.
-            Caso tenha deixado passar despercebido algum erro, o código esta disponivel também no meu <a class="link" href="https://codepen.io/mariorodeghiero/pen/rYoLOY" target="_blank">codepen.io</a>. <br>
-            Thanks!!
+            Esse foi um post para apresentar um pouco mais sobre chartjs ♥️, esta lib open source fantástica. Agora é só colocar a criatividade
+            em prática e brincar com as milhares de configurações possíveis no Chartjs. Caso tenha deixado passar despercebido
+            algum erro, o código esta disponivel também no meu
+            <a class="link" href="https://codepen.io/mariorodeghiero/pen/rYoLOY" target="_blank">codepen.io</a>.
+            <br> Thanks!!
         </p>
 
     </article>
