@@ -6,7 +6,7 @@ findPost.addEventListener("keyup", findMatches);
 
 function getPosts() {
   // fetch('https://mariorodeghiero.herokuapp.com/')
-  fetch("dist/db/posts.json")
+  fetch("../db/posts.json")
     .then(res => res.json())
     .then(data => {
       let output = "";

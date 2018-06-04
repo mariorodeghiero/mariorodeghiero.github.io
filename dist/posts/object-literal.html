@@ -74,23 +74,23 @@
             bootstrap e configurado algumas estilizações pessoais, fique a vontade para aplicar suas estilazações.
         </p>
         <pre><code class="language-html">
-        &lt;html&gt;
-        &lt;body&gt;
-                
-             &lt;div class="container"&gt 
-                &lt;div class="form-group"&gt 
-                    &lt;h1&gt Restaurante 
-                        &lt;span id="restauranteNome">&lt;/span&gt
-                    &lt;/h1&gt
-                    &lt;hr&gt
-                    &lt;h4&gt Atualmente temos disponiveis: &lt;/h4&gt
-                    &lt;span id="mesas">&lt;/span&gt mesas
-                &lt;/div&gt
-            &lt;/div&gt
-            
-            &lt;script src="js/object-literal.js"&gt;&lt;script&gt;
-        &lt;/body&gt;
-        &lt;/html&gt;
+&lt;html&gt;
+&lt;body&gt;
+        
+     &lt;div class="container"&gt 
+        &lt;div class="form-group"&gt 
+            &lt;h1&gt Restaurante 
+                &lt;span id="restauranteNome">&lt;/span&gt
+            &lt;/h1&gt
+            &lt;hr&gt
+            &lt;h4&gt Atualmente temos disponiveis: &lt;/h4&gt
+            &lt;span id="mesas">&lt;/span&gt mesas
+        &lt;/div&gt
+    &lt;/div&gt
+    
+    &lt;script src="js/object-literal.js"&gt;&lt;script&gt;
+&lt;/body&gt;
+&lt;/html&gt;
           </code></pre>
 
         <h2>Construindo um objeto literal</h2>
@@ -104,38 +104,38 @@
 
         <h2>Código JS</h2>
         <pre><code class="language-javascript">
-       let restaurante = { 
-           nome: 'Thay', 
-           mesas: 30, 
-           reservada: 25, 
-           mesasDisponiveis: function () { 
-               return this.mesas - this.reservada;
-           } 
-       }; 
+let restaurante = { 
+    nome: 'Thay', 
+    mesas: 30, 
+    reservada: 25, 
+    mesasDisponiveis: function () { 
+        return this.mesas - this.reservada;
+    } 
+}; 
 
-       let restNome = document.getElementById('restauranteNome');
-       restNome.innerHTML = restaurante.nome;
+let restNome = document.getElementById('restauranteNome');
+restNome.innerHTML = restaurante.nome;
 
-       let restMesas = document.getElementById('mesas');
-       restMesas.textContent = restaurante.mesasDisponiveis();
+let restMesas = document.getElementById('mesas');
+restMesas.textContent = restaurante.mesasDisponiveis();
 
         </code></pre>
 
         <h2>Exemplo do Código funcionando</h2>
 
         <p>
-            Aqui temos o exemplo do código JS funcionando, realizando a manipulação do DOM deixando visível o nome do restaurante
-            e quantidade de mesas disponíveis para reservas
+            Aqui temos o exemplo do código JS funcionando, realizando a manipulação do DOM deixando visível o nome do restaurante e quantidade
+            de mesas disponíveis para reservas
         </p>
 
         <img class="screenShot" src="../img/screenShot-object-literal.png" alt="screen Shot da estrutura de arquivos">
 
         <p>
-            Este código foi escrito com base no aprendizado do livro "JavaScript & JQuery Desenvolvimento de interfaces
-            web interativas", autor "Jon Duckett". <br>
-            Pretendo criar mais posts, repassando o que aprendi em livros, youtube
-            e nos cursos em que estudo. Escrever é uma boa forma de fixar o que aprendo e ainda de praxe, posso ajudar alguém.<br>
-            Thanks!!!
+            Este código foi escrito com base no aprendizado do livro "JavaScript & JQuery Desenvolvimento de interfaces web interativas",
+            autor "Jon Duckett".
+            <br> Pretendo criar mais posts, repassando o que aprendi em livros, youtube e nos cursos em que estudo. Escrever
+            é uma boa forma de fixar o que aprendo e ainda de praxe, posso ajudar alguém.
+            <br> Thanks!!!
         </p>
 
     </article>

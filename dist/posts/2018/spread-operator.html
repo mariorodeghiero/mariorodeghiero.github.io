@@ -80,13 +80,12 @@
         </p>
 
         <pre><code class="language-javascript">
-     let arr = [1, 2, 3]; 
-     
-     function soma(x, y, z) { 
-         return x + y + z; 
-     } 
-    
-     soma(...arr); //resultado: 6
+let arr = [1, 2, 3]; 
+
+function soma(x, y, z) { 
+    return x + y + z; 
+} 
+soma(...arr); //resultado: 6
         </code></pre>
 
         <p>
@@ -104,10 +103,10 @@
         </p>
 
         <pre><code class="language-javascript">
-    let arr2 = [77, 34, 1704, 333, 243];
-    let maior = Math.max(...arr2);
-    
-    console.log(maior); //resultado:1704
+let arr2 = [77, 34, 1704, 333, 243];
+let maior = Math.max(...arr2);
+
+console.log(maior); //resultado:1704
         </code></pre>
 
         <h2>Exemplo 3</h2>
@@ -118,10 +117,10 @@
         </p>
 
         <pre><code class="language-javascript">
-    let arr3 = [4, 10, 47]; 
-    let arr4 = [21, arr3, 11, 99]; 
-    
-    console.log(arr4); // resultado: [21,[4, 10, 47], 11, 99];
+let arr3 = [4, 10, 47]; 
+let arr4 = [21, arr3, 11, 99]; 
+
+console.log(arr4); // resultado: [21,[4, 10, 47], 11, 99];
         </code></pre>
 
         <p>
@@ -132,10 +131,10 @@
         </p>
 
         <pre><code class="language-javascript">
-    let arr3 = [4, 10, 47]; 
-    let arr4 = [21, ...arr3, 11, 99]; 
+let arr3 = [4, 10, 47]; 
+let arr4 = [21, ...arr3, 11, 99]; 
 
-    console.log(arr4); // resultado: [21, 4, 10, 47, 11, 99];
+console.log(arr4); // resultado: [21, 4, 10, 47, 11, 99];
         </code></pre>
 
         <h2>Exemplo 4</h2>
@@ -146,10 +145,10 @@
         </p>
 
         <pre><code class="language-javascript">
-    let str = 'code';
-    let arr = [...str];
+let str = 'code';
+let arr = [...str];
 
-    console.log(arr); // resultado: ['c', 'o', 'd', 'e']
+console.log(arr); // resultado: ['c', 'o', 'd', 'e']
         </code></pre>
 
         <h2>Exemplo 5</h2>
@@ -161,29 +160,29 @@
         </p>
 
         <pre><code class="language-javascript">
-    /**
-    * Sem spread operator, onde o antigo array também sofre alteração.
-    */
+/**
+* Sem spread operator, onde o antigo array também sofre alteração.
+*/
 
-    let arr5 = [34, 23, 44];
-    let arr6 = arr5;
-    
-    arr6.push(99); 
-    
-    console.log(arr5); // resultado: [34, 23, 44, 99]
+let arr5 = [34, 23, 44];
+let arr6 = arr5;
+
+arr6.push(99); 
+
+console.log(arr5); // resultado: [34, 23, 44, 99]
         </code></pre>
 
         <pre><code class="language-javascript">
-    /**
-    * Com spread operator, onde o antigo array não sofre alteração.
-    */
+/**
+* Com spread operator, onde o antigo array não sofre alteração.
+*/
 
-    let arr5 = [34, 23, 44];
-    let arr6 = [...arr5];
-    
-    arr6.push(99);
-    
-    console.log(arr5); // resultado: [34, 23, 44]
+let arr5 = [34, 23, 44];
+let arr6 = [...arr5];
+
+arr6.push(99);
+
+console.log(arr5); // resultado: [34, 23, 44]
         </code></pre>
 
         <h2>Exemplo 6</h2>
@@ -196,12 +195,11 @@
         </p>
 
         <pre><code class="language-javascript">
-    var arr = ["mario", "antonio", "rodeghiero"];
-    var obj = { ...arr }; 
-    
-    console.log(obj); // resultado: {'0': 'mario', '1': 'antonio', '2': 'rodeghiero',}
+var arr = ["mario", "antonio", "rodeghiero"];
+var obj = { ...arr }; 
 
-    console.log(obj[0]); // resultado: mario
+console.log(obj); // resultado: {'0': 'mario', '1': 'antonio', '2': 'rodeghiero',}
+console.log(obj[0]); // resultado: mario
         </code></pre>
 
         <p>
