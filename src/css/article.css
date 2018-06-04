@@ -16,7 +16,7 @@
     -webkit-border-radius: 10px;
     -moz-border-radius: 10px;
     border-radius: 10px;
-    border: #FFF solid 2px; }
+    border: #fff solid 2px; }
 
 .code {
   background: #134f5c;
@@ -49,9 +49,9 @@ article {
     color: black;
     font-size: 1.2rem; }
   article h4 {
-    color: #A9A9A9;
-    font-size: .9em;
-    letter-spacing: .51px;
+    color: #a9a9a9;
+    font-size: 0.9em;
+    letter-spacing: 0.51px;
     text-align: center;
     margin: -1.7em auto 3em;
     font-style: italic; }
@@ -67,7 +67,7 @@ article {
 
 @media only screen and (max-width: 700px) {
   article {
-    font-size: .85em;
+    font-size: 0.85em;
     line-height: 1.7em;
     margin-bottom: 30px;
     padding: 8%; }
@@ -78,15 +78,15 @@ article {
       line-height: 3.5em;
       letter-spacing: 0; }
     article h4 {
-      letter-spacing: .3px;
+      letter-spacing: 0.3px;
       margin: -2.7em auto 4em; }
     article h5 {
-      font-size: 1.0em; } }
+      font-size: 1em; } }
 
 @media only screen and (max-width: 502px) {
   article {
     width: auto;
-    font-size: .8em;
+    font-size: 0.8em;
     line-height: 1.6em; }
     article p {
       font-size: 0.8rem; }
@@ -96,9 +96,9 @@ article {
       letter-spacing: 0; }
     article h4 {
       letter-spacing: 0;
-      margin: .4em auto 3em; }
+      margin: 0.4em auto 3em; }
     article h5 {
-      font-size: 1.0em; }
+      font-size: 1em; }
   .voltar img {
     width: 70%; } }
 
@@ -108,7 +108,14 @@ article {
   width: 80%; }
 
 .screenShot {
-  width: 100%; }
+  width: 100%;
+  border-radius: 8px; }
+
+.command-line {
+  background-color: #ebe7e7;
+  border-radius: 5px;
+  color: #272727;
+  padding-left: 5px; }
 
 .link {
   background-color: #63839c;

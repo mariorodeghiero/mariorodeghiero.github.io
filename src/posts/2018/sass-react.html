@@ -72,18 +72,30 @@
         <h2>Instalando created-react-app</h2>
 
         <p>
-
+            Após ter os prérequisitos instalado em seu computador, para criarmos o projeto, basta rodar o seguinte comando abaixo, substituindo
+            o "nome-do-projeto", por o nome desejado.
         </p>
+        <p class="command-line">$ npx created-react-app nome-do-projeto</p>
+
+        <img class="screenShot" src="../../img/screenShot-npx.png" alt="screen Shot do comando created-react-app">
+
+        <p> Após executar o comando, devemos entrar na pasta do projeto e executar mais alguns comandos para instalar e integrar
+            o Sass com o react.</p>
+
+        <p class="command-line">$ cd nome-do-projeto</p>
+        <p class="command-line">$ yarn add sass-loader node-sass --dev</p>
+        <span>ou</span>
+        <p class="command-line">$ npm install sass-loader node-sass --save-dev</p>
+        <p>Agora que já instalamos os modulos necessários, devemos ejetar os arquivos de configurações do created-react-app
+            e ralizar as alteraçoes necessárias para trabalharmos com Sass.'</p>
+        <p class="command-line">$ npm run eject</p>
+
+        <p>Em seguida vamos o arquiv de configuração do webpack na dentro da pasta src/</p>
+
 
         <pre><code class="language-javascript">
-var code = 0;
-        </code></pre>
-
-
-        <p>
-            Esse foi um post para apresentar um pouco mais sobre spread operator.
-            <br> Thanks!!
-        </p>
+        var code = 0;
+                </code></pre>
 
     </article>
 
