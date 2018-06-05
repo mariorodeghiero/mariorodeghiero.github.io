@@ -23,4 +23,10 @@
     "url": "dist/posts/2018/spread-operator.html",
     "date": "14 mar 2018"
   }
+  {
+    "title": "Sass + React.js",
+    "tags": "[JS, webpack, react, sass]",
+    "url": "dist/posts/2018/sass-react.html",
+    "date": "5 june 2018"
+  }
 ]
