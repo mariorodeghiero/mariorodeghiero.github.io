@@ -66,14 +66,14 @@
 
         <p>
             Neste artigo vou mostrar os passos para instalar e utilizar o <a class="link" href="https://sass-lang.com" target="_blank">Sass</a> com <a class="link" href="https://reactjs.org" target="_blank">React.js</a>. Vamos usar o <a class="link" href="https://github.com/facebook/create-react-app" target="_blank">created-react-app</a> como base
-            para nosso projeto, mas antes de apresentar como inicar um projeto com o created-react-app é necessario que voce tenha instalado:<br/><br/> <a class="link" href="https://nodejs.org/en/" target="_blank">Node.js</a> e <a class="link" href="https://www.npmjs.com/package/npx" target="_blank">npx</a>.
+            para nosso projeto, mas antes de apresentar como iniciar um projeto com o created-react-app é necessário que você tenha instalado:<br/><br/> <a class="link" href="https://nodejs.org/en/" target="_blank">Node.js</a> e <a class="link" href="https://www.npmjs.com/package/npx" target="_blank">npx</a>.
         </p>
         <p class="command-line">$ npm install -g npx</p>
         
 
         <h2>Instalando created-react-app</h2>
         <p>
-            Após ter os prérequisitos instalado em seu computador, para criarmos o projeto, basta rodar o seguinte comando abaixo, substituindo
+            Após ter os pré-requisitos instalado em seu computador, para criarmos o projeto, basta rodar o seguinte comando abaixo, substituindo
             o <b>"nome-do-projeto"</b>, por o nome desejado.
         </p>
         <p class="command-line">$ npx created-react-app nome-do-projeto</p>
@@ -89,13 +89,13 @@
         <p class="command-line">$ npm install sass-loader node-sass --save-dev</p>
 
         <h2>Passo 1</h2>
-        <p>Agora que já instalamos os modulos necessários, devemos ejetar os arquivos de configurações do created-react-app
-            e ralizar as alteraçoes necessárias para trabalharmos com Sass.'</p>
+        <p>Agora que já instalamos os módulos necessários, devemos ejetar os arquivos de configurações do created-react-app
+            e realizar as alterações necessárias para trabalharmos com Sass.</p>
         <p class="command-line">$ npm run eject</p>
 
         <h2>Passo 2</h2>
         <p>Em seguida vamos editar os dois arquivos abaixo, onde estão as configurações do webpack na pasta <b>"/config"</b>.
-            <br/> O primeiro é o arquivo de desenvolvimento, o segundo é arquivo de produção.</p>
+            <br/> O primeiro é o arquivo de desenvolvimento, o segundo é o arquivo de produção.</p>
 
         <li><b>Arquivo de desenvolvimento:</b> webpack.config.dev.js</li>
         <li><b>Arquivo de produção:</b>  webpack.config.prod.js</li>
@@ -116,8 +116,7 @@ test: /\.css$/,
         </code></pre>
 
         <p>Após ter localizado, você precisa realizar as seguintes alterações abaixo. Alterando primeiramente para ler todos
-            arquivos que terminam com <b>".scss"</b>, onde é usado expressão regular para indixar e depois é necessário inserir
-            o <b>"sass-loader"</b> para realizar a transformação do arquivo original para JavaScript.</p>
+            arquivos que terminam com <b>".scss"</b>, onde é usado uma expressão regular para indicar e depois é necessário inserir o <b>"sass-loader"</b> para realizar a transformação do arquivo original para JavaScript.</p>
         <pre><code class="language-javascript">
 test: /\.scss$/,
     use: [
@@ -158,7 +157,7 @@ loader: ExtractTextPlugin.extract(
         },
         </code></pre>
 
-        <p>Então é só alterar, como fizemos no passo anterior, mas a unica diferença é que este arquivo possui algumas configurações adicionais, como não iremos abordar sobre webpack neste artigo, você pode simplesmente subistuir o codigo acima, por este:</p>
+        <p>Então é só alterar, como fizemos no passo anterior, mas a única diferença é que este arquivo possui algumas configurações adicionais, como não iremos abordar sobre webpack neste artigo, você pode simplesmente subsistir o código acima, por este:</p>
 
         <pre><code class="language-javascript">
 test: /\.scss$/,
