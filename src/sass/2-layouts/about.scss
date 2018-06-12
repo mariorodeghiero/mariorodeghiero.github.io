@@ -49,20 +49,36 @@ span {
   }
 }
 
-.info {
-  font-family: "Roboto";
-  font-weight: 100;
-  line-height: 1.1;
-  letter-spacing: 0.025em;
-  margin-top: 50px;
-  float: left;
-}
+.container-info {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, 300px);
+  grid-column-gap: 100px;
+  align-items: center;
+  margin-top: 100px;
+  .info {
+    font-family: "Roboto";
+    font-weight: 100;
+    line-height: 1.1;
+    letter-spacing: 0.025em;
+    h5 {
+      text-align: center;
+      margin-top: -50px;
+      padding-bottom: 20px;
+    }
+  }
 
-.skills {
-  font-family: "Roboto";
-  font-weight: 100;
-  line-height: 1.6;
-  letter-spacing: 0.025em;
-  margin-top: 50px;
-  float: right;
+  .skills {
+    font-family: "Roboto";
+    font-weight: 100;
+    line-height: 1.6;
+    letter-spacing: 0.025em;
+    margin-top: 50px;
+    h5 {
+      text-align: center;
+      padding: 15px;
+    }
+    ul > li {
+      padding: 4px;
+    }
+  }
 }

@@ -40,18 +40,29 @@ span {
       font-weight: 400;
       color: inherit; }
 
-.info {
-  font-family: "Roboto";
-  font-weight: 100;
-  line-height: 1.1;
-  letter-spacing: 0.025em;
-  margin-top: 50px;
-  float: left; }
-
-.skills {
-  font-family: "Roboto";
-  font-weight: 100;
-  line-height: 1.6;
-  letter-spacing: 0.025em;
-  margin-top: 50px;
-  float: right; }
+.container-info {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, 300px);
+  grid-column-gap: 100px;
+  align-items: center;
+  margin-top: 100px; }
+  .container-info .info {
+    font-family: "Roboto";
+    font-weight: 100;
+    line-height: 1.1;
+    letter-spacing: 0.025em; }
+    .container-info .info h5 {
+      text-align: center;
+      margin-top: -50px;
+      padding-bottom: 20px; }
+  .container-info .skills {
+    font-family: "Roboto";
+    font-weight: 100;
+    line-height: 1.6;
+    letter-spacing: 0.025em;
+    margin-top: 50px; }
+    .container-info .skills h5 {
+      text-align: center;
+      padding: 15px; }
+    .container-info .skills ul > li {
+      padding: 4px; }
