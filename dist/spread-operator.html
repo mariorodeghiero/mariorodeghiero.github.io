@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta itemprop="name" content="Spread operator - ES6">
+  <title>Spread operator (...)</title>
+
+  <!-- Social: Twitter -->
+  <meta name="twitter:site" content="@rodeghiero_">
+  <meta name="twitter:title" content="Spread operator">
+  <meta name="twitter:description" content="Um pouco mais sobre spread operator">
+
+  <!-- Social: Open Graph -->
+  <meta property="og:locale" content="en_US">
+  <meta property="og:url" content="https://mariorodeghiero.com/dist/posts/object-literal.html">
+  <meta property="og:title" content="Spread operator">
+  <meta property="og:site_name" content="Mario Rodeghiero Desenvolvedor Front End">
+  <meta property="og:description" content="Um pouco mais sobre spread operator">
+  <meta property="og:type" content="article">
+  <meta property="article:author" content="Mário Antônio do Amaral Rodeghiero">
+  <meta property="article:section" content="Tutoriais">
+  <meta property="article:tag" content="javascript, ES6, spread operator">
+
+  <meta itemprop="description" content="Um pouco mais sobre spread operator">
+
+  <link rel="stylesheet" href="../../css/article.css">
+  <link href="../../css/prism.css" rel="stylesheet">
+  <script src="../../js/prism.js"></script>
+
+  <!-- Global Site Tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-107916783-1"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+
+    function gtag() {
+      dataLayer.push(arguments);
+    }
+    gtag('js', new Date());
+
+    gtag('config', 'UA-107916783-1');
+  </script>
+<link href="app.css" rel="stylesheet"></head>
+
+<body>
+
+  <article>
+
+    <a href="https://github.com/MarioRodeghiero">
+      <h5 class="author">
+        <img src="../src/img/github-logo.png" alt="icone github"> Autor: MárioRodeghiero
+      </h5>
+    </a>
+    <h5 class="publish-date">Date: 14/03/2018</h5>
+    <h1>Spread operator (...)</h1>
+    <h4>"Um pouco mais sobre spread operator (...)"</h4>
+
+    <p>
+      Com spread operator, podemos criar um novo objeto a partir de um objeto existente sem alterar o valor do objeto antigo. Ele
+      é muito utilizado para percorrer um array e realizar alguma ação com os elementos encontrado. Abaixo vamos ver algumas
+      maneiras de como podemos implantar o spread operator, simulando algumas ações. A sintaxe do spread operator é simples,
+      basta usar os três pontos (...).
+    </p>
+
+    <h2 class="sub-title">Exemplo 1</h2>
+
+    <p>
+      Criaremos um array com três números, logo em seguida temos uma função soma, que recebe três parâmetros e seu retorno é soma
+      de todos parâmetros. Para realizar a soma utilizando o spread operator, simplesmente chamamos a função soma e passamos
+      "..." com o array.
+    </p>
+
+    <pre><code class="language-javascript">
+let arr = [1, 2, 3];
+
+function soma(x, y, z) {
+    return x + y + z;
+}
+soma(...arr); //resultado: 6
+        </code></pre>
+
+    <p>
+      <b>Obs:</b>Você podera testar todos exemplos no terminal, usando o
+      <a class="link" href="https://nodejs.org/en/" target="_blank">Node.js</a>.
+    </p>
+
+    <h2 class="sub-title">Exemplo 2</h2>
+
+    <p>
+      No código abaixo, queremos obter o maior numero existente em um Array, usando o Spread Operator.
+      <br> Reparem que temos um Array e em seguida criamos uma variável com nome "maior" que recebe o retorno da função "Math"
+      com a propriedade "max". "Max" é uma propriedade do objeto "Math", que é uma coleção de valores e funções matemáticas.
+    </p>
+
+    <pre><code class="language-javascript">
+let arr2 = [77, 34, 1704, 333, 243];
+let maior = Math.max(...arr2);
+
+console.log(maior); //resultado:1704
+        </code></pre>
+
+    <h2 class="sub-title">Exemplo 3</h2>
+
+    <p>
+      Vamos imaginar que você queira colocar os elementos do array3 dentro do array4, sua primeira tentativa seria o seguinte código
+      abaixo:
+    </p>
+
+    <pre><code class="language-javascript">
+let arr3 = [4, 10, 47];
+let arr4 = [21, arr3, 11, 99];
+
+console.log(arr4); // resultado: [21,[4, 10, 47], 11, 99];
+        </code></pre>
+
+    <p>
+      O problema no código acima, é que você acaba criando um array dentro de outro array. Analisando o exemplo abaixo, usamos
+      spread operator para realizar a ação.
+      <b>Note!!</b> Que no resultado, os colchetes sumiram de dentro array4, ficando somente elementos numéricos no array.
+    </p>
+
+    <pre><code class="language-javascript">
+let arr3 = [4, 10, 47];
+let arr4 = [21, ...arr3, 11, 99];
+
+console.log(arr4); // resultado: [21, 4, 10, 47, 11, 99];
+        </code></pre>
+
+    <h2 class="sub-title">Exemplo 4</h2>
+
+    <p>
+      Com spread operator, podemos também separar cada letra de uma string, dentro de um array. Veja no exemplo abaixo como é simples
+      realizar esta ação:
+    </p>
+
+    <pre><code class="language-javascript">
+let str = 'code';
+let arr = [...str];
+
+console.log(arr); // resultado: ['c', 'o', 'd', 'e']
+        </code></pre>
+
+    <h2 class="sub-title">Exemplo 5</h2>
+
+    <p>
+      Não podemos esquecer de mostrar que quando usamos o spread operator para criar um novo array com elementos de outro array,
+      toda alteração feita no novo array, não vai ser realizada no antigo array. Vejamos as duas situações abaixo para ficar
+      mais claro:
+    </p>
+
+    <pre><code class="language-javascript">
+/**
+* Sem spread operator, onde o antigo array também sofre alteração.
+*/
+
+let arr5 = [34, 23, 44];
+let arr6 = arr5;
+
+arr6.push(99);
+
+console.log(arr5); // resultado: [34, 23, 44, 99]
+        </code></pre>
+
+    <pre><code class="language-javascript">
+/**
+* Com spread operator, onde o antigo array não sofre alteração.
+*/
+
+let arr5 = [34, 23, 44];
+let arr6 = [...arr5];
+
+arr6.push(99);
+
+console.log(arr5); // resultado: [34, 23, 44]
+        </code></pre>
+
+    <h2 class="sub-title">Exemplo 6</h2>
+
+    <p>
+      Com spread operator, podemos criar um objeto com suas chaves e valores. No exemplo abaixo, você pode ver melhor como funciona.
+      Primeiro criamos um array, no exemplo foi array com strings, mas pode ser qualquer tipo. Depois criamos nossa variável
+      obj e passamos a chaves com spread operator(...) com nosso array. Veja o resultado..., você pode acessar qualquer chave
+      do objeto e obter o seu valor.
+    </p>
+
+    <pre><code class="language-javascript">
+var arr = ["mario", "antonio", "rodeghiero"];
+var obj = { ...arr };
+
+console.log(obj); // resultado: {'0': 'mario', '1': 'antonio', '2': 'rodeghiero',}
+console.log(obj[0]); // resultado: mario
+        </code></pre>
+
+    <p>
+      Esse foi um post para apresentar um pouco mais sobre spread operator.
+      <br> Thanks!!
+    </p>
+
+  </article>
+
+  <!--Disqus comentarios-->
+  <div class="disqus" id="disqus_thread"></div>
+  <script>
+    (function () {
+      var d = document,
+        s = d.createElement('script');
+      s.src = 'https://helponedev.disqus.com/embed.js';
+      s.setAttribute('data-timestamp', +new Date());
+      (d.head || d.body).appendChild(s);
+    })();
+  </script>
+  <noscript>Please enable JavaScript to view the
+    <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a>
+  </noscript>
+<script type="text/javascript" src="app.420024f7c7ee18f10eba.js"></script></body>
+
+</html>

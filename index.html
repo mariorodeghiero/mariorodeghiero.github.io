@@ -3,222 +3,225 @@
 
 <head>
 
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>[MR] Mário Rodeghiero - Front-end developer</title>
-    <meta name="description" content="Blog sobre desenvolvimento web. ">
-    <link rel="canonical" href="https://www.mariorodeghiero.com">
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>[MR] Mário Rodeghiero - Front-end developer</title>
+  <meta name="description" content="Blog sobre desenvolvimento web. ">
+  <link rel="canonical" href="https://www.mariorodeghiero.com">
 
-    <!-- Twitter -->
-    <meta name="twitter:site" content="@rodeghiero_">
-    <meta name="twitter:title" content="Mario Rodeghiero Desenvolvedor Front End">
-    <meta name="twitter:description" content="Blog sobre desenvolvimento web. ">
+  <!-- Twitter -->
+  <meta name="twitter:site" content="@rodeghiero_">
+  <meta name="twitter:title" content="Mario Rodeghiero Desenvolvedor Front End">
+  <meta name="twitter:description" content="Blog sobre desenvolvimento web. ">
 
-    <!-- Open Graph -->
-    <meta property="og:locale" content="en_US">
-    <meta property="og:url" content="https://mariorodeghiero.com">
-    <meta property="og:title" content="Mario Rodeghiero Desenvolvedor Front End">
-    <meta property="og:site_name" content="Mario Rodeghiero Desenvolvedor Front End">
-    <meta property="og:description" content="Blog sobre desenvolvimento web. ">
-    <meta property="og:type" content="article">
-    <meta property="article:author" content="Mário Antônio do Amaral Rodeghiero">
-    <meta property="article:section" content="Tutoriais">
-    <meta property="article:tag" content="javascript, html, css, sass, es6, chartjs">
-    <!--  -->
-    <meta itemprop="name" content="Mario Rodeghiero Desenvolvedor Front End">
-    <meta itemprop="description" content="Blog sobre desenvolvimento web. ">
-    <meta name="application-name" content="Blog Mario Rodeghiero">
+  <!-- Open Graph -->
+  <meta property="og:locale" content="en_US">
+  <meta property="og:url" content="https://mariorodeghiero.com">
+  <meta property="og:title" content="Mario Rodeghiero Desenvolvedor Front End">
+  <meta property="og:site_name" content="Mario Rodeghiero Desenvolvedor Front End">
+  <meta property="og:description" content="Blog sobre desenvolvimento web. ">
+  <meta property="og:type" content="article">
+  <meta property="article:author" content="Mário Antônio do Amaral Rodeghiero">
+  <meta property="article:section" content="Tutoriais">
+  <meta property="article:tag" content="javascript, html, css, sass, es6, chartjs">
+  <!--  -->
+  <meta itemprop="name" content="Mario Rodeghiero Desenvolvedor Front End">
+  <meta itemprop="description" content="Blog sobre desenvolvimento web. ">
+  <meta name="application-name" content="Blog Mario Rodeghiero">
 
-    <link rel="stylesheet" href="dist/css/index.min.css" />
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+  <script src="http://code.jquery.com/ui/1.9.2/jquery-ui.js"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">
 
-    <!-- Global Site Tag (gtag.js) - Google Analytics -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-107916783-1"></script>
-    <script>
-        window.dataLayer = window.dataLayer || [];
+  <link href="./dist/app.css" rel="stylesheet">
+</head>
 
-        function gtag() {
-            dataLayer.push(arguments);
-        }
-        gtag('js', new Date());
+<!-- Global Site Tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-107916783-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
 
-        gtag('config', 'UA-107916783-1');
-    </script>
+  function gtag() {
+    dataLayer.push(arguments);
+  }
+  gtag('js', new Date());
+
+  gtag('config', 'UA-107916783-1');
+</script>
 </head>
 
 <body>
-    <div class="geral">
-        <header>
-            <div class="container-header">
-                <div class="logo">
-                    <h1>[MR]</h1>
-                </div>
-                <div class="toggle">
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                </div>
-                <nav class="links animated zoomIn">
-                    <ul>
-                        <li>
-                            <a href="https://www.mariorodeghiero.com">Home</a>
-                        </li>
-                        <li>
-                            <a>About Me</a>
-                        </li>
-                        <li>
-                            <a>Contact</a>
-                        </li>
-                    </ul>
-                </nav>
-                <div class="clearfix"></div>
-            </div>
-        </header>
-
-        <div class="search-btn">
-            <input id="search-btn" type="image" src="dist/img/search-icon.png">
+  <div class="geral">
+    <header>
+      <div class="container-header animated fadeIn">
+        <div class="logo">
+          <h1>[MR]</h1>
         </div>
-
-        <div class="search animated slideInUp" id="container-search">
-            <input type="search" name="search" id="search-input" class="inp-search effect-2" placeholder="ex: flex-box">
-            <span class="focus-border"></span>
-            <span class="close-btn" id="close-btn">&times;</span>
-            <ul id="output"></ul>
+        <div class="toggle">
+          <span></span>
+          <span></span>
+          <span></span>
         </div>
+        <nav class="links ">
+          <ul>
+            <li>
+              <a href="./">Home</a>
+            </li>
+            <li>
+              <a href="./about.html">About Me</a>
+            </li>
+            <li>
+              <a>Contact</a>
+            </li>
+          </ul>
+        </nav>
+        <div class="clearfix"></div>
+      </div>
+    </header>
 
-        <div class="container-tag">
-            <ul class="tags">
-                <li>
-                    <a class="tag">HTML</a>
-                </li>
-                <li>
-                    <a class="tag">CSS</a>
-                </li>
-                <li>
-                    <a class="tag">JS</a>
-                </li>
-                <li>
-                    <a class="tag">React.js</a>
-                </li>
-                <li>
-                    <a class="tag">vscode</a>
-                </li>
-                <li>
-                    <a class="tag">gulp</a>
-                </li>
-                <li>
-                    <a class="tag">chart.js</a>
-                </li>
-                <li>
-                    <a class="tag">ES6</a>
-                </li>
-            </ul>
-        </div>
-
-        <div class="container ">
-            <div class="article ">
-
-                <a href="../dist/posts/2018/sass-react.html">
-                    <article class="card card-body mb-5 animated zoomInRight">
-                        <h1>Sass + React.js</h1>
-                        <p> Neste artigo vou mostrar os passos para instalar e utilizar o Sass com React.js</p>
-                        <div class="container-tag-post">
-                            <ul class="tag-post">
-                                <li>Sass</li>
-                                <li>React.js</li>
-                                <li>JS</li>
-                                <li>webpack</li>
-                            </ul>
-                        </div>
-                        <h4> Tuesday, june 5, 2018</h4>
-                    </article>
-                </a>
-
-                <a href="../dist/posts/2018/spread-operator.html">
-                    <article class="card card-body mb-5 animated zoomInRight">
-                        <h1>Spread operator ES6</h1>
-                        <p>Neste post vamos um pouco sobre como funciona o spread operator "..." no ES6.</p>
-                        <div class="container-tag-post">
-                            <ul class="tag-post">
-                                <li>JS</li>
-                                <li>ES6</li>
-                            </ul>
-                        </div>
-                        <h4> Wednesday, march 14, 2018</h4>
-                    </article>
-                </a>
-
-                <article class="card card-body mb-5 animated zoomInRight">
-                    <a href="../dist/posts/chart-js.html">
-                        <h1>Construindo gráficos com chart.js</h1>
-                        <p>Neste post vamos criar e enteder, sobre como funciona o framework Chartjs, essa lib opensource famosa
-                            por seu gráficos resposivos.
-                        </p>
-                        <div class="container-tag-post">
-                            <ul class="tag-post">
-                                <li class="btn-outline-info">JS</li>
-                                <li>HTML</li>
-                            </ul>
-                        </div>
-                        <h4> Tuesday, December 12, 2017</h4>
-                    </a>
-                </article>
-
-                <a href="../dist/posts/object-literal.html">
-                    <article class="card card-body mb-5 animated zoomInRight">
-                        <h1>Objeto com notação literal</h1>
-                        <p>Neste post vou mostrar como construir um objeto em Javascript com notação literal e realizar a manipulação
-                            do DOM.</p>
-                        <div class="container-tag-post">
-                            <ul class="tag-post">
-                                <li class="btn-outline-info">JS</li>
-                                <li>HTML</li>
-                            </ul>
-                        </div>
-                        <h4> Sunday, 5 november 2017</h4>
-                    </article>
-                </a>
-
-                <article class="card card-body mb-5 animated zoomInRight">
-                    <a href="../dist/posts/copy-right.html">
-                        <h1>CopyRight Automático </h1>
-                        <p>Neste post vou mostrar um script apra atualizar data do CopyRight de forma automatica.</p>
-                        <div class="container-tag-post">
-                            <ul class="tag-post">
-                                <li class="btn-outline-info">JS</li>
-                                <li>HTML</li>
-                            </ul>
-                        </div>
-                        <h4> Monday, october 9, 2017</h4>
-                    </a>
-                </article>
-
-            </div>
-        </div>
+    <div class="search-btn animated fadeIn">
+      <input id="search-btn" type="image" src="../src/img/search-icon.png" alt="Pesquisar" title="Pesquisar">
     </div>
 
-    <footer class=" footer">
-        <ul class="social-icons">
-            <li>
-                <a href="https://github.com/MarioRodeghiero">
-                    <img class="github" src="dist/img/github-icon.svg" alt="Icone de redirecionamento para Git">
-                </a>
-            </li>
-            <li>
-                <a href="https://br.linkedin.com/in/mariorodeghiero">
-                    <img class="linkedin" src="dist/img/linkedin-icon.svg" alt="Icone de redirecionamento para Linkedin">
-                </a>
-            </li>
-            <li>
-                <a href="https://twitter.com/rodeghiero_">
-                    <img class="twitter" src="dist/img/twitter-icon.svg" alt="Icone de redirecionamento paraTwitter">
-                </a>
-            </li>
-        </ul>
-    </footer>
+    <div class="search animated slideInUp" id="container-search">
+      <input type="search" name="search" id="search-input" class="inp-search effect-2" placeholder="ex: flex-box" autofocus>
+      <span class="focus-border"></span>
+      <span class="close-btn" id="close-btn">&times;</span>
+      <ul id="output"></ul>
+    </div>
 
-    <script src="dist/js/index.min.js"></script>
+    <div class="container-tag animated fadeIn">
+      <ul class="tags">
+        <li>
+          <a class="tag">HTML</a>
+        </li>
+        <li>
+          <a class="tag">CSS</a>
+        </li>
+        <li>
+          <a class="tag">JS</a>
+        </li>
+        <li>
+          <a class="tag">React.js</a>
+        </li>
+        <li>
+          <a class="tag">VS Code</a>
+        </li>
+        <li>
+          <a class="tag">Gulp</a>
+        </li>
+        <li>
+          <a class="tag">Chart.js</a>
+        </li>
+        <li>
+          <a class="tag">ES6</a>
+        </li>
+      </ul>
+    </div>
+
+    <div class="container ">
+      <div class="article animated zoomIn">
+
+        <a href="./dist/sass-react.html">
+          <article class="card card-body mb-5">
+            <h1>Sass + React.js</h1>
+            <p>Como integrar Sass e React.js</p>
+            <div class="container-tag-post">
+              <ul class="tag-post">
+                <li>Sass</li>
+                <li>React.js</li>
+                <li>JS</li>
+                <li>webpack</li>
+              </ul>
+            </div>
+            <span> Tuesday, June 5, 2018</span>
+          </article>
+        </a>
+
+        <a href="./dist/spread-operator.html">
+          <article class="card card-body mb-5">
+            <h1>Spread operator ES6</h1>
+            <p>Entendendo como funciona o spread operator "..."</p>
+            <div class="container-tag-post">
+              <ul class="tag-post">
+                <li>JS</li>
+                <li>ES6</li>
+              </ul>
+            </div>
+            <span> Wednesday, March 14, 2018</span>
+          </article>
+        </a>
+
+        <a href="./dist/chart-js.html">
+          <article class="card card-body mb-5">
+            <h1>Gráficos com chart.js</h1>
+            <p>Construindo gráficos com chart.js</p>
+            <div class="container-tag-post">
+              <ul class="tag-post">
+                <li>JS</li>
+                <li>HTML</li>
+              </ul>
+            </div>
+            <span> Tuesday, December 12, 2017</span>
+          </article>
+        </a>
+
+        <a href="./dist/object-literal.html">
+          <article class="card card-body mb-5">
+            <h1>Objeto literal em JS</h1>
+            <p>Objeto literal + realizando manipulação do DOM.
+            </p>
+            <div class="container-tag-post">
+              <ul class="tag-post">
+                <li>JS</li>
+                <li>HTML</li>
+              </ul>
+            </div>
+            <span> Sunday, November 5, 2017</span>
+          </article>
+        </a>
+
+        <a href="./dist/copy-right.html">
+          <article class="card card-body mb-5">
+            <h1>CopyRight Automático </h1>
+            <p>Atualizar data do CopyRight de forma automatica.</p>
+            <div class="container-tag-post">
+              <ul class="tag-post">
+                <li>JS</li>
+                <li>HTML</li>
+              </ul>
+            </div>
+            <span> Monday, October 9, 2017</span>
+          </article>
+        </a>
+
+      </div>
+    </div>
+  </div>
+
+  <footer class=" footer">
+    <ul class="social-icons">
+      <li>
+        <a href="https://github.com/MarioRodeghiero">
+          <img class="github" src="../src/img/github-icon.svg" alt="Icone de redirecionamento para Git">
+        </a>
+      </li>
+      <li>
+        <a href="https://br.linkedin.com/in/mariorodeghiero">
+          <img class="linkedin" src="../src/img/linkedin-icon.svg" alt="Icone de redirecionamento para Linkedin">
+        </a>
+      </li>
+      <li>
+        <a href="https://twitter.com/rodeghiero_">
+          <img class="twitter" src="../src/img/twitter-icon.svg" alt="Icone de redirecionamento paraTwitter">
+        </a>
+      </li>
+    </ul>
+  </footer>
+
+  <script type="text/javascript" src="./dist/app.420024f7c7ee18f10eba.js"></script>
 </body>
 
 </html>

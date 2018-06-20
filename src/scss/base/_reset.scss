@@ -1,0 +1,40 @@
+// * {
+//   margin: 0;
+//   padding: 0;
+// }
+
+body,
+html {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  // font-size: 100%;
+}
+
+ol,
+ul {
+  list-style: none;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+p,
+li,
+span {
+  font-family: "Roboto";
+  font-weight: 100;
+  line-height: 1.1;
+  letter-spacing: 0.025em;
+}
+
+b {
+  font-family: "Roboto";
+  font-weight: 300;
+  line-height: 1.1;
+  letter-spacing: 0.025em;
+  color: #6d6c6c;
+}

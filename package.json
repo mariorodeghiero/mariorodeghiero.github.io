@@ -1,38 +1,63 @@
 {
-  "name": "boiler-plate",
+  "name": "blog-mariorodeghiero",
   "version": "1.0.0",
-  "description": "Front-End Boiler plate",
-  "main": "gulpfile.js",
-  "author": "Mário Rodeghiero <mario.rodehiero@gmail.com>",
-  "license": "MIT",
-  "homepage": "https://github.com/mariorodeghiero/front-end-boilerplate",
-  "devDependencies": {
-    "babel-core": "^6.26.0",
-    "babel-loader": "^7.1.2",
-    "babel-preset-env": "^1.6.0",
-    "browser-sync": "^2.18.12",
-    "gulp": "^3.9.1",
-    "gulp-autoprefixer": "^4.0.0",
-    "gulp-babel": "^7.0.0",
-    "gulp-clean": "^0.3.2",
-    "gulp-concat": "^2.6.1",
-    "gulp-csslint": "^1.0.0",
-    "gulp-cssmin": "^0.2.0",
-    "gulp-html-replace": "^1.6.2",
-    "gulp-imagemin": "^3.3.0",
-    "gulp-jshint": "^2.0.4",
-    "gulp-sass": "^3.1.0",
-    "gulp-uglify": "^3.0.0",
-    "gulp-usemin": "^0.3.28",
-    "jshint": "^2.9.5",
-    "jshint-stylish": "^2.2.1",
-    "rss-to-json": "^1.0.2"
+  "description": "Repository created for my blog",
+  "main": "app.js",
+  "homepage": "https://github.com/mariorodeghiero/new-blog-webpack/blob/master/README.md",
+  "bugs": {
+    "url": "https://github.com/mariorodeghiero/new-blog-webpack/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/mariorodeghiero/new-blog-webpack.git"
   },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "gulp": "gulp"
+    "server": "node_modules/.bin/webpack-dev-server --inline --open",
+    "dev": "webpack --colors --progress",
+    "prod": "NODE_ENV=production webpack"
   },
-  "bugs": {
-    "url": "https://github.com/mariorodeghiero/front-end-boilerplate/issues"
+  "keywords": [
+    "webpack",
+    "webpack 3",
+    "boiler-plate",
+    "es6",
+    "babel",
+    "sass"
+  ],
+  "tags": [
+    "webpack",
+    "boiler-plate"
+  ],
+  "author": {
+    "name": "Mário Antônio do A. Rodeghiero",
+    "email": "mario.rodeghiero@gmail.com",
+    "homepage": "https://mariorodeghiero.com"
+  },
+  "license": "MIT",
+  "devDependencies": {
+    "babel-preset-env": "^1.6.1",
+    "babel-preset-es2015": "^6.24.1",
+    "clean-webpack-plugin": "^0.1.18",
+    "css-loader": "^0.28.9",
+    "extract-text-webpack-plugin": "^3.0.2",
+    "file-loader": "^1.1.6",
+    "glob-all": "^3.1.0",
+    "html-webpack-plugin": "^2.30.1",
+    "img-loader": "^2.0.1",
+    "json-loader": "^0.5.7",
+    "node-sass": "^4.7.2",
+    "purify-css": "^1.2.5",
+    "purifycss-webpack": "^0.7.0",
+    "raw-loader": "^0.5.1",
+    "sass-loader": "^6.0.6",
+    "style-loader": "^0.20.2",
+    "uglifyjs-webpack-plugin": "^1.1.8",
+    "webpack": "^3.11.0",
+    "webpack-dev-server": "^2.11.1"
+  },
+  "dependencies": {
+    "babel-core": "^6.26.0",
+    "babel-loader": "^7.1.2",
+    "prismjs": "^1.14.0"
   }
 }

@@ -1,23 +1,29 @@
-# My personal blog
+# New-blog
 
-Repository used on my blog, where I talk about some programming languages.
+## Plugins and Loaders
 
-- Javascript
-- HTML
-- CSS
-
-
-## Built With
-
-* [Node.JS](https://nodejs.org) - The runtime build
-* [NPM](https://www.npmjs.com/) - Dependency Management
-* [Gulp](http://gulpjs.com/) - Development Task Manager
-
+- babel-preset-es2015
+- clean-webpack-plugin
+- css-loader"
+- extract-text-webpack-plugin
+- file-loader
+- html-webpack-plugin
+- img-loader
+- node-sass
+- purify-css
+- purifycss-webpack
+- raw-loader
+- sass-loader
+- style-loader
+- uglifyjs-webpack-plugin
+- webpack
+- webpack-dev-server
+- babel-core
+- babel-loader
 
 ## Author
 
-* [Mário Antônio A. Rodeghiero](https://github.com/mariorodeghiero)
-
+- [Mário Antônio do Amaral Rodeghiero](https://github.com/mariorodeghiero)
 
 ## License
 
