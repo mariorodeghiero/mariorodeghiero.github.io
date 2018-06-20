@@ -2,13 +2,13 @@
   {
     "title": "CopyRight Automatico",
     "tags": "[JS]",
-    "url": "./copy-right.html",
+    "url": "../dist/copy-right.html",
     "date": "9 out 2017"
   },
   {
     "title": "Objeto de notação literal",
     "tags": "[JS]",
-    "url": "./object-literal.html",
+    "url": "../dist/object-literal.html",
     "date": "05 nov 2017"
   },
   {
@@ -20,13 +20,13 @@
   {
     "title": "Spread operator(...)",
     "tags": "[JS, ES6]",
-    "url": "./spread-operator.html",
+    "url": "../dist/spread-operator.html",
     "date": "14 mar 2018"
   },
   {
     "title": "Sass + React.js",
     "tags": "[JS, webpack, react, sass]",
-    "url": "./sass-react.html",
+    "url": "../dist/sass-react.html",
     "date": "5 june 2018"
   }
 ]
