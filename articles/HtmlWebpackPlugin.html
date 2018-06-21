@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta itemprop="name" content="HtmlWebpackPlugin Multiple HTML files">
+  <title>Generating multiple HTML files with HtmlWebpackPlugin</title>
+
+  <!-- Social: Twitter -->
+  <meta name="twitter:site" content="@rodeghiero_">
+  <meta name="twitter:title" content="HtmlWebpackPlugin Multiple HTML files">
+  <meta name="twitter:description" content="Generating multiple HTML files with HtmlWebpackPlugin">
+
+  <!-- Social: Open Graph -->
+  <meta property="og:locale" content="en_US">
+  <meta property="og:url" content="https://mariorodeghiero.com/dist/posts/object-literal.html">
+  <meta property="og:title" content="HtmlWebpackPlugin Multiple HTML files">
+  <meta property="og:site_name" content="Mario Rodeghiero Front End Developer">
+  <meta property="og:description" content="Generating multiple HTML files with HtmlWebpackPlugin">
+  <meta property="og:type" content="article">
+  <meta property="article:author" content="Mário Antônio do Amaral Rodeghiero">
+  <meta property="article:section" content="Tutorials">
+  <meta property="article:tag" content="HtmlWebpackPlugin, webpack, html, javascript">
+
+  <meta itemprop="description" content="Generating multiple HTML files with HtmlWebpackPlugin">
+  <!-- Global Site Tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-107916783-1"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+
+    function gtag() {
+      dataLayer.push(arguments);
+    }
+    gtag('js', new Date());
+
+    gtag('config', 'UA-107916783-1');
+  </script>
+  <link href="../dist/app.css" rel="stylesheet">
+</head>
+
+<body>
+
+  <article>
+
+    <a href="https://github.com/MarioRodeghiero">
+      <h5 class="author">
+        <img src="../src/img/github-logo.png" alt="icone github"> Autor: MárioRodeghiero
+      </h5>
+    </a>
+
+    <h5 class="publish-date">Data: 21/06/2018</h5>
+    <h1>HtmlWebpackPlugin Multiples HTML files</h1>
+    <h4>"Generating multiple HTML files with HtmlWebpackPlugin"</h4>
+
+    <p>
+      This is my first article in English, so I hope you like and sorry for some grammatical error. In the last days I made some
+      modifications in my blog and one of them was to stop using Gulp and to use the
+      <a class="link" href="https://webpack.js.org" target="_blank">Webpack</a>. During the configurations, I faced some difficulties and one of them was the process of generating multiple
+      HTML files using the plugin
+      <a class="link" href="https://github.com/jantimon/html-webpack-plugin" target="_blank">HtmlWebpackPlugin</a>.
+    </p>
+
+    <h2 class="sub-title">Versions</h2>
+
+    <pre><code class="language-javascript">
+     "html-webpack-plugin": "^2.30.1",
+     "webpack": "^3.11.0"
+        </code></pre>
+
+    <p>
+      We assume that you already have the webpack configured and want to implement the HtmlWebpackPlugin plugin to generate   multiple
+      html files. So, we need to install the plugin, using the command below:
+    </p>
+
+    <p class="command-line">$ npm i --save-dev html-webpack-plugin</p>
+    or
+    <p class="command-line">$ yarn add --dev html-webpack-plugin</p>
+
+    <h2 class="sub-title">Default HtmlWebpackPlugin Configuration</h2>
+    <p>
+      Once you have the requirements configured, usually use the plugin like this:
+    </p>
+
+    <pre><code class="language-javascript">
+const webpack = require('webpack');
+const HtmlWebpackPlugin = require('html-webpack-plugin')
+
+let HWPConfig = new HtmlWebpackPlugin({
+  template: __dirname + "/index.html",
+  file: "index.html",
+  inject: "body"
+});
+
+module.exports = {
+  .
+  .
+  .
+  plugins: [
+    HWPConfig
+  ]
+}
+    </code></pre>
+
+    <p>I like to store the plugin settings in any variable and then use it inside plugins.</p>
+
+    <h2 class="sub-title">Custom HtmlWebpackPlugin Configuration</h2>
+
+    <p>If we used the default setting for each new file and depending on the number of files, would leave our webpack configuration
+      file, very extensive. So let's create the following configuration :
+    </p>
+
+    <pre><code class="language-javascript">
+const webpack = require('webpack');
+const HtmlWebpackPlugin = require('html-webpack-plugin')
+
+let HWPConfig = new HtmlWebpackPlugin({
+  template: __dirname + "/index.html",
+  file: "index.html",
+  inject: "body"
+
+let articlesHtmlPlugin = ['sass-react', 'chart-js', 'copy-right', 'object-literal', 'spread-operator'];
+
+let multiplesFiles = articles.map(function(entryName) {
+  return new HtmlWebpackPlugin({
+    filename: entryName + '.html',
+    template: __dirname + `/articles/{entryName}.html`
+})
+
+module.exports = {
+  .
+  .
+  .
+  plugins: [
+    HWPConfig
+  ].concat(articlesHtmlPlugin)
+};
+    </code></pre>
+
+    <ul>
+      <li>1 - We create an array, with the exact name of each article in the articles folder, but
+        <b>without the extension</b>.
+      </li>
+      <br>
+      <li>2 - We create a
+        <b>"multiplesFiles"</b> variable, where we store in it the
+        <b>"articles.map"</b> return. It will go through each item of the array, add the name + extension in filename and then
+        inform the directory with the name of the file in
+        <b> template </b>.
+      </li>
+      <br>
+      <li>3 - Concatenate our variable
+        <b>articlesHtmlPlugin</b> at the end of plugins, using
+        <b>"concat (articlesHtmlPlugin)"</b>
+      </li>
+    </ul>
+
+
+    <h2 class="sub-title">Conclusion</h2>
+    <p>
+      This is one of the alternatives for generating multiple html files using the HtmlWebpackPlugin plugin.
+      <br> Now with each new file created just insert the exact name in the array, that the map would take care of the rest.
+      <br>
+      <br> Thanks!!
+    </p>
+  </article>
+
+  <!--Disqus comentarios-->
+  <div class="disqus" id="disqus_thread"></div>
+  <script>
+    (function () {
+      var d = document,
+        s = d.createElement('script');
+      s.src = 'https://helponedev.disqus.com/embed.js';
+      s.setAttribute('data-timestamp', +new Date());
+      (d.head || d.body).appendChild(s);
+    })();
+  </script>
+  <noscript>Please enable JavaScript to view the
+    <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a>
+  </noscript>
+</body>
+
+</html>

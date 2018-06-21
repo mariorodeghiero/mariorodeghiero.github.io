@@ -28,5 +28,11 @@
     "tags": "[JS, webpack, react, sass]",
     "url": "../dist/sass-react.html",
     "date": "5 june 2018"
+  },
+  {
+    "title": "HtmlWebpackPlugin Multiples HTML files",
+    "tags": "[JS, webpack]",
+    "url": "../dist/HtmlWebpackPlugin.html",
+    "date": "21 june 2018"
   }
 ]
