@@ -1,9 +1,16 @@
 User-agent: *
 Disallow: /src
+Disallow: /articles
 Disallow: .gitignore
 Disallow: CNAME
 Disallow: CONTRIBUTRING.md
+Disallow: CHANGELOG.md
 Disallow: LICENSE
 Disallow: README.md
-Disallow: gulpfile.js
+Disallow: webpack.config.js
 Disallow: package.json
+Disallow: package-lock.json
+Disallow: about.html
+Disallow: .editorconfig
+Disallow: /db
+
