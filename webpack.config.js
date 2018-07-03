@@ -30,7 +30,8 @@ var entry1 = [
   'copy-right',
   'object-literal',
   'spread-operator',
-  'HtmlWebpackPlugin'
+  'HtmlWebpackPlugin',
+  'json-server'
 ];
 
 var entryHtmlPlugins = entry1.map(function (entryName) {

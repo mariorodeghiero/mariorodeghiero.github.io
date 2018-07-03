@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta itemprop="name" content="jSON Server with ReactJS">
+  <title>How to use jSON Server with ReactJS</title>
+  <!-- default-->
+
+  <meta name="description" content="How to use jSON Server with ReactJS">
+  <!-- Social: Twitter -->
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:site" content="@rodeghiero_">
+  <meta name="twitter:title" content="jSON Server with ReactJS">
+  <meta name="twitter:description" content="How to use jSON Server with ReactJS">
+  <meta property="twitter:image:src" content="https://mariorodeghiero.com/src/img/htmlWebpackPlugin.png">
+
+  <!-- Social: Open Graph -->
+  <meta property="og:locale" content="en_US">
+  <meta property="og:url" content="https://mariorodeghiero.com/dist/HtmlWebpackPlugin.html">
+  <meta property="og:title" content="jSON Server with ReactJS">
+  <meta property="og:image" content="https://mariorodeghiero.com/src/img/htmlWebpackPlugin.png">
+  <meta property="og:site_name" content="Mario Rodeghiero - Front End Developer">
+  <meta property="og:description" content="How to use jSON Server with ReactJS">
+  <meta property="og:type" content="article">
+  <meta property="article:author" content="Mário Antônio do Amaral Rodeghiero">
+  <meta property="article:section" content="Tutorials">
+  <meta property="article:tag" content="json-server, json server, reactjs, react.js javascript, restapi">
+
+  <meta itemprop="description" content="How to use jSON Server with ReactJS">
+  <!-- Global Site Tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-107916783-1"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+
+    function gtag() {
+      dataLayer.push(arguments);
+    }
+    gtag('js', new Date());
+
+    gtag('config', 'UA-107916783-1');
+  </script>
+  <link href="../dist/app.css" rel="stylesheet">
+<link href="app.css" rel="stylesheet"></head>
+
+<body>
+  <article>
+    <div>
+      <a href="https://github.com/MarioRodeghiero">
+        <h5 class="author">
+          <img src="../src/img/github-logo.png" alt="icone github"> Author: MárioRodeghiero
+        </h5>
+      </a>
+    </div>
+
+    <div>
+      <h5 class="publish-date">Date: 07/03/2018</h5>
+      <h1>jSON Server with ReactJS</h1>
+      <h4>"How to use jSON Server with ReactJS"</h4>
+      <p>
+        <a class="link" href="https://github.com/typicode/json-server" target="_blank">JSON Server</a> helps you to set up a REST API simply and quickly. As they report in the Github repository, you can
+        create in less than 30 seconds. In this article, we will see how to install and make available a jSON file.
+      </p>
+    </div>
+
+    <div>
+      <h2 class="sub-title">Starting the project</h2>
+      <ul>
+        <li>1 - We created the project using created-react-app</li>
+        <p class="command-line">$ npx create-react-app my-app</p>
+        <p class="command-line">$ cd my-app</p>
+        <br/>
+        <li>2 - We installed jSON-Server</li>
+        <p class="command-line">$ npm install -g json-server</p>
+        <br/>
+      </ul>
+    </div>
+
+    <div>
+      <h2 class="sub-title">Creating the JSON File</h2>
+      <p>
+        Within my-app folder we will create a file named
+        <b>"db.json"</b> with the following data:
+      </p>
+
+      <pre>
+      <code class="language-javascript">
+{
+  "posts": [
+    {
+      "title": "CopyRight Automatico",
+      "tags": "[JS]"
+    },
+    {
+      "title": "HtmlWebpackPlugin Multiples HTML files",
+      "tags": "[JS, webpack]"
+    }
+  ]
+}
+      </code>
+    </pre>
+
+      <p>Then let's run "json-server" and "react-app" by running the command below:</p>
+      <p class="command-line">$ json-server --watch db.json --port 3001</p>
+      <p class="command-line">$ npm run start</p>
+    </div>
+
+    <div>
+      <h2 class="sub-title">Configuring the App.js file</h2>
+      <p>
+        Now that we have our "json-server" running under "localhost:3001/posts" we can do our consultation. So in the App.js file
+        insert the following code below, where when mounting the component in the react, we perform a query with
+        <b>"fetch"</b> and in a sequence we use the
+        <b>"map"</b> to return each item.
+      </p>
+      <img class="screenShot" src="../src/img/screenShot-json-server.png" alt="screen Shot da estrutura de arquivos">
+    </div>
+
+    <div>
+      <h2 class="sub-title">Result</h2>
+      <p>
+        Now, if we look at the "React App" page, we will have the following result.
+      </p>
+      <img class="screenShot" src="../src/img/screenShot-json-server-1.png" alt="screen Shot da estrutura de arquivos">
+    </div>
+
+    <div>
+      <h2 class="sub-title">Conclusion</h2>
+      <p>
+        By following the steps in this article, you can create an excellent development environment with ReactJS and jSON SERVER
+        for your applications.
+        <br/>The theme used in the code, I created inspired by "Vue.js" and you can install in "VS_Code", searching for
+        <a class="link" href="https://mariorodeghiero.com/vue-theme/" target="_blank">"Vue Theme"</a>.
+      </p>
+      <p>Thanks!!!</p>
+    </div>
+  </article>
+
+  <!--Disqus comentarios-->
+  <div class="disqus" id="disqus_thread"></div>
+  <script>
+    (function () {
+      var d = document,
+        s = d.createElement('script');
+      s.src = 'https://helponedev.disqus.com/embed.js';
+      s.setAttribute('data-timestamp', +new Date());
+      (d.head || d.body).appendChild(s);
+    })();
+  </script>
+  <noscript>Please enable JavaScript to view the
+    <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a>
+  </noscript>
+<script type="text/javascript" src="app.420024f7c7ee18f10eba.js"></script></body>
+
+</html>
