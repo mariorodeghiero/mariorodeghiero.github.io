@@ -40,5 +40,11 @@
     "tags": "[JS, ReactJS]",
     "url": "../dist/json-server.html",
     "date": "Jul 3, 2018"
+  },
+  {
+    "title": "Some tips on SASS",
+    "tags": "[SASS, CSS]",
+    "url": "../dist/sass.html",
+    "date": "Jul 20, 2018"
   }
 ]

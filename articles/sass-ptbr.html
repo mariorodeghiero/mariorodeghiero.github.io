@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta itemprop="name" content="Trabalhando com SASS">
+  <title>Trabalhando com SASS</title>
+  <!-- default-->
+
+  <meta name="description" content="Melhorando seu CSS com SASS">
+  <!-- Social: Twitter -->
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:site" content="@rodeghiero_">
+  <meta name="twitter:title" content="Trabalhando com SASS">
+  <meta name="twitter:description" content="Melhorando seu CSS com SASS">
+  <meta property="twitter:image:src" content="https://mariorodeghiero.com/src/img/sass.png">
+
+  <!-- Social: Open Graph -->
+  <meta property="og:locale" content="en_US">
+  <meta property="og:url" content="https://mariorodeghiero.com/dist/sass.html">
+  <meta property="og:title" content="Trabalhando com SASS">
+  <meta property="og:image" content="https://mariorodeghiero.com/src/img/sass.png">
+  <meta property="og:site_name" content="Mario Rodeghiero - Front End Developer">
+  <meta property="og:description" content="Melhorando seu CSS com SASS">
+  <meta property="og:type" content="article">
+  <meta property="article:author" content="Mário Antônio do Amaral Rodeghiero">
+  <meta property="article:section" content="Tutorials">
+  <meta property="article:tag" content="sass, melhorando css, pre-processadores, scss, variaveis, mixins, placeholder">
+
+  <meta itemprop="description" content="Melhorando seu CSS com SASS">
+  <!-- Global Site Tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-107916783-1"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+
+    function gtag() {
+      dataLayer.push(arguments);
+    }
+    gtag('js', new Date());
+
+    gtag('config', 'UA-107916783-1');
+  </script>
+  <link href="../dist/app.css" rel="stylesheet">
+</head>
+
+<body>
+  <article>
+    <div>
+      <a href="https://github.com/MarioRodeghiero">
+        <h5 class="author">
+          <img src="../src/img/github-logo.png" alt="icone github"> Author: MárioRodeghiero
+        </h5>
+      </a>
+    </div>
+
+    <div>
+      <h5 class="publish-date">Date: 07/20/2018</h5>
+      <h1>Trabalhando com SASS</h1>
+      <h4>"Melhorando seu CSS com SASS"</h4>
+      <p>
+        <a class="link" href="https://sass-lang.com/" target="_blank">SASS</a> é pré-processador assim como o Less e o Stylus. Particularmente eu prefiro usar o SASS e sobre ele que vamos
+        discutir neste artigo. Mas porque usar um pré-processador? Neste artigo vamos conferir algumas das funcionalidades
+        que o SASS oferece para resolvermos algumas questões que no CSS não é possivel.
+      </p>
+    </div>
+
+    <div>
+      <h2 class="sub-title">Variaveis</h2>
+      <p>
+        Um problema muito conhecido no mundo da programação é o DRY(Don't repeat yourself), as variaveis no Sass ajudam a resolver
+        boa parte desta questão. Vamos ver como exemplo, cores usadas no CSS:
+      </p>
+
+      <pre>
+            <code class="language-javascript">
+
+  .header {
+    color: #000;
+    background-color: #fff;
+  }
+
+  .links{
+    color: #000;
+  }
+
+  .footer{
+    background-color: #fff;
+  }
+            </code>
+          </pre>
+
+      <p>
+        Analisando este código, é possivel notarmos que se repete o valor hexadecimal de algumas cores, agora imagine se o designer
+        solicita uma alteração de background no "header" e "footer", você teria que alterar em dois locais diferentes, dependendo
+        do projeto e soliciação, seria uma tarefa massante. Com o SASS, podemos resolver esta questão rapidamente e de forma
+        muito eficaz.
+      </p>
+
+      <pre>
+            <code class="language-javascript">
+
+  $color-defalt: #000;
+  $bk-color: #fff;
+
+  .header {
+    ...
+    color: $color-defalt;
+    background-color: $bk-color;
+    ...
+  }
+
+  .links{
+    ...
+    color: $color-defalt;
+    ...
+  }
+
+  .footer{
+    ...
+    background-color: $bk-color;
+    ...
+  }
+            </code>
+          </pre>
+    </div>
+
+    <div>
+      <h2 class="sub-title">Mixins</h2>
+      <p>
+        As funcionalidades que os mixins oferecem são extremamente importante, pois com eles podemos definir estilos e reutilizalos
+        em nosso codigo. Dentro de um mixin pode conter muitas regras, mas o ideal é que ele não seja muito extenso, sendo
+        simples e funcional.
+      </p>
+
+      <pre>
+            <code class="language-javascript">
+  /**
+   * Criando mixin
+   */
+
+  @mixin rounded-border($radius: 0.2em) {
+    border-radius: $radius
+  }
+
+  /**
+   * incluindo mixin com valor default
+   */
+
+  .button {
+    ...
+    @include rounded-border;
+    ...
+  }
+
+
+  /**
+   * Incluindo mixin com outro valor
+   */
+
+  .card {
+    ...
+    @include rounded-border(0.5em);
+    ...
+  }
+            </code>
+          </pre>
+
+      <p>
+        Uma forma eficaz de criar um mixin é passando um valor padrao como argumento, assim voce pode utilizar o mixin com valor
+        padrao para um determinado componente e caso precise reutilizar o mixin em outro componente, basta informar o novo
+        valor entre parentes como no codigo acima.
+      </p>
+    </div>
+
+    <div>
+      <h2 class="sub-title">@extend</h2>
+      <p>
+        O @extend possui uma funcionalidade interassante, onde podemos criar uma classe ou ID com as regras de CSS desejada e para
+        usar, basta usar "@extend + classe". Assim como o proprio nome diz, ele vai extender a classe ou ID com as regras
+        CSS e quando gerado o arquivo CSS, no inicio do arquivo vai conter o nome do exetend acompanhado de todos locais
+        onde ele foi chamado. </p>
+
+      <pre>
+        <code class="language-javascript">
+  .shadow {
+    -webkit-box-shadow: 0 2px 5px 0.3px rgba(0, 0, 0, 0.4);
+    box-shadow: 0 2px 5px 0.3px rgba(0, 0, 0, 0.4);
+  }
+
+  .card {
+    ...
+    @extend .shadow
+    ...
+  }
+         </code>
+      </pre>
+    </div>
+
+    <div>
+      <h2 class="sub-title">%placeholder</h2>
+      <p>
+        O placeholder também é de grande utilidade e uma das diferenças entre
+        <strong>"placeholders"</strong> e
+        <strong>"mixins"</strong>, é que no mixin podemos informar valores padrões porque ele trabalha com
+        <strong>"@include"</strong>. Já no placeholder utilizamos
+        <strong>"@extend"</strong> onde não tem suporte para receber valores. Então se você precisar passar algum valor, o mixin
+        é mais aconselhado, caso contrario você pode utilizar o placeholder da seguinte forma:
+      </p>
+
+      <pre>
+        <code class="language-javascript">
+  %shadow {
+    -webkit-box-shadow: 0 2px 5px 0.3px rgba(0, 0, 0, 0.4);
+    box-shadow: 0 2px 5px 0.3px rgba(0, 0, 0, 0.4);
+  }
+
+  .card {
+    ...
+    @extend %shadow
+    ...
+  }
+         </code>
+      </pre>
+
+      <p>
+        O placeholder tem uma caracteristica conhecida como
+        <strong>"classe silenciosa"</strong>, pois quando gerado o codigo CSS o placeholder fica oculto, montrando somente onde ele
+        foi inserido, o contrario do "@extend".
+      </p>
+    </div>
+
+    <div>
+      <h2 class="sub-title">Conclusão</h2>
+      <p>
+        Essas são apenas algumas das inumeras funcionalidades que o SASS disponibiliza para agilizar o processo de desenvolvimento,
+        deixando nosso codigo mais performatico. Vale a pena conferir a documentação diretamente no site do
+        <a class="link" href="https://sass-lang.com/documentation/file.SASS_REFERENCE.html" target="_blank">SASS</a> e conhecer um pouco mais sobre o poder deste pré-processador.
+        <br>
+        <br> Thanks!!
+      </p>
+  </article>
+
+  <!--Disqus comentarios-->
+  <div class="disqus" id="disqus_thread"></div>
+  <script>
+    (function () {
+      var d = document,
+        s = d.createElement('script');
+      s.src = 'https://helponedev.disqus.com/embed.js';
+      s.setAttribute('data-timestamp', +new Date());
+      (d.head || d.body).appendChild(s);
+    })();
+  </script>
+  <noscript>Please enable JavaScript to view the
+    <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a>
+  </noscript>
+</body>
+
+</html>

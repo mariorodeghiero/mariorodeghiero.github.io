@@ -1,0 +1,24 @@
+.search {
+  .inp-search {
+    font: 15px/24px "Lato", Arial, sans-serif;
+    width: 40%;
+    margin-top: 40px;
+    box-sizing: border-box;
+    letter-spacing: 1px;
+    background: #eee;
+    border: 0;
+    border-bottom: 1px solid $color-logo;
+    opacity: 0.5;
+    padding: 7px 0;
+  }
+  #output {
+    font-size: 0.8rem;
+  }
+  &:focus {
+    outline: none;
+  }
+}
+
+:focus {
+  outline: none;
+}

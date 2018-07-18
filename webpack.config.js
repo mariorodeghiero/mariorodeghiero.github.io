@@ -31,7 +31,9 @@ var entry1 = [
   'object-literal',
   'spread-operator',
   'HtmlWebpackPlugin',
-  'json-server'
+  'json-server',
+  'sass',
+  'sass-ptbr'
 ];
 
 var entryHtmlPlugins = entry1.map(function (entryName) {

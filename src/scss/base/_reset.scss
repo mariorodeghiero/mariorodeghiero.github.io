@@ -1,15 +1,9 @@
-// * {
-//   margin: 0;
-//   padding: 0;
-// }
-
 body,
 html {
   height: 100%;
   margin: 0;
   padding: 0;
   border: 0;
-  // font-size: 100%;
 }
 
 ol,
@@ -31,7 +25,8 @@ span {
   letter-spacing: 0.025em;
 }
 
-b {
+b,
+strong {
   font-family: "Roboto";
   font-weight: 300;
   line-height: 1.1;

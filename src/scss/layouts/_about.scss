@@ -1,0 +1,122 @@
+.container-about {
+  width: 80%;
+  max-width: 1280px;
+  margin: 0 auto;
+  .about-title {
+    margin: 0 auto;
+    margin-top: 100px;
+    text-align: center;
+    h2 {
+      padding-top: 20px;
+      padding-bottom: 30px;
+      color: #918e8e;
+      font-weight: 100;
+    }
+    h3 {
+      font-weight: 200;
+    }
+    .introduction {
+      padding: 50px;
+    }
+    img {
+      margin-right: 1em;
+      width: 100px;
+      height: 100px;
+      border-radius: 50px;
+    }
+    p {
+      margin-top: 20px;
+      text-align: left;
+      line-height: 1.6em;
+      font-size: 1em;
+      color: #918e8e;
+      text-indent: 3em;
+      a {
+        text-decoration: none;
+        color: inherit;
+      }
+    }
+  }
+  .container-info {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, 320px);
+    grid-column-gap: 20px;
+    justify-content: center;
+    padding-top: 80px;
+    padding-bottom: 80px;
+    margin: 0 auto;
+    .info {
+      font-family: "Roboto";
+      font-weight: 100;
+      line-height: 1.1;
+      letter-spacing: 0.025em;
+      padding-bottom: 50px;
+      h5 {
+        text-align: center;
+        padding-bottom: 30px;
+      }
+    }
+    .skills {
+      font-family: "Roboto";
+      font-weight: 100;
+      line-height: 1.6;
+      letter-spacing: 0.025em;
+      padding-bottom: 50px;
+      h5 {
+        text-align: center;
+        padding-bottom: 30px;
+      }
+      ul > li {
+        padding: 4px;
+      }
+    }
+  }
+  .portfolio {
+    width: 100%;
+    h1 {
+      text-align: center;
+    }
+    .wrapper {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, 300px);
+      grid-column-gap: 20px;
+      grid-row-gap: 20px;
+      justify-content: center;
+      padding-top: 50px;
+      padding-bottom: 80px;
+      margin: 0 auto;
+      .box {
+        border: 1px solid #f0f0f0;
+        border-radius: 5px;
+        padding-left: 20px;
+        padding-right: 20px;
+        padding-top: 20px;
+        transition: ease-in-out;
+        transition-duration: 0.5s;
+        a {
+          text-decoration: none;
+          color: inherit;
+          text-align: center;
+          h3 {
+            padding-bottom: 20px;
+          }
+          ul {
+            margin-left: -40px;
+            li {
+              display: inline-block;
+              img {
+                width: 30px;
+                height: 30px;
+              }
+            }
+          }
+        }
+        &:hover {
+          box-shadow: 0px 2px 8px 0px #c4c1c1;
+          transition: ease-in-out;
+          transition-duration: 1s;
+        }
+      }
+    }
+  }
+}
