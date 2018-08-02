@@ -1,11 +1,18 @@
 .container-flag {
-  padding: 20px;
-  p {
-    font-weight: 200;
-  }
-  .flag {
-    margin-left: 10px;
-    width: 25px;
-    height: 25px;
-  }
+    float: left;
+    padding: 20px;
+    p {
+        float: left;
+        font-weight: 200;
+        margin-top: 20px;
+    }
+    .flag {
+        margin-top: 20px;
+        margin-left: 10px;
+        width: 20px;
+        height: 20px;
+    }
+    a {
+        text-decoration: none;
+    }
 }
