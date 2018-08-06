@@ -48,7 +48,7 @@ module.exports = {
     app: ['./src/main.js', './src/main.scss']
   },
   output: {
-    path: path.resolve(__dirname, './dist'),
+    path: path.resolve(__dirname, './article'),
     filename: '[name].[chunkhash].js'
   },
   module: {
@@ -94,7 +94,7 @@ module.exports = {
   plugins: [
     HWPConfig, HWPConfigAbout,
     // HWPConfigArticle,
-    new CleanWebpackPlugin(['dist'], {
+    new CleanWebpackPlugin(['article'], {
       root: __dirname,
       verbose: true,
       dry: false

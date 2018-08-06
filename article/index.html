@@ -34,24 +34,30 @@
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
   <script src="http://code.jquery.com/ui/1.9.2/jquery-ui.js"></script>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">
+  <link href="./article/app.css" rel="stylesheet">
 
-  <link href="./dist/app.css" rel="stylesheet">
-  <link href="app.css" rel="stylesheet">
-</head>
+  <!-- Global Site Tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-107916783-1"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
 
-<!-- Global Site Tag (gtag.js) - Google Analytics -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=UA-107916783-1"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
+    function gtag() {
+      dataLayer.push(arguments);
+    }
+    gtag('js', new Date());
 
-  function gtag() {
-    dataLayer.push(arguments);
-  }
-  gtag('js', new Date());
+    gtag('config', 'UA-107916783-1');
+  </script>
 
-  gtag('config', 'UA-107916783-1');
-</script>
-</head>
+  <!-- Google AdSense -->
+  <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+  <script>
+    (adsbygoogle = window.adsbygoogle || []).push({
+      google_ad_client: "ca-pub-6958594865191342",
+      enable_page_level_ads: true
+    });
+  </script>
+<link href="app.css" rel="stylesheet"></head>
 
 <body>
   <div class="geral">
@@ -71,7 +77,7 @@
               <a href="./">Home</a>
             </li>
             <li>
-              <a href="./dist/about.html">About Me</a>
+              <a href="./article/about.html">About Me</a>
             </li>
             <!-- <li>
               <a>Contact</a>
@@ -128,7 +134,7 @@
     <div class="container ">
       <div class="article animated zoomIn">
 
-        <a href="./dist/sass.html">
+        <a href="./article/sass.html">
           <article class="card card-body mb-5">
             <h1>SASS</h1>
             <p>Improving your CSS with SASS</p>
@@ -142,7 +148,7 @@
           </article>
         </a>
 
-        <a href="./dist/json-server.html">
+        <a href="./article/json-server.html">
           <article class="card card-body mb-5">
             <h1>jSON Server with ReactJS</h1>
             <p>How to use jSON Server with ReactJS</p>
@@ -156,7 +162,7 @@
           </article>
         </a>
 
-        <a href="./dist/HtmlWebpackPlugin.html">
+        <a href="./article/HtmlWebpackPlugin.html">
           <article class="card card-body mb-5">
             <h1>HtmlWebpackPlugin</h1>
             <p>Multiples HTML files with HtmlWebpackPlugin</p>
@@ -170,7 +176,7 @@
           </article>
         </a>
 
-        <a href="./dist/sass-react.html">
+        <a href="./article/sass-react.html">
           <article class="card card-body mb-5">
             <h1>Sass + React.js</h1>
             <p>Como integrar Sass e React.js</p>
@@ -186,7 +192,7 @@
           </article>
         </a>
 
-        <a href="./dist/spread-operator.html">
+        <a href="./article/spread-operator.html">
           <article class="card card-body mb-5">
             <h1>Spread operator ES6</h1>
             <p>Entendendo como funciona o spread operator "..."</p>
@@ -200,7 +206,7 @@
           </article>
         </a>
 
-        <a href="./dist/chart-js.html">
+        <a href="./article/chart-js.html">
           <article class="card card-body mb-5">
             <h1>Gráficos com chart.js</h1>
             <p>Construindo gráficos com chart.js</p>
@@ -214,7 +220,7 @@
           </article>
         </a>
 
-        <a href="./dist/object-literal.html">
+        <a href="./article/object-literal.html">
           <article class="card card-body mb-5">
             <h1>Objeto literal em JS</h1>
             <p>Objeto literal + realizando manipulação do DOM.
@@ -229,7 +235,7 @@
           </article>
         </a>
 
-        <a href="./dist/copy-right.html">
+        <a href="./article/copy-right.html">
           <article class="card card-body mb-5">
             <h1>CopyRight Automático </h1>
             <p>Atualizar data do CopyRight de forma automatica.</p>
@@ -266,8 +272,24 @@
       </li>
     </ul>
   </footer>
-  <script type="text/javascript" src="./dist/app.420024f7c7ee18f10eba.js"></script>
-  <script type="text/javascript" src="app.420024f7c7ee18f10eba.js"></script>
-</body>
+  <script type="text/javascript" src="./article/app.420024f7c7ee18f10eba.js"></script>
+  <script type="application/ld+json">
+      {
+        "@context": "http://schema.org/",
+        "@type": "Website",
+        "url": "https://mariorodeghiero.com",
+        "name": "Mário Rodeghiero Blog",
+        "author": {
+            "type": "Person",
+            "name": "Mário Antônio A. Rodeghiero",
+            "sameAs": [
+                "https://twitter.com/rodeghiero_",
+                "https://www.linkedin.com/in/mariorodeghiero/"
+            ]
+        },
+        "description": "Blog about Web Development."
+      }
+  </script>
+<script type="text/javascript" src="app.420024f7c7ee18f10eba.js"></script></body>
 
 </html>
