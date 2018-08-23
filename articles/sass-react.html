@@ -60,8 +60,9 @@
       Neste artigo vou mostrar os passos para instalar e utilizar o
       <a class="link" href="https://sass-lang.com" target="_blank">Sass</a> com
       <a class="link" href="https://reactjs.org" target="_blank">React.js</a>. Vamos usar o
-      <a class="link" href="https://github.com/facebook/create-react-app" target="_blank">created-react-app</a> como base para nosso projeto, mas antes de apresentar como iniciar um projeto com o created-react-app
-      é necessário que você tenha instalado:
+      <a class="link" href="https://github.com/facebook/create-react-app" target="_blank">created-react-app</a> como base
+      para nosso projeto, mas antes de apresentar como iniciar um projeto com o created-react-app é necessário que você tenha
+      instalado:
       <br/>
       <br/>
       <a class="link" href="https://nodejs.org/en/" target="_blank">Node.js</a> e
@@ -89,14 +90,15 @@
     <p class="command-line">$ npm install sass-loader node-sass --save-dev</p>
 
     <h2 class="sub-title">Passo 1</h2>
-    <p>Agora que já instalamos os módulos necessários, devemos ejetar os arquivos de configurações do created-react-app e realizar
-      as alterações necessárias para trabalharmos com Sass.</p>
+    <p>Agora que já instalamos os módulos necessários, devemos ejetar os arquivos de configurações do created-react-app e
+      realizar as alterações necessárias para trabalharmos com Sass.</p>
     <p class="command-line">$ npm run eject</p>
 
     <h2 class="sub-title">Passo 2</h2>
     <p>Em seguida vamos editar os dois arquivos abaixo, onde estão as configurações do webpack na pasta
       <b>"/config"</b>.
-      <br/> O primeiro é o arquivo de desenvolvimento, o segundo é o arquivo de produção.</p>
+      <br/> O primeiro é o arquivo de desenvolvimento, o segundo é o arquivo de produção.
+    </p>
 
     <li>
       <b>Arquivo de desenvolvimento:</b> webpack.config.dev.js</li>
@@ -120,8 +122,8 @@ test: /\.css$/,
       },
         </code></pre>
 
-    <p>Após ter localizado, você precisa realizar as seguintes alterações abaixo. Alterando primeiramente para ler todos arquivos
-      que terminam com
+    <p>Após ter localizado, você precisa realizar as seguintes alterações abaixo. Alterando primeiramente para ler todos
+      arquivos que terminam com
       <b>".scss"</b>, onde é usado uma expressão regular para indicar e depois é necessário inserir o
       <b>"sass-loader"</b> para realizar a transformação do arquivo original para JavaScript.</p>
     <pre><code class="language-javascript">
@@ -195,6 +197,8 @@ test: /\.scss$/,
             },
         </code></pre>
 
+    <br>
+    <br>
     <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
     <ins class="adsbygoogle" style="display:block; text-align:center;" data-ad-layout="in-article" data-ad-format="fluid" data-ad-client="ca-pub-6958594865191342"
       data-ad-slot="4936789613"></ins>
@@ -210,8 +214,8 @@ test: /\.scss$/,
       <a class="link" href="https://sass-lang.com" target="_blank">Sass</a> oferece.
       <br/>
       <br/>
-      <b>Obs:</b> Não esqueça de deletar os imports dos arquivos "Css" e importar os novos arquivos "Sass" para o React.js funcionar
-      normalmente.
+      <b>Obs:</b> Não esqueça de deletar os imports dos arquivos "Css" e importar os novos arquivos "Sass" para o React.js
+      funcionar normalmente.
       <br/>
       <br/> Thanks!!
     </p>
