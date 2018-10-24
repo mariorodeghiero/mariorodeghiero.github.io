@@ -7,16 +7,14 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta itemprop="name" content="Objeto de notação literal">
   <title>Objeto de notação literal</title>
-
   <!-- Social: Twitter -->
   <meta name="twitter:card" content="summary">
   <meta name="twitter:site" content="@rodeghiero_">
   <meta name="twitter:title" content="Objeto de notação literal">
   <meta name="twitter:description" content="Construindo objetos de notação literal">
-
   <!-- Social: Open Graph -->
   <meta property="og:locale" content="en_US">
-  <meta property="og:url" content="https://mariorodeghiero.com/article/object-literal.html">
+  <meta property="og:url" content="https://www.mrodeghiero.com/object-literal.html">
   <meta property="og:title" content="Objeto de notação literal">
   <meta property="og:site_name" content="Mario Rodeghiero Desenvolvedor Front End">
   <meta property="og:description" content="Criando objetos de notação literala em javascript.">
@@ -24,9 +22,29 @@
   <meta property="article:author" content="Mário Antônio do Amaral Rodeghiero">
   <meta property="article:section" content="Tutoriais">
   <meta property="article:tag" content="Javascript, html, css, sass">
-
   <meta itemprop="description" content="Construindo objetos de notação literal">
-
+  <!-- Favicon -->
+  <link rel="apple-touch-icon" sizes="57x57" href="../src/favicon/apple-icon-57x57.png">
+  <link rel="apple-touch-icon" sizes="60x60" href="../src/favicon/apple-icon-60x60.png">
+  <link rel="apple-touch-icon" sizes="72x72" href="../src/favicon/apple-icon-72x72.png">
+  <link rel="apple-touch-icon" sizes="76x76" href="../src/favicon/apple-icon-76x76.png">
+  <link rel="apple-touch-icon" sizes="114x114" href="../src/favicon/apple-icon-114x114.png">
+  <link rel="apple-touch-icon" sizes="120x120" href="../src/favicon/apple-icon-120x120.png">
+  <link rel="apple-touch-icon" sizes="144x144" href="../src/favicon/apple-icon-144x144.png">
+  <link rel="apple-touch-icon" sizes="152x152" href="../src/favicon/apple-icon-152x152.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="../src/favicon/apple-icon-180x180.png">
+  <link rel="icon" type="image/png" sizes="192x192" href="../src/favicon/android-icon-192x192.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="../src/favicon/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="96x96" href="../src/favicon/favicon-96x96.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="../src/favicon/favicon-16x16.png">
+  <link rel="manifest" href="./src/favicon/manifest.json">
+  <meta name="msapplication-TileColor" content="#ffffff">
+  <meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
+  <meta name="application-name" content="Mário Rodeghiero Blog">
+  <meta name="msapplication-square70x70logo" content="smalltile.png">
+  <meta name="msapplication-square150x150logo" content="mediumtile.png">
+  <meta name="msapplication-wide310x150logo" content="widetile.png">
+  <meta name="msapplication-square310x310logo" content="largetile.png">
   <!-- Global Site Tag (gtag.js) - Google Analytics -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=UA-107916783-1"></script>
   <script>
@@ -53,20 +71,26 @@
       <h5 class="publish-date">Date: 10/11/2017</h5>
     </div>
 
-    <h1 class="title">Objeto literal</h1>
-    <h4>"Construindo objetos de notação literal."</h4>
+    <div>
+      <h1 class="title">Objeto literal</h1>
+      <h4>"Construindo objetos de notação literal."</h4>
+      <p>
+        Neste post vamos criar um objeto em javascript, usando notação literal. É um objeto que contem uma coleção de
+        valores referenciados por nomes, e podem ser utilizados conforme a necessidade do seu programa. O objeto pode
+        conter propriedades
+        "dado: valor" e também métodos (quando armazenamos uma função dentro de uma propriedade).
+      </p>
+    </div>
 
-    <p>
-      Neste post vamos criar um objeto em javascript, usando notação literal. É um objeto que contem uma coleção de valores referenciados
-      por nomes, e podem ser utilizados conforme a necessidade do seu programa. O objeto pode conter propriedades "dado:
-      valor" e também métodos (quando armazenamos uma função dentro de uma propriedade).
-    </p>
+    <div>
+      <h2 class="sub-title">Código HTML</h2>
+      <p>Logo abaixo esta disponível o código HTML que foi utilizando para exemplo. Para estilização foi usado o
+        framework
+        bootstrap e configurado algumas estilizações pessoais, fique a vontade para aplicar suas estilazações.
+      </p>
 
-    <h2 class="sub-title">Código HTML</h2>
-    <p>Logo abaixo esta disponível o código HTML que foi utilizando para exemplo. Para estilização foi usado o framework
-      bootstrap e configurado algumas estilizações pessoais, fique a vontade para aplicar suas estilazações.
-    </p>
-    <pre><code class="language-html">
+      <pre>
+      <code class="language-html">
 &lt;html&gt;
 &lt;body&gt;
 
@@ -84,19 +108,28 @@
     &lt;script src="js/object-literal.js"&gt;&lt;script&gt;
 &lt;/body&gt;
 &lt;/html&gt;
-          </code></pre>
+          </code>
+        </pre>
+    </div>
 
-    <h2 class="sub-title">Construindo um objeto literal</h2>
-    <p>
-      Vamos criar um objeto "Restaurante" no qual vai ter o nome de "Thay", onde vamos ter 30 mesas, sendo que 15 delas estarão
-      reservadas. Como vocês podem ver no código abaixo, primeiramente criamos uma variável "restaurante" seguida do sinal
-      de igual e abrimos chaves para criar o objeto, com suas propriedades e método. Dentro das chaves, vamos inserir cada
-      objeto (nome, mesas, reservada) e por ultimo o método com uma função para checar a quantidade de mesas disponíveis,
-      onde irá retornar o valor da quantidade de mesas, menos a quantidade de mesas reservadas.
-    </p>
+    <div>
+      <h2 class="sub-title">Construindo um objeto literal</h2>
+      <p>
+        Vamos criar um objeto "Restaurante" no qual vai ter o nome de "Thay", onde vamos ter 30 mesas, sendo que 15
+        delas estarão reservadas. Como vocês podem ver no código abaixo, primeiramente criamos uma variável
+        "restaurante" seguida do
+        sinal de igual e abrimos chaves para criar o objeto, com suas propriedades e método. Dentro das chaves, vamos
+        inserir
+        cada objeto (nome, mesas, reservada) e por ultimo o método com uma função para checar a quantidade de mesas
+        disponíveis, onde irá retornar o valor da quantidade de mesas, menos a quantidade de mesas reservadas.
+      </p>
+    </div>
 
-    <h2 class="sub-title">Código JS</h2>
-    <pre><code class="language-javascript">
+    <div>
+      <h2 class="sub-title">Código JS</h2>
+
+      <pre>
+      <code class="language-javascript">
 let restaurante = {
     nome: 'Thay',
     mesas: 30,
@@ -112,32 +145,26 @@ restNome.innerHTML = restaurante.nome;
 let restMesas = document.getElementById('mesas');
 restMesas.textContent = restaurante.mesasDisponiveis();
 
-        </code></pre>
+        </code>
+      </pre>
+    </div>
 
-    <h2 class="sub-title">Exemplo do Código funcionando</h2>
-
-    <p>
-      Aqui temos o exemplo do código JS funcionando, realizando a manipulação do DOM deixando visível o nome do restaurante e quantidade
-      de mesas disponíveis para reservas
-    </p>
-
-    <img class="screenShot" src="../src/img/screenShot-object-literal.png" alt="screen Shot da estrutura de arquivos">
-    <br>
-    <br>
-    <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
-    <ins class="adsbygoogle" style="display:block; text-align:center;" data-ad-layout="in-article" data-ad-format="fluid" data-ad-client="ca-pub-6958594865191342"
-      data-ad-slot="4936789613"></ins>
-    <script>
-      (adsbygoogle = window.adsbygoogle || []).push({});
-    </script>
-
-    <p>
-      Este código foi escrito com base no aprendizado do livro "JavaScript & JQuery Desenvolvimento de interfaces web interativas",
-      autor "Jon Duckett".
-      <br> Pretendo criar mais posts, repassando o que aprendi em livros, youtube e nos cursos em que estudo. Escrever é
-      uma boa forma de fixar o que aprendo e ainda de praxe, posso ajudar alguém.
-      <br> Thanks!!!
-    </p>
+    <div>
+      <h2 class="sub-title">Exemplo do Código funcionando</h2>
+      <p>
+        Aqui temos o exemplo do código JS funcionando, realizando a manipulação do DOM deixando visível o nome do
+        restaurante e quantidade
+        de mesas disponíveis para reservas
+      </p>
+      <img class="screenShot" src="../src/img/screenShot-object-literal.png" alt="screen Shot da estrutura de arquivos">
+      <p>
+        Este código foi escrito com base no aprendizado do livro "JavaScript & JQuery Desenvolvimento de interfaces web
+        interativas", autor "Jon Duckett".
+        <br> Pretendo criar mais posts, repassando o que aprendi em livros, youtube e nos cursos em que estudo.
+        Escrever é uma boa forma de fixar o que aprendo e ainda de praxe, posso ajudar alguém.
+        <br> Thanks!!!
+      </p>
+    </div>
 
   </article>
 

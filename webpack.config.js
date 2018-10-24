@@ -33,7 +33,9 @@ var entry1 = [
   'HtmlWebpackPlugin',
   'json-server',
   'sass',
-  'sass-ptbr'
+  'sass-ptbr',
+  'styled-components',
+  'gist-interview',
 ];
 
 var entryHtmlPlugins = entry1.map(function (entryName) {

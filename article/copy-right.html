@@ -7,16 +7,14 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta itemprop="name" content="CopyRight Automático">
   <title>CopyRight Automatico</title>
-
   <!-- Social: Twitter -->
   <meta name="twitter:card" content="summary">
   <meta name="twitter:site" content="@rodeghiero_">
   <meta name="twitter:title" content="CopyRight Automático">
   <meta name="twitter:description" content="Atualizar data do CopyRight de forma automatica">
-
   <!-- Social: Open Graph -->
   <meta property="og:locale" content="en_US">
-  <meta property="og:url" content="https://mariorodeghiero.com/article/copy-right.html">
+  <meta property="og:url" content="https://www.mrodeghiero.com/copy-right.html">
   <meta property="og:title" content="CopyRight Automático">
   <meta property="og:site_name" content="Mario Rodeghiero Desenvolvedor Front End">
   <meta property="og:description" content="Atualizar data do CopyRight de forma automatica utilizando javascript.">
@@ -24,9 +22,29 @@
   <meta property="article:author" content="Mário Antônio do Amaral Rodeghiero">
   <meta property="article:section" content="Tutoriais">
   <meta property="article:tag" content="Javascript, html, css, sass">
-
   <meta itemprop="description" content="Atualizar data do CopyRight de forma automatica">
-
+  <!-- Favicon -->
+  <link rel="apple-touch-icon" sizes="57x57" href="../src/favicon/apple-icon-57x57.png">
+  <link rel="apple-touch-icon" sizes="60x60" href="../src/favicon/apple-icon-60x60.png">
+  <link rel="apple-touch-icon" sizes="72x72" href="../src/favicon/apple-icon-72x72.png">
+  <link rel="apple-touch-icon" sizes="76x76" href="../src/favicon/apple-icon-76x76.png">
+  <link rel="apple-touch-icon" sizes="114x114" href="../src/favicon/apple-icon-114x114.png">
+  <link rel="apple-touch-icon" sizes="120x120" href="../src/favicon/apple-icon-120x120.png">
+  <link rel="apple-touch-icon" sizes="144x144" href="../src/favicon/apple-icon-144x144.png">
+  <link rel="apple-touch-icon" sizes="152x152" href="../src/favicon/apple-icon-152x152.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="../src/favicon/apple-icon-180x180.png">
+  <link rel="icon" type="image/png" sizes="192x192" href="../src/favicon/android-icon-192x192.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="../src/favicon/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="96x96" href="../src/favicon/favicon-96x96.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="../src/favicon/favicon-16x16.png">
+  <link rel="manifest" href="./src/favicon/manifest.json">
+  <meta name="msapplication-TileColor" content="#ffffff">
+  <meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
+  <meta name="application-name" content="Mário Rodeghiero Blog">
+  <meta name="msapplication-square70x70logo" content="smalltile.png">
+  <meta name="msapplication-square150x150logo" content="mediumtile.png">
+  <meta name="msapplication-wide310x150logo" content="widetile.png">
+  <meta name="msapplication-square310x310logo" content="largetile.png">
   <!-- Global Site Tag (gtag.js) - Google Analytics -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=UA-107916783-1"></script>
   <script>
@@ -53,32 +71,45 @@
       <h5 class="publish-date">Date: 09/10/2017</h5>
     </div>
 
-    <h1 class="title">CopyRight Automático</h1>
-    <h4>"Atualizar data do CopyRight de forma automatica"</h4>
+    <div>
+      <h1 class="title">CopyRight Automático</h1>
+      <h4>"Atualizar data do CopyRight de forma automatica"</h4>
+      <p>
+        Minha ideia é colocar em pratica, tudo que aprendo através de livros, vídeos e cursos. Espero que este post
+        seja
+        o primeiro,
+        entre vários outros que estão por vir. Seja sobre html, css, JS ou qualquer outra linguagem e que eu possa
+        ajudar,
+        repassando conhecimento que adquiri durante meu estudos.
+        <br> Agora deu de blá-blá-blá e Bora lá! Vamos falar sobre o objetivo do post “Atualizar data do CopyRight de
+        forma
+        automatica”.
+      </p>
+    </div>
 
-    <p>
-      Minha ideia é colocar em pratica, tudo que aprendo através de livros, vídeos e cursos. Espero que este post seja o primeiro,
-      entre vários outros que estão por vir. Seja sobre html, css, JS ou qualquer outra linguagem e que eu possa ajudar,
-      repassando conhecimento que adquiri durante meu estudos.
-      <br> Agora deu de blá-blá-blá e Bora lá! Vamos falar sobre o objetivo do post “Atualizar data do CopyRight de forma
-      automatica”.
-    </p>
+    <div>
+      <h2 class="sub-title">Estrutura de arquivos</h2>
+      <p>
+        Caso alguém tenha duvida sobre a estrutura de arquivos utilizada, segue a saída do comando “tree”, aplicado no
+        terminal do
+        computador.
+      </p>
+      <img class="screenShot" src="../src/img/screenShot-copyright.png" alt="screen Shot da estrutura de arquivos">
+    </div>
 
-    <h2 class="sub-title">Estrutura de arquivos</h2>
-    <p>
-      Caso alguém tenha duvida sobre a estrutura de arquivos utilizada, segue a saída do comando “tree”, aplicado no terminal do
-      computador.
-    </p>
+    <div>
+      <h2 class="sub-title">Código HTML</h2>
+      <p>
+        Para exiber o copyright, criei um arquivo chamado “index.html” na pasta raiz(exemples-myBlog) e logo abaixo da
+        tag ”body”,
+        foi criada a tag “footer” e inserido o id="copy", assim, vamos conseguir utilizar o id em nosso código
+        javascript.
+        <br> Para realizar a chamada do nosso arquivo javascript, criamos a tag “script” e inserimos o
+        src="js/copy.js".
+      </p>
 
-    <img class="screenShot" src="../src/img/screenShot-copyright.png" alt="screen Shot da estrutura de arquivos">
-
-    <h2 class="sub-title">Código HTML</h2>
-    <p>
-      Para exiber o copyright, criei um arquivo chamado “index.html” na pasta raiz(exemples-myBlog) e logo abaixo da tag ”body”,
-      foi criada a tag “footer” e inserido o id="copy", assim, vamos conseguir utilizar o id em nosso código javascript.
-      <br> Para realizar a chamada do nosso arquivo javascript, criamos a tag “script” e inserimos o src="js/copy.js".
-    </p>
-    <pre><code class="language-html">
+      <pre>
+         <code class="language-html">
 &lt;html&gt;
   &lt;body&gt;
 
@@ -88,37 +119,42 @@
     &lt;script src="js/copy.js"&gt;&lt;script&gt;
   &lt;/body&gt;
 &lt;/html&gt;
-		</code></pre>
+        </code>
+      </pre>
+    </div>
 
-    <h2 class="sub-title">Código JS</h2>
-    <p>
-      A primeira coisa a ser feita no código javascript, é criar um novo objeto “Date()” e vamos armazenar na variavel "date".
-      Fizemos isso, porque “Date()” nos retorna uma informação muito completa, algo parecido com isso: “Mon Oct 09 2017 15:27:03
-      GMT-0300 (-03)”. Como queremos exibir apenas o ano em nosso copyright, vamos criar a variável “year” para pegar somente
-      o ano do nosso objeto, passando “date.getFullYear()”. Agora é só realizarmos o básico, vamos buscar o elemento com
-      id="copy" e depois utilizar o “innerHTML” para apresentar o ano em nossa pagina de exemplo.
-    </p>
+    <div>
+      <h2 class="sub-title">Código JS</h2>
+      <p>
+        A primeira coisa a ser feita no código javascript, é criar um novo objeto “Date()” e vamos armazenar na
+        variavel
+        "date".
+        Fizemos isso, porque “Date()” nos retorna uma informação muito completa, algo parecido com isso: “Mon Oct 09
+        2017
+        15:27:03
+        GMT-0300 (-03)”. Como queremos exibir apenas o ano em nosso copyright, vamos criar a variável “year” para pegar
+        somente
+        o ano do nosso objeto, passando “date.getFullYear()”. Agora é só realizarmos o básico, vamos buscar o elemento
+        com
+        id="copy" e depois utilizar o “innerHTML” para apresentar o ano em nossa pagina de exemplo.
+      </p>
 
-    <pre><code class="language-javascript">
+      <pre>
+        <code class="language-javascript">
 let date = new Date();
 let year = date.getFullYear();
 
 let copyRight = document.getElementById('copy');
 copyRight.innerHTML = '&lt;span&gt;Copyright &copy;'+ year +'&lt;/span&gt;';
-		</code></pre>
-    <br>
-    <br>
-    <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
-    <ins class="adsbygoogle" style="display:block; text-align:center;" data-ad-layout="in-article" data-ad-format="fluid" data-ad-client="ca-pub-6958594865191342"
-      data-ad-slot="4936789613"></ins>
-    <script>
-      (adsbygoogle = window.adsbygoogle || []).push({});
-    </script>
+        </code>
+      </pre>
+    </div>
 
-    <p>
-      <br> Thanks!!!
-    </p>
-
+    <div>
+      <p>
+        <br> Thanks!!!
+      </p>
+    </div>
   </article>
 
   <!--Disqus comentarios-->

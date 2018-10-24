@@ -1,50 +1,56 @@
 [
   {
-    "title": "CopyRight Automatico",
-    "tags": "[JS]",
-    "url": "../article/copy-right.html",
-    "date": "Out 9, 2017"
+    "title": "React Gist interview",
+    "tags": "[JS, ReactJS]",
+    "url": "../gist-interview.html",
+    "date": "Out 18, 2019"
   },
   {
-    "title": "Objeto de notação literal",
-    "tags": "[JS]",
-    "url": "../article/object-literal.html",
-    "date": "Nov 5, 2017"
+    "title": "SASS",
+    "tags": "[SASS, CSS]",
+    "url": "../sass.html",
+    "date": "Aug 2, 2018"
   },
   {
     "title": "Construindo gráficos com chart.js",
     "tags": "[JS, ChartJS]",
-    "url": "../article/chart-js.html",
+    "url": "../chart-js.html",
     "date": "Dez 12, 2017"
   },
   {
     "title": "Spread operator(...)",
     "tags": "[JS, ES6]",
-    "url": "../article/spread-operator.html",
+    "url": "../spread-operator.html",
     "date": "Mar 14, 2018"
   },
   {
     "title": "Sass + React.js",
     "tags": "[JS, webpack, ReactJS, sass]",
-    "url": "../article/sass-react.html",
+    "url": "../sass-react.html",
     "date": "Jun 5, 2018"
-  },
-  {
-    "title": "HtmlWebpackPlugin Multiples HTML files",
-    "tags": "[JS, webpack]",
-    "url": "../article/HtmlWebpackPlugin.html",
-    "date": "Jun 21, 2018"
   },
   {
     "title": "jSON Server with ReactJS",
     "tags": "[JS, ReactJS]",
-    "url": "../article/json-server.html",
+    "url": "../json-server.html",
     "date": "Jul 3, 2018"
   },
   {
-    "title": "SASS",
-    "tags": "[SASS, CSS]",
-    "url": "../article/sass.html",
-    "date": "Aug 2, 2018"
+    "title": "HtmlWebpackPlugin Multiples HTML files",
+    "tags": "[JS, webpack]",
+    "url": "../HtmlWebpackPlugin.html",
+    "date": "Jun 21, 2018"
+  },
+  {
+    "title": "Objeto de notação literal",
+    "tags": "[JS]",
+    "url": "../object-literal.html",
+    "date": "Nov 5, 2017"
+  },
+  {
+    "title": "CopyRight Automatico",
+    "tags": "[JS]",
+    "url": "../copy-right.html",
+    "date": "Out 9, 2017"
   }
 ]
