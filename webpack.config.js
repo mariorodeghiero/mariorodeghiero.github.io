@@ -36,6 +36,7 @@ var entry1 = [
   'sass-ptbr',
   'styled-components',
   'gist-interview',
+  'array-find-index-ptbr',
 ];
 
 var entryHtmlPlugins = entry1.map(function (entryName) {

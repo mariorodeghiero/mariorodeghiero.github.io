@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta itemprop="name" content="Array.find">
+  <title>Array.find( ) e Array.findIndex( )</title>
+  <!-- Social: Twitter -->
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:site" content="@rodeghiero_">
+  <meta name="twitter:title" content="Array.find() e Array.findIndex()">
+  <meta name="twitter:description" content="Utilizando os metodos Array.find() e Array.findIndex()">
+  <!-- Social: Open Graph -->
+  <meta property="og:locale" content="en_US">
+  <meta property="og:url" content="https://www.mrodeghiero.com/chart-js.html">
+  <meta property="og:title" content="Array.find">
+  <meta property="og:site_name" content="Mario Rodeghiero Desenvolvedor Front End">
+  <meta property="og:description" content="Utilizando os metodos Array.find() e Array.findIndex()">
+  <meta property="og:type" content="article">
+  <meta property="article:author" content="Mário Antônio do Amaral Rodeghiero">
+  <meta property="article:section" content="Tutoriais">
+  <meta property="article:tag" content="javascript, es6, array">
+  <meta property="article:tag" content="es6">
+  <meta property="article:tag" content="array">
+  <meta property="article:tag" content="Array.find()">
+  <meta property="article:tag" content="Array.findIndex()">
+  <meta itemprop="description" content="Utilizando os metodos Array.find() e Array.findIndex()">
+  <!-- Favicon -->
+  <link rel="apple-touch-icon" sizes="57x57" href="../src/favicon/apple-icon-57x57.png">
+  <link rel="apple-touch-icon" sizes="60x60" href="../src/favicon/apple-icon-60x60.png">
+  <link rel="apple-touch-icon" sizes="72x72" href="../src/favicon/apple-icon-72x72.png">
+  <link rel="apple-touch-icon" sizes="76x76" href="../src/favicon/apple-icon-76x76.png">
+  <link rel="apple-touch-icon" sizes="114x114" href="../src/favicon/apple-icon-114x114.png">
+  <link rel="apple-touch-icon" sizes="120x120" href="../src/favicon/apple-icon-120x120.png">
+  <link rel="apple-touch-icon" sizes="144x144" href="../src/favicon/apple-icon-144x144.png">
+  <link rel="apple-touch-icon" sizes="152x152" href="../src/favicon/apple-icon-152x152.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="../src/favicon/apple-icon-180x180.png">
+  <link rel="icon" type="image/png" sizes="192x192" href="../src/favicon/android-icon-192x192.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="../src/favicon/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="96x96" href="../src/favicon/favicon-96x96.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="../src/favicon/favicon-16x16.png">
+  <link rel="manifest" href="./src/favicon/manifest.json">
+  <meta name="msapplication-TileColor" content="#ffffff">
+  <meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
+  <meta name="application-name" content="Mário Rodeghiero Blog">
+  <meta name="msapplication-square70x70logo" content="smalltile.png">
+  <meta name="msapplication-square150x150logo" content="mediumtile.png">
+  <meta name="msapplication-wide310x150logo" content="widetile.png">
+  <meta name="msapplication-square310x310logo" content="largetile.png">
+  <!-- Global Site Tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-107916783-1"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+
+    function gtag() {
+      dataLayer.push(arguments);
+    }
+    gtag('js', new Date());
+
+    gtag('config', 'UA-107916783-1');
+  </script>
+<link href="app.css" rel="stylesheet"></head>
+
+<body>
+
+  <article>
+    <div class="author">
+      <a href="https://github.com/MarioRodeghiero">
+        <h5>
+          <img src="../src/img/github-logo.png" alt="icone github"> Autor: MárioRodeghiero
+        </h5>
+      </a>
+      <h5 class="publish-date">Date: 28/10/2018</h5>
+    </div>
+
+    <div>
+      <h1 class="title">Array.find( ) e Array.findIndex( )</h1>
+      <h4>"Utilizando os metodos Array.find( ) e Array.findIndex( )"</h4>
+      <p>
+        Os métodos Array.find( ) e Array.findIndex( ) são novos métodos introduzidos no ES6, com eles pudemos
+        facilmente verificar se existe determinada "Dado" ou um "Index" dentro de um "Array".
+      </p>
+    </div>
+
+    <div>
+      <h2 class="sub-title">Array.find( )</h2>
+      <p>
+        O método Array.find( ) procura se existe o dado desejado, ele percorre todos elementos de um <b>"Array"</b> até
+        encontrar um valor que retorne <b>"true"</b> e interrompe a execução, caso ele não encontre o dado desejado,
+        sera retornado <b>"undefined"</b>. É importante ressaltar que ele não altera o <b>"array original"</b>.
+      </p>
+
+      <pre>
+        <code class="language-javascript">
+          const cars = [
+              {
+                  model: "HB20",
+                  year: "2015"},
+              {
+                  model: "Onix",
+                  year: "2016"
+              }
+           ]
+        </code>
+      </pre>
+
+      <p>Supondo que temos dados retornando de um <b>"API"</b> conforme o array de carros acima e queremos realizar uma
+        busca por o carro <b>"Onix"</b>.</p>
+      <pre>
+        <code class="language-javascript">
+          const cars = [
+              {
+                  model: "HB20",
+                  year: "2015"},
+              {
+                  model: "Onix",
+                  year: "2016"
+              }
+           ]
+
+          const carFind = cars.find(name => name.model === "Onix")
+
+
+          console.log(carFind)  //retorno: { model: 'Onix', year: '2016' }
+        </code>
+      </pre>
+    </div>
+
+    <div>
+      <h2 class="sub-title">Array.findIndex( )</h2>
+      <p>
+        O método Array.findIndex( ) é bem similar ao "Array.find( )" só que quando ele encontra o primeiro dado da
+        pesquisa realizada, ele retorna a posição do dado no Array. <br>É importante ressaltar que caso você pesquise
+        por um valor que <b>não existe</b>, sera retornado <b>-1</b>.
+        <br>
+        No Exemplo abaixo vamos pesquisar por o carro "HB20" que retorna a posição dele no Array e também vamos
+        pesquisar por o carro <b>"Soul"</b> que não existe no Array.
+      </p>
+      <pre>
+        <code class="language-javascript">
+          const cars = [
+              {
+                  model: "HB20",
+                  year: "2015"},
+              {
+                  model: "Onix",
+                  year: "2016"
+              }
+           ]
+
+          const carIndex = cars.findIndex(name => name.model === "HB20")
+
+          const carNotFound = cars.findIndex(name => name.model === "Soul")
+
+
+          console.log(carIndex)  //retorno:  0
+
+          console.log(carNotFound)  //retorno:  -1
+        </code>
+      </pre>
+    </div>
+
+    <div>
+      <h2 class="sub-title">Conclusão</h2>
+      <p>
+        Esse foi um post para apresentar um pouco mais sobre os métodos Array.find() e Array.findIndex(),
+        mas você pode conferir mais direto no
+        <a class="link" href="https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Array/find"
+          target="_blank">developer.mozilla</a>.
+        <br>
+        <br>
+        Thanks!
+      </p>
+    </div>
+  </article>
+
+  <!--Disqus comentarios-->
+  <div class="disqus" id="disqus_thread"></div>
+  <script>
+    (function () {
+      var d = document,
+        s = d.createElement('script');
+      s.src = 'https://helponedev.disqus.com/embed.js';
+      s.setAttribute('data-timestamp', +new Date());
+      (d.head || d.body).appendChild(s);
+    })();
+  </script>
+  <script type="application/ld+json">
+    {
+      "@context": "http://schema.org",
+      "@type": "TechArticle",
+      "name": "Array.find( ) e Array.findIndex( )",
+      "headline": "Utilizando os metodos Array.find( ) e Array.findIndex( )",
+      "author": {
+        "@type": "Person",
+        "name": "Mário Rodeghiero"
+      },
+      "mainEntityOfPage": {
+          "@type": "WebPage",
+          "@id": "https://www.mrodeghiero.com/array-find-index-ptbr.html"
+      },
+      "editor": "Mário Antônio A. Rodeghiero'",
+      "publisher": "Mário Rodeghiero - Front-end Developer Blog'",
+      "url": "http://www.mrodeghiero.com",
+      "image": "https://www.mrodeghiero.com/src/img/blog-image.png",
+      "keywords": "es6, array.find, array.findIndex, array, javascript",
+      "datePublished": "2018-10-28",
+      "dateCreated": "2018-10-28",
+      "dateModified": "2018-10-28",
+      "articleSection": [ "ES6", "array.find", "array.findIndex" ],
+      "articleBody": Os métodos Array.find( ) e Array.findIndex( ) são novos métodos introduzidos no ES6, com eles pudemos facilmente verificar se existe determinada Dado ou um "Index" dentro de um Array."
+    }
+    </script>
+  <noscript>Please enable JavaScript to view the
+    <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a>
+  </noscript>
+<script type="text/javascript" src="app.420024f7c7ee18f10eba.js"></script></body>
+
+</html>
