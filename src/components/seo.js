@@ -27,6 +27,8 @@ function SEO({ description, lang, meta, title }) {
 
   const metaDescription = description || site.siteMetadata.description
 
+  // const ogImage = "url"
+
   return (
     <Helmet
       htmlAttributes={{
@@ -35,6 +37,10 @@ function SEO({ description, lang, meta, title }) {
       title={title}
       titleTemplate={`%s | ${site.siteMetadata.title}`}
       meta={[
+        {
+          name: `aplication-name`,
+          content: "Blog Mario Rodeghiero",
+        },
         {
           name: `description`,
           content: metaDescription,
