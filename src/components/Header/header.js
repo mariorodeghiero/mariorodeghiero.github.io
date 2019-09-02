@@ -14,9 +14,11 @@ import {
   DropdownMenu,
 } from "reactstrap"
 
+import * as S from "./styled"
+
 const Header = ({ siteTitle }) => (
-  <div>
-    <Navbar color="dark" light expand="md">
+  <S.Header>
+    <Navbar color="light" light expand="md">
       <NavbarBrand href="/">{siteTitle}</NavbarBrand>
       <Collapse navbar>
         <Nav className="ml-auto" navbar>
@@ -24,12 +26,12 @@ const Header = ({ siteTitle }) => (
             <NavLink href="/">Home</NavLink>
           </NavItem>
           <NavItem>
-            <NavLink href="/about">About</NavLink>
+            <NavLink href="/about">About Me</NavLink>
           </NavItem>
         </Nav>
       </Collapse>
     </Navbar>
-  </div>
+  </S.Header>
 )
 
 Header.propTypes = {
