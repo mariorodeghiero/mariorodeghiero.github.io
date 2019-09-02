@@ -1,21 +1,70 @@
 import React from "react"
-import { Link } from "gatsby"
+import { Link, graphql, StaticQuery } from "gatsby"
+
+import Post from "../components/Post"
 
 import Layout from "../components/layout"
-import Image from "../components/image"
 import SEO from "../components/seo"
+import "bootstrap/dist/css/bootstrap.min.css"
+import { Container, Row, Col } from "reactstrap"
 
 const IndexPage = () => (
   <Layout>
     <SEO title="Home" />
-    <h1>Hi people</h1>
-    <p>Welcome to your new Gatsby site.</p>
-    <p>Now go build something great.</p>
-    <div style={{ maxWidth: `300px`, marginBottom: `1.45rem` }}>
-      <Image />
-    </div>
-    <Link to="/page-2/">Go to page 2</Link>
+
+    <Row>
+      <Col md="4">
+        <div
+          style={{ height: "100vh", width: "100%", backgroundColor: "#c5c5c5" }}
+        >
+          <Link to="/page-2/">Go to page 2</Link>
+        </div>
+      </Col>
+      <Col md="8">
+        <StaticQuery
+          query={indexQuery}
+          render={data => {
+            return (
+              <div>
+                {data.allMarkdownRemark.edges.map(({ node }) => (
+                  <Post
+                    title={node.frontmatter.title}
+                    date={node.frontmatter.date}
+                    author={node.frontmatter.author}
+                    path={node.frontmatter.path}
+                    body={node.frontmatter.body}
+                  />
+                ))}
+              </div>
+            )
+          }}
+        />
+      </Col>
+    </Row>
   </Layout>
 )
+
+const indexQuery = graphql`
+  query MyQuery {
+    allMarkdownRemark(sort: { fields: [frontmatter___date], order: DESC }) {
+      edges {
+        node {
+          id
+          frontmatter {
+            layout
+            title
+            date(formatString: "MMM Do YYYY")
+            description
+            tags
+            author
+            introduction
+            path
+          }
+          excerpt
+        }
+      }
+    }
+  }
+`
 
 export default IndexPage
