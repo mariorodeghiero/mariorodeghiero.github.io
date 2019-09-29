@@ -76,6 +76,7 @@ const IndexPage = () => (
                     author={node.frontmatter.author}
                     path={node.frontmatter.path}
                     body={node.frontmatter.body}
+                    tags={node.frontmatter.tags}
                   />
                 ))}
               </div>
