@@ -34,6 +34,7 @@ const Sidebar = (props) => {
         <S.Icon src={GitHub} alt="GitHub" />
       </a>
     </div>
+    {/* TODO */}
     {/* <div>
       <Chip />
     </div> */}
@@ -45,6 +46,7 @@ const Sidebar = (props) => {
         Hi, It's me Mário Rodeghiero. I'm a Front-End Developer focus on ReactJS working remotely for a Canadian company. Designing and creating new things is my passion and I have been working on various open-sorce projects.
       </S.AboutDescription>
     </div>
+    {/* TODO */}
     {/* <Link to="/page-2/">Go to page 2</Link> */}
   </div>
   )

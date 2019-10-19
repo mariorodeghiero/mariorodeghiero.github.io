@@ -7,13 +7,13 @@ export const Icon = styled.img`
 `
 
 export const AboutTitle = styled.h2`
-  font-size:14px;
-	font-weight:300;
+  font-size: 1rem;
+	font-weight: 300;
 `
 
 export const Description = styled.p`
-  font-size:14px;
-	font-weight:300;
+  font-size: 0.875rem;
+	font-weight: 300;
 `
 
 export const Picture = styled.img`
