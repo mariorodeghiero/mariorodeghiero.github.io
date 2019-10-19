@@ -1,4 +1,4 @@
-import React from "react"
+import React, { useState } from 'react';
 import { Link, graphql, StaticQuery } from "gatsby"
 
 import Post from "../components/Post"
@@ -24,40 +24,53 @@ const GlobalStyle = createGlobalStyle`
   }
 `
 
-const IndexPage = () => (
-  <React.Fragment>
-    <GlobalStyle />
-    <Layout>
-      <SEO title="Home" />
-      <Row>
-        <Col md="4">
-          <Sidebar />
-        </Col>
-        <Col md="8">
-          <StaticQuery
-            query={indexQuery}
-            render={data => {
-              return (
-                <div>
-                  {data.allMarkdownRemark.edges.map(({ node }) => (
-                    <Post
-                      title={node.frontmatter.title}
-                      date={node.frontmatter.date}
-                      author={node.frontmatter.author}
-                      path={node.frontmatter.path}
-                      body={node.frontmatter.body}
-                      tags={node.frontmatter.tags}
-                    />
-                  ))}
-                </div>
-              )
-            }}
-          />
-        </Col>
-      </Row>
-    </Layout>
-  </React.Fragment>
-)
+const IndexPage = () => {
+  const [openPost, setOpenPost] = useState(false);
+
+  return (
+    <React.Fragment>
+      <GlobalStyle />
+      <Layout>
+        <SEO title="Home" />
+        <Row>
+          <Col md="4">
+            <Sidebar />
+          </Col>
+          <Col md="8">
+            <StaticQuery
+              query={indexQuery}
+              render={data => {
+                if (openPost) {
+                  return (
+                    <div>
+                      view
+                      <button onClick={() => setOpenPost(!openPost)}>back</button>
+                    </div>
+                  )
+                }
+                return (
+                  <div>
+                    {data.allMarkdownRemark.edges.map(({ node }) => (
+                      <Post
+                        title={node.frontmatter.title}
+                        date={node.frontmatter.date}
+                        author={node.frontmatter.author}
+                        path={node.frontmatter.path}
+                        body={node.frontmatter.body}
+                        tags={node.frontmatter.tags}
+                        setOpenPost={() => setOpenPost(!openPost)}
+                      />
+                    ))}
+                  </div>
+                )
+              }}
+            />
+          </Col>
+        </Row>
+      </Layout>
+    </React.Fragment>
+  )
+}
 
 const indexQuery = graphql`
   query MyQuery {

@@ -10,7 +10,7 @@ import {
   Badge,
 } from "reactstrap"
 
-const Post = ({ title, author, path, date, body, tags }) => {
+const Post = ({ title, author, path, date, body, tags, setOpenPost }) => {
   return (
     <Card>
       <CardBody>
@@ -31,9 +31,9 @@ const Post = ({ title, author, path, date, body, tags }) => {
             )
           })}
         </ul>
-        <Link to={path} className="btn btn-outline-primary float-right">
+        <div onClick={setOpenPost} to={path} className="btn btn-outline-primary float-right">
           Read more
-        </Link>
+        </div>
       </CardBody>
     </Card>
   )

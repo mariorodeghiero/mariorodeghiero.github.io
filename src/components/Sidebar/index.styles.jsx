@@ -6,9 +6,19 @@ export const Icon = styled.img`
   margin: 6px;
 `
 
+export const AboutTitle = styled.h2`
+  font-size:14px;
+	font-weight:300;
+`
+
+export const Description = styled.p`
+  font-size:14px;
+	font-weight:300;
+`
+
 export const Picture = styled.img`
-  width: 120px;
-  height: 120px;
+  width: 90px;
+  height: 90px;
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
@@ -17,4 +27,5 @@ export const Picture = styled.img`
   -o-background-size: cover;
   background-size: cover;
   border-radius: 50%;
+  margin: 24px;
 `
