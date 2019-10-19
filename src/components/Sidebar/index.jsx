@@ -21,11 +21,17 @@ const Sidebar = (props) => {
   >
     <S.Picture src={Perfil} alt="Mario Antonio do Amaral Rodeghiero" />
     <p>Mario Antonio A. Rodeghiero</p>
-    <p>Front-End Developer - ReactJS</p>
+    <p>Front-End Developer</p>
     <div>
-      <S.Icon src={Twitter} alt="Twitter" />
-      <S.Icon src={LinkedIn} alt="LinkedIn" />
-      <S.Icon src={GitHub} alt="GitHub" />
+      <a href="https://twitter.com/mariorodeghiero" target="_blank">
+        <S.Icon src={Twitter} alt="Twitter" />
+      </a>
+      <a href="https://www.linkedin.com/in/mariorodeghiero/" target="_blank">
+       <S.Icon src={LinkedIn} alt="LinkedIn" />
+      </a>
+      <a href="https://github.com/mariorodeghiero" target="_blank">
+        <S.Icon src={GitHub} alt="GitHub" />
+      </a>
     </div>
     <div>
       <Chip />
