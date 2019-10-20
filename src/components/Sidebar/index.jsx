@@ -5,7 +5,7 @@ import Twitter from "../../images/twitter-icon.svg"
 import LinkedIn from "../../images/linkedin-icon.svg"
 import GitHub from "../../images/github-icon.svg"
 import Perfil from "../../images/perfil.jpeg"
-import Chip from "../Chip"
+import { MdEmail, MdWork, MdComputer } from "react-icons/md";
 
 import * as S from './index.styles'
 
@@ -20,10 +20,24 @@ const Sidebar = (props) => {
       position: "fixed",
     }}
   >
-    <S.Picture src={Perfil} alt="Mario Antonio do Amaral Rodeghiero" />
-    <h5>Mario Antonio A. Rodeghiero</h5>
-    <p>Front-End Developer at @VanHack</p>
-    <div>
+    <S.AboutSection>
+      <S.Picture src={Perfil} alt="Mario Antonio do Amaral Rodeghiero" />
+      <S.AboutTitle>
+        Let me introduce myself.
+      </S.AboutTitle>
+      <S.AboutDescription>
+        Hi, It's me Mário Rodeghiero. I'm a Front-End Developer focus on ReactJS working remotely for a Canadian company. Designing and creating new things is my passion and I have been working on various open-sorce projects.
+      </S.AboutDescription>
+      <S.AboutMore>
+        More about me...
+      </S.AboutMore>
+    </S.AboutSection>
+    <S.ProfileSecton>
+      <p><MdComputer/> Front-End Developer</p>
+      <p><MdWork /> @VanHack</p>
+      <p><MdEmail/> mario.rodeghiero@gmail.com</p>
+    </S.ProfileSecton>
+    <S.SocialSection>
       <a href="https://twitter.com/mariorodeghiero" target="_blank">
         <S.Icon src={Twitter} alt="Twitter" />
       </a>
@@ -33,20 +47,11 @@ const Sidebar = (props) => {
       <a href="https://github.com/mariorodeghiero" target="_blank">
         <S.Icon src={GitHub} alt="GitHub" />
       </a>
-    </div>
-    {/* TODO */}
+    </S.SocialSection>
     {/* <div>
       <Chip />
     </div> */}
-    <div>
-      <S.AboutTitle>
-        Let me introduce myself.
-      </S.AboutTitle>
-      <S.AboutDescription>
-        Hi, It's me Mário Rodeghiero. I'm a Front-End Developer focus on ReactJS working remotely for a Canadian company. Designing and creating new things is my passion and I have been working on various open-sorce projects.
-      </S.AboutDescription>
-    </div>
-    {/* TODO */}
+    
     {/* <Link to="/page-2/">Go to page 2</Link> */}
   </div>
   )

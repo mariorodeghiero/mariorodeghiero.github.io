@@ -4,16 +4,49 @@ export const Icon = styled.img`
   width: 24px;
   height: 24px;
   margin: 6px;
+  opacity: 0.9;
+  transition: opacity 0.5s ease-in-out;
+
+  :hover {
+    opacity: 0.6;
+  }
 `
 
+export const ProfileSecton = styled.div`
+  margin: 24px;
+
+  p {
+    text-align: left;
+  }
+`
+
+export const AboutSection = styled.div`
+  margin: 24px;
+`
 export const AboutTitle = styled.h2`
-  font-size: 1rem;
-	font-weight: 300;
+  font-size: 1.25rem;
+	font-weight: 400;
 `
 
-export const Description = styled.p`
+export const AboutDescription = styled.p`
   font-size: 0.875rem;
 	font-weight: 300;
+`
+export const AboutMore = styled.button`
+  font-size: 0.875rem;
+	font-weight: 500;
+  opacity: 1;
+  transition: opacity 0.5s ease-in-out;
+
+  :hover {
+    opacity: 0.6;
+  }
+`
+
+export const SocialSection = styled.div`
+  position: fixed;
+  bottom: 16px;
+  left: 12%;
 `
 
 export const Picture = styled.img`
