@@ -33,9 +33,9 @@ const Sidebar = (props) => {
       </S.AboutMore>
     </S.AboutSection>
     <S.ProfileSecton>
-      <p><MdComputer/> Front-End Developer</p>
-      <p><MdWork /> @VanHack</p>
-      <p><MdEmail/> mario.rodeghiero@gmail.com</p>
+      <S.Position><MdComputer/> Front-End Developer</S.Position>
+      <S.Work><MdWork /> @VanHack</S.Work>
+      <S.Contact><MdEmail/> mario.rodeghiero@gmail.com</S.Contact>
     </S.ProfileSecton>
     <S.SocialSection>
       <a href="https://twitter.com/mariorodeghiero" target="_blank">

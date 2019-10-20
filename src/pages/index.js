@@ -6,6 +6,7 @@ import Layout from "../components/layout"
 import SEO from "../components/seo"
 import "bootstrap/dist/css/bootstrap.min.css"
 import { Container, Row, Col } from "reactstrap"
+import Chip from "../components/Chip"
 
 import Sidebar from "../components/Sidebar"
 
@@ -37,6 +38,9 @@ const IndexPage = () => {
             <Sidebar />
           </Col>
           <Col md="8">
+            <div>
+              <Chip />
+            </div>
             <StaticQuery
               query={indexQuery}
               render={data => {

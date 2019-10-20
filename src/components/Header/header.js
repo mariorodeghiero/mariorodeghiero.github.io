@@ -1,6 +1,5 @@
 import PropTypes from "prop-types"
 import React from "react"
-
 import {
   Collapse,
   Navbar,
@@ -19,13 +18,10 @@ import * as S from "./styled"
 
 const Header = ({ siteTitle }) => (
   <S.Header>
-    <Navbar color="light" light expand="md">
+    <Navbar expand="md">
       <NavbarBrand href="/">{siteTitle}</NavbarBrand>
       <Collapse navbar>
         <Nav className="ml-auto" navbar>
-          <NavItem>
-            <NavLink href="/">Home</NavLink>
-          </NavItem>
           <NavItem>
             <NavLink href="/about">About Me</NavLink>
           </NavItem>

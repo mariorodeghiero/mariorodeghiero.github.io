@@ -22,12 +22,9 @@ export default function ChipsArray() {
     { key: 2, label: "styled-components" },
     { key: 3, label: "CSS" },
     { key: 4, label: "SASS" },
-    { key: 5, label: "HTML" },
-    { key: 6, label: "webpack" },
+    { key: 5, label: "webpack" },
     { key: 6, label: "VS_Code" },
-    { key: 7, label: "Gulp" },
     { key: 7, label: "storybook" },
-    { key: 8, label: "Jira" },
     { key: 8, label: "Git/Github" },
   ])
 

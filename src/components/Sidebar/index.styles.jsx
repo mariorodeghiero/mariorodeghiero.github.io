@@ -14,12 +14,27 @@ export const Icon = styled.img`
 
 export const ProfileSecton = styled.div`
   margin: 24px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template: "position work"
+                 "contact contact";
+  justify-items: center;
 
   p {
     text-align: left;
   }
 `
 
+export const Position = styled.p`
+  grid-area: position;
+`
+
+export const Work = styled.p`
+  grid-area: work;
+`
+export const Contact = styled.p`
+  grid-area: contact;
+`
 export const AboutSection = styled.div`
   margin: 24px;
 `
