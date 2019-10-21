@@ -1,12 +1,8 @@
 import PropTypes from "prop-types"
 import React, { useState } from "react"
-
 import { MdFilterList } from "react-icons/md";
 import { Tooltip } from 'reactstrap';
-
-
 import Chip from '../Chip'
-
 import * as S from "./styled"
 
 const Header = ({ siteTitle }) => {
@@ -22,7 +18,7 @@ const Header = ({ siteTitle }) => {
           {openFilter && <Chip />}
         </S.ChipBox>
         <S.FilterBox>
-          <MdFilterList id="filter" onClick={() => setFilter(!openFilter)} style={{ outline: 0 }} />
+          <MdFilterList size={24} id="filter" onClick={() => setFilter(!openFilter)} style={{ outline: 0 }} />
           <Tooltip placement="left" isOpen={tooltipOpen} autohide={false} target="filter" toggle={toggle}>
             Filter
           </Tooltip>

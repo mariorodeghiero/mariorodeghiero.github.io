@@ -1,6 +1,7 @@
 import React from "react"
 import { makeStyles } from "@material-ui/core/styles"
 import Chip from "@material-ui/core/Chip"
+import * as S from "./styled"
 
 const useStyles = makeStyles(theme => ({
   root: {
@@ -43,13 +44,15 @@ export default function ChipsArray() {
         let icon
 
         return (
-          <Chip
-            key={data.key}
-            icon={icon}
-            label={data.label}
-            // onDelete={handleDelete(data)}
-            className={classes.chip}
-          />
+          <S.ContainerChip>
+            <Chip
+              key={data.key}
+              icon={icon}
+              label={data.label}
+              // onDelete={handleDelete(data)}
+              className={classes.chip}
+            />
+          </S.ContainerChip>
         )
       })}
     </div>
