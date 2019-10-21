@@ -1,7 +1,23 @@
 import styled from "styled-components"
 
 export const Header = styled.div`
-  /* -webkit-box-shadow: 0 3px 5px rgba(57, 63, 72, 0.3);
-  -moz-box-shadow: 0 3px 5px rgba(57, 63, 72, 0.3);
-  box-shadow: 0 3px 5px rgba(57, 63, 72, 0.3); */
+`
+
+export const Container = styled.div`
+  display: grid;
+  grid-template-columns: 95% 5%; 
+  grid-template-areas: "chip filter";
+  align-items: center;
+  height: 80px;
+
+`
+
+export const ChipBox = styled.div`
+  grid-area:  chip;
+`
+
+export const FilterBox = styled.div`
+  grid-area:  filter;
+  cursor: pointer;
+  outline: 0;
 `

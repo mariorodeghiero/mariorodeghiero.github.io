@@ -9,6 +9,7 @@ import { Container, Row, Col } from "reactstrap"
 import Chip from "../components/Chip"
 
 import Sidebar from "../components/Sidebar"
+import Header from "../components/Header"
 
 import { createGlobalStyle } from "styled-components"
 
@@ -38,9 +39,7 @@ const IndexPage = () => {
             <Sidebar />
           </Col>
           <Col md="8">
-            <div>
-              <Chip />
-            </div>
+            <Header />
             <StaticQuery
               query={indexQuery}
               render={data => {
