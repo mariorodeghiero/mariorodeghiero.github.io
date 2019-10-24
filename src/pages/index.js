@@ -12,6 +12,7 @@ import Sidebar from "../components/Sidebar"
 import Header from "../components/Header"
 
 import { createGlobalStyle } from "styled-components"
+import PostLoading from '../components/PostLoading';
 
 const GlobalStyle = createGlobalStyle`
   * {
@@ -52,19 +53,22 @@ const IndexPage = () => {
                   )
                 }
                 return (
-                  <div>
+                  <React.Fragment >
                     {data.allMarkdownRemark.edges.map(({ node }) => (
-                      <Post
-                        title={node.frontmatter.title}
-                        date={node.frontmatter.date}
-                        author={node.frontmatter.author}
-                        path={node.frontmatter.path}
-                        body={node.frontmatter.body}
-                        tags={node.frontmatter.tags}
-                        setOpenPost={() => setOpenPost(!openPost)}
-                      />
+                      <div style={{ marginTop: "20px" }}>
+                        <Post
+                          title={node.frontmatter.title}
+                          date={node.frontmatter.date}
+                          author={node.frontmatter.author}
+                          path={node.frontmatter.path}
+                          body={node.frontmatter.body}
+                          tags={node.frontmatter.tags}
+                          setOpenPost={() => setOpenPost(!openPost)} />
+                      </div>
+
                     ))}
-                  </div>
+                    <PostLoading />
+                  </React.Fragment>
                 )
               }}
             />

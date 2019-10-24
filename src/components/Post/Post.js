@@ -34,7 +34,7 @@ const Post = ({ title, author, path, date, body, tags, setOpenPost }) => {
             )
           })}
         </ul>
-        <div onClick={setOpenPost} to={path} className="btn btn-outline-primary float-right">
+        <div onClick={setOpenPost} to={path} className="btn btn-outline-primary">
           Read more
         </div>
       </CardBody>
