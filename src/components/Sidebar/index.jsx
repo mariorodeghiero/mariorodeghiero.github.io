@@ -7,7 +7,7 @@ import GitHub from "../../images/github-icon.svg"
 import Perfil from "../../images/perfil.jpeg"
 import { MdEmail, MdWork, MdComputer } from "react-icons/md";
 
-import * as S from './index.styles'
+import * as S from './styled'
 
 const Sidebar = (props) => {
   return (
