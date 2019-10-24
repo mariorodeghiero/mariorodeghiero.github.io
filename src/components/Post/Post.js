@@ -1,6 +1,9 @@
 import React from "react"
 import { Link } from "gatsby"
-import { slugify } from "../utils"
+import { slugify } from "../../utils"
+
+import * as S from "./styled"
+
 import {
   Card,
   CardTitle,
@@ -12,7 +15,7 @@ import {
 
 const Post = ({ title, author, path, date, body, tags, setOpenPost }) => {
   return (
-    <Card>
+    <S.Card>
       <CardBody>
         <CardTitle>
           <Link to={path}>{title}</Link>
@@ -35,7 +38,7 @@ const Post = ({ title, author, path, date, body, tags, setOpenPost }) => {
           Read more
         </div>
       </CardBody>
-    </Card>
+    </S.Card>
   )
 }
 
