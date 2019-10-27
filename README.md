@@ -1,38 +1,21 @@
 <div align="center">
-<h1>My blog</h1>
+<h1>website in development</h1>
 
 <p>This is the repository used to keep my blog</p>
-
+<!-- 
 [![contributions welcome](https://img.shields.io/badge/contributions-welcome-brightgreen.svg?style=flat)](https://github.com/mariorodeghiero/mariorodeghiero.github.io/issues)
-[![The MIT License](https://img.shields.io/badge/license-MIT-orange.svg?style=flat-square)](http://opensource.org/licenses/MIT)
+[![The MIT License](https://img.shields.io/badge/license-MIT-orange.svg?style=flat-square)](http://opensource.org/licenses/MIT) -->
 
 </div>
 
 ## Built With
 
-- [SASS](https://sass-lang.com) - SASS
-- [webpack](https://webpack.js.org) - webpack
+- [Gatsby](https://www.gatsbyjs.org/) - Gatsby
+- [React](https://reactjs.org/) - React
+- [GraphQL](https://graphql.org/) - GraphQL
 
 ## Plugins and Loaders
 
-- babel-preset-es2015
-- clean-webpack-plugin
-- css-loader"
-- extract-text-webpack-plugin
-- file-loader
-- html-webpack-plugin
-- img-loader
-- node-sass
-- purify-css
-- purifycss-webpack
-- raw-loader
-- sass-loader
-- style-loader
-- uglifyjs-webpack-plugin
-- webpack
-- webpack-dev-server
-- babel-core
-- babel-loader
 
 ## Author
 
