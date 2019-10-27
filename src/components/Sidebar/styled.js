@@ -65,15 +65,11 @@ export const SocialSection = styled.div`
 `
 
 export const Picture = styled.img`
-  width: 90px;
-  height: 90px;
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: cover;
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  background-size: cover;
-  border-radius: 50%;
-  margin: 24px;
+    width: 90px;
+    height: 90px;
+    box-sizing: border-box;
+    background-clip: content-box;
+    border: 1px solid transparent;
+    border-radius: 49.9%;
+    margin: 24px; 
 `

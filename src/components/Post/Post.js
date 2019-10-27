@@ -1,6 +1,7 @@
 import React from "react"
 import { Link } from "gatsby"
 import { slugify } from "../../utils"
+import Chip from "@material-ui/core/Chip"
 
 import * as S from "./styled"
 
@@ -16,20 +17,21 @@ import {
 const Post = ({ title, author, path, date, body, tags, setOpenPost }) => {
   return (
     <S.Card>
-      <CardBody>
-        <CardTitle>
+      <S.CardBody>
+        <S.CardTitle>
           <Link to={path}>{title}</Link>
-        </CardTitle>
-        <CardSubtitle>
-          <span className="text-info">{date}</span> by{" "}
-          <span className="text-info">{author}</span>
-        </CardSubtitle>
-        <CardText>{body}</CardText>
+        </S.CardTitle>
+        <S.CardSubtitle>
+          <span>{date}</span> by{" "}
+          <span>{author}</span>
+        </S.CardSubtitle>
+        <S.CardText>{body}</S.CardText>
         <ul>
           {tags.map(tag => {
             return (
               <Link to={`tag/${slugify(tag)}`}>
-                <Badge color="light">{tag}</Badge>
+                <S
+                  <Chip label={tag} />
               </Link>
             )
           })}
@@ -37,7 +39,7 @@ const Post = ({ title, author, path, date, body, tags, setOpenPost }) => {
         <div onClick={setOpenPost} to={path} className="btn btn-outline-primary">
           Read more
         </div>
-      </CardBody>
+      </S.CardBody>
     </S.Card>
   )
 }

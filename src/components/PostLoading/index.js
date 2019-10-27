@@ -17,8 +17,6 @@ const PostLoading = () => {
                     <S.BodyOne></S.BodyOne>
                     <S.BodyTwo></S.BodyTwo>
                     <S.BodyThree></S.BodyThree>
-                    {/* <S.BodyFour></S.BodyFour>
-                    <S.BodyFive></S.BodyFive> */}
                 </S.WhiteSpace>
             </S.LoadingBox>
         </S.PostCard>

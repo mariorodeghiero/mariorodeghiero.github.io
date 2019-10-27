@@ -61,7 +61,7 @@ const IndexPage = () => {
                           date={node.frontmatter.date}
                           author={node.frontmatter.author}
                           path={node.frontmatter.path}
-                          body={node.frontmatter.body}
+                          body={node.excerpt}
                           tags={node.frontmatter.tags}
                           setOpenPost={() => setOpenPost(!openPost)} />
                       </div>

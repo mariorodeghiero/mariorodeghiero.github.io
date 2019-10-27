@@ -73,16 +73,5 @@ export const BodyThree = styled.div`
     height: 8px;
     top: 108px;
 `
-export const BodyFour = styled.div`
-    width: 100%;
-    height: 24px;
-    top: 150px;
-`
-export const BodyFive = styled.div`
-    width: 8px;
-    height: 26px;
-    top: 174px;
-    left: 40px;
-`
 
 
