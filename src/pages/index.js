@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { Link, graphql, StaticQuery } from "gatsby"
 
 import Post from "../components/Post/Post"
@@ -29,6 +29,14 @@ const GlobalStyle = createGlobalStyle`
 
 const IndexPage = () => {
   const [openPost, setOpenPost] = useState(false);
+  const [postLoadinActive, setpostLoadinActive] = useState(true);
+
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      setpostLoadinActive(false)
+    }, 1500);
+    return () => clearTimeout(timer);
+  }, []);
 
   return (
     <React.Fragment>
@@ -54,20 +62,28 @@ const IndexPage = () => {
                 }
                 return (
                   <React.Fragment >
-                    {data.allMarkdownRemark.edges.map(({ node }) => (
-                      <div style={{ marginTop: "20px" }}>
-                        <Post
-                          title={node.frontmatter.title}
-                          date={node.frontmatter.date}
-                          author={node.frontmatter.author}
-                          path={node.frontmatter.path}
-                          body={node.excerpt}
-                          tags={node.frontmatter.tags}
-                          setOpenPost={() => setOpenPost(!openPost)} />
-                      </div>
-
-                    ))}
-                    <PostLoading />
+                    {postLoadinActive ? (
+                      <React.Fragment>
+                        <PostLoading />
+                        <PostLoading />
+                        <PostLoading />
+                        <PostLoading />
+                      </React.Fragment>) : (
+                        <React.Fragment>
+                          {data.allMarkdownRemark.edges.map(({ node }) => (
+                            <div style={{ marginTop: "20px" }}>
+                              <Post
+                                title={node.frontmatter.title}
+                                date={node.frontmatter.date}
+                                author={node.frontmatter.author}
+                                path={node.frontmatter.path}
+                                body={node.excerpt}
+                                tags={node.frontmatter.tags}
+                                setOpenPost={() => setOpenPost(!openPost)} />
+                            </div>
+                          ))}
+                        </React.Fragment>
+                      )}
                   </React.Fragment>
                 )
               }}
